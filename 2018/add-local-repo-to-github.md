@@ -21,7 +21,7 @@ This post walks you though the less-common path of pushing your local changes to
 6. Click `Create Repository`.
 7. Copy the SSH link to the clipboard.
 8. If your local folder is not preinitialized as a git repo, use the console to do the following. Otherwise, skip this step.
-    ```sh
+    ```bash
     git init # initialize folder as a git repo 
     git add * # Assuming you already have a .gitignore file (copy one from another repo if not)
     git commit -m "Add all files"
@@ -29,7 +29,7 @@ This post walks you though the less-common path of pushing your local changes to
 
 9. In the console, do the following:
 
-    ```sh
+    ```bash
     git remote add origin SSHLINK_PLACEHOLDER # Replace the SSHLINK_PLACEHOLDER with the SSH link for your GitHub repo.
     git push -u origin master
     ```
@@ -41,12 +41,12 @@ Although the instructions above are pretty straightforward, in practice there's 
 
 
 ### 1. Ensure user name and email are set
-```sh
+```bash
 git config --global --list # Lists all set global configuration settings
 git config --local --list # Lists all set local (per repo) configuration settings
 ```
 I like to set my user email and name are set globally:
-```sh
+```bash
 git config --global user.email YOURNAME@YOURDOMAIN.COM # Replace placeholder with your email address
 git config --global user.name "FIRST LAST" # Replace placeholder with your full name.
 ```
@@ -54,7 +54,7 @@ git config --global user.name "FIRST LAST" # Replace placeholder with your full 
 ### 2. Check Git remotes and spelling errors
 The `remotes` for a repo are key-value pairs which instruct git to the location indicated by that keyword. `origin` should be pointing to the SSH link of your repo. This should go without saying, but check, double-check and triple-check that you're using the correct SSH link. This one once probably cost me an hour to figure out.
 
-```sh
+```bash
 git remote -v
 ```
 
@@ -83,7 +83,7 @@ On Windows:
 set GIT_SSH_COMMAND=ssh -i "\SOMEPATH\RSA_PRIVATE_KEY_FILENAME"
 ```
 On MacOS:
-```sh
+```bash
 export GIT_SSH_COMMAND="ssh -i /SOMEPATH/RSA_PRIVATE_KEY_FILENAME" # Replace the placeholder, eg. /Users/leventoz/.ssh/key
 ```
 

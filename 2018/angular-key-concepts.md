@@ -46,7 +46,7 @@ This means:
 A **`route`** is an entry in the routes array defined in `app-routing.module.ts`. Each entry maps a token of the path part of the URI to a component, and can have child entries. Route ordering is important as Angular matches the URI path top-to-bottom. 
 For example:
 
-```TypeScript
+```typescript
 const routes: Routes = [
    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
    { path: 'welcome', component: WelcomeComponent },

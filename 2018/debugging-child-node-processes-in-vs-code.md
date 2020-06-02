@@ -11,7 +11,7 @@ To enable child process debugging for Node, the child Node process must be launc
 ## Command-line arguments for Node
 The arguments that worked for me are "--nolazy --inspect --inspect-port=9230 --inspect-brk". By default Node debugging starts at port 9229, so it's already in use for the parent process if you're launching your project in debug mode. We must tell the child-process to use a different port. If you have multiple child-processes running at the same time, they should all have their unique inspect ports, or debug attach will silently fail.
 
-```JavaScript
+```javascript
 const cp = require('child_process');
 const childProc = cp.fork('path_to_js_file', {
     execArgv: ['--nolazy', '--inspect', '--inspect-port=9230', '--inspect-brk']
@@ -26,7 +26,7 @@ const childProc = cp.fork('path_to_js_file', {
 
 To enable automatic debug attaching to Node processes, enable the following in your current debug configuration. 
 
-```JSON
+```json
 "autoAttachChildProceesses": true
 ```
 
@@ -51,7 +51,7 @@ Sometimes during development, as you start and stop processes, you may find that
 ### Different methods of launching child process in Node
 There are several methods of launching a child process in Node. The most flexible and the most powerful is the __spawn__ function, and it allows launching any process. If you want to launch a Node process, the __fork__ function is more convenient. These functions' signatures vary greatly and care must be taken to ensure the arguments are passed to Node correctly. This is especially true for spawn, as ordering of the arguments matters: 
 
-```sh
+```bash
 node [arguments to node] script.js [arguments to the script]
 ```
 

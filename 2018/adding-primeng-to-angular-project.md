@@ -32,7 +32,7 @@ This post walks you through installing packages you need to incorporate PrimeNG 
 
 Go to your terminal and install the packages as follows:
 
-```sh
+```bash
 npm install primeng --save      # Required
 npm install primeicons --save   # Mostly required
 npm install @angular/animations --save # For animations
@@ -56,7 +56,7 @@ I've made a list of every import available on PrimeNG as of writing for convenie
 
 In your `app.module.ts`, modules need to be first imported then declared in the `imports` array of the `NgModule` decoration of your AppModule.
 
-```TypeScript
+```typescript
 // Angular imports - as needed
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -250,7 +250,7 @@ You can import dependency styles a few ways;
 2. Import the css in `src/styles.less` as in  `@import '../node_modules/fullcalendar/dist/dependency.min.css';` - Note: use relative paths
 3. Put a reference to the `styles` array under `projects.architect.build.options` in `angular.json`. Example:
 
-```JSON
+```json
 [
     "node_modules/primeflex/primeflex.scss",                   // If using FlexGrid
     "node_modules/fullcalendar/dist/fullcalendar.min.css",     // If using FullCalendar component
@@ -279,7 +279,7 @@ You can import dependency scripts in a couple of ways:
 ### 2. Include a referece in the `scripts` array under `projects.architect.build.options` in `angular.json`.
 
 For example:
-```JSON
+```json
 [
     "node_modules/chart.js/dist/Chart.js",                      // If using chart components
     "node_modules/fullcalendar/dist/fullcalendar.min.js",       // If using FullCalendar component

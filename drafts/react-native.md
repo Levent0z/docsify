@@ -21,7 +21,7 @@ Use email links to connect Expo to the React Native app.
 
 ### Ignoring Warnings
 
-```JavaScript
+```javascript
 import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings{[
     'Warning: componentWillMoint is deprecated',
@@ -33,7 +33,7 @@ YellowBox.ignoreWarnings{[
 
 ## Custom Component (Class Style)
 
-```JavaScript
+```javascript
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
@@ -52,7 +52,7 @@ export default class MyComponent extends Component {
 ```
 
 ## Custom Component (Functional Style) with props and styles
-```JavaScript
+```javascript
 import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -77,7 +77,7 @@ MyOtherComponent.propTypes = {
 ## Navigation
 
 
-```JavaScript
+```javascript
 import { StackNavigator } from 'react-navigation';
 import MyComponent1 from './MyComponent1';
 import MyComponent2 from './MyComponent2';
@@ -99,11 +99,11 @@ export default StackNavigator({
 ```
 > Any component that gets displayed in the navigator gets a `navigation` prop. Use it to navigate as follows:
 > 
-> ```JavaScript
+> ```javascript
 > this.props.navigation.navigate('navKey2'); // or 'navKey1'
 > ```
 > To go back, simply:
-> ```JavaScript
+> ```javascript
 > this.props.navigation.goBack();   
 > ```
 
@@ -111,7 +111,7 @@ export default StackNavigator({
 ## Useful Tips
 
 ### Interesting Imports:
-```JavaScript
+```javascript
 import { TouchableHighlight } from 'react-native'; // Makes its content touchable
 import DateTimePicker from 'react-native-modal-datetime-picker'; // Separate NPM package
 ```
@@ -123,13 +123,13 @@ Use the promise based `fetch` api.
 ### Quick JSON-file-based REST server
 Use [JSON Server](https://github.com/typicode/json-server) to watch and serve a static JSON file. Supports GET and POST. 
 To install and use:
-```sh
+```bash
 yarn global add json-server
 json-server someFile.json
 ```
 
 ### Accessing the local computer from the app running on Expo
-```JavaScript
+```javascript
 import Export from 'expo';
 const { manifest } = Expo.Constants;
 const api = maniest.packagerOpts.dev ? manifest.debuggerHost.split(':').shift().concat(':3000') : 'production_url_here';
@@ -137,6 +137,6 @@ const url = `http://${api}/`;
 ```
 
 ### Getting rid of Expo (i.e. `eject`ing your app)
-```sh
+```bash
 yarn run eject
 ```

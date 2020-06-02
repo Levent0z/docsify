@@ -145,7 +145,7 @@ By default, both Windows and Mac tries to protect their users by blocking execut
 
 **On macOS**:
 1. Launch `Terminal` and enter the following: 
-```sh
+```bash
 defaults write com.apple.finder AppleShowAllFiles YES
 ```
 2. While holding the `option` key, right-click on Finder icon on the `Dock` and select `Relaunch`.
@@ -164,7 +164,7 @@ defaults write com.apple.finder AppleShowAllFiles YES
 **On Windows**, you can set the path at `System Properties > Advanced > Environment Variables`.
 
 **macOS**, the path is a composite value, which might contain values from `/etc/paths`, `/etc/profile`, `~/.bash_profile`, `~/.bash_login`, `~/.profile`. To add a path on Mac, create a file whose contents is the path as follows:
-```sh
+```bash
 echo "/some/path/to/the/binary" >> /etc/paths.d/variable  #Replace variable with a name unique in that folder
 ```
 

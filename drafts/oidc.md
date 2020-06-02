@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
 ```
 
 ## AUTH.SERVICE.TS
-```TypeScript
+```typescript
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserManager, User, WebStorageStateStore, Log } from 'oidc-client';

@@ -40,7 +40,7 @@ get-help entityframeworkcore
 
 ## Adding via ??
 
-```sh
+```bash
 dotnet ef
 ```
 

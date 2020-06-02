@@ -15,7 +15,7 @@ I will be using the latest 64-bit versions of Visual Studio Code (1.20.1), Node 
 
 ## Starting Up
 Only 4 simple commands are all it takes to get going:
-```sh
+```bash
 npm install -g @angular/cli    # globally install the ng command
 ng new angular-starter         # create a new project
 cd angular-starter             
@@ -37,7 +37,7 @@ The server by default can be accessed via `http://localhost:4200/`.
 A component allows you to, well componentize, parts of your user-interface so they can be reused in multiple places. To see how this works, let's create a simple component.
 
 In the root folder of your project do:
-```sh
+```bash
 ng g component list-of-links
 ```
 This will do a few things:
@@ -59,7 +59,7 @@ The component here is completely static. To make it dynamic, we can create `bind
 
 In the component's TS file, create a class member as follows:
 
-```TypeScript
+```typescript
   items = [
     { href: "https://angular.io/tutorial", label: "Tour of Heroes" },
     { href: "https://github.com/angular/angular-cli/wiki", label: "CLI Documentation" },
