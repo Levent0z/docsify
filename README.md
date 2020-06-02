@@ -1,16 +1,3 @@
-# Headline
+# Welcome
 
-> An awesome project.
-
-
-<!-- tabs:start -->
-
-# ** Tab 1 **
-
-bir
-
-# ** Tab 2 **
-
-iki
-
-<!-- tabs:end -->
+Thank you for your patience as I work to redesign my blog with a brand new system called [docsify](//docsify.js.org).
