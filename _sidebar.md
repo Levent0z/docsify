@@ -1,4 +1,10 @@
 # Blogs
+
+## 2020
+
+- [Terminal and Bash](2020/terminal-and-bash.md)
+
+## 2018
 - [How to Add Your Existing Local Git Repo to GitHub](2018/add-local-repo-to-github.md)
 - [Adding PrimeNG to your Angular Project](2018/adding-primeng-to-angular-project.md)
 - [Key Concepts in Angular](2018/angular-key-concepts.md)

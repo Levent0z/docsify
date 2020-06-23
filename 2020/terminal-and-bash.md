@@ -6,7 +6,7 @@ If you're new to the world of command-line programming on the Mac using Bash, or
 
 ### Disclaimer
 
-I’m not a terminal or Bash scripting expert. I’ve decided to write this blog because I had to write a number of scripts and learned quite a few things in the process, and I want to spread the knowledge of what I now know. Bash and scripting is a huge world, and it’s not very user-friendly. It’s not always clear what is going on (or not). This technology is decades old, but please keep in mind that it is also very powerful. 
+I’m not a terminal or Bash scripting "expert", if there's such a thing. I’ve decided to write this blog because I had to write a number of scripts and learned quite a few things in the process, and I want to spread the knowledge of what I now know. Bash and scripting is a huge world, and it’s not very user-friendly. It’s not always clear what is going on (or not). This technology is decades old, but please keep in mind that it is also very powerful. 
 
 ## A Little Back Story
 
@@ -94,15 +94,16 @@ Profiles allow you to specify options for the command shell. One of my favorite 
 
 **Triggers** ”watch for text matching a regular expression to arrive in a terminal session and then perform an action in response“. There are quite a few trigger types, but the two that I use are ”Highlight Text“ and ”Post Notification“. 
 
-To specify triggers, go to iTerm2 preferences (`CMD+,`) and select `Profiles` in the top bar. Next, select the `Advanced` tab and click the `Edit` button under the `Triggers` section. 
+To specify triggers, go to iTerm2 Preferences (`CMD+,`) and select `Profiles` in the top bar. Next, select the `Advanced` tab and click the `Edit` button under the `Triggers` section. 
 
->TODO  [Image: image.png]
+![iTerm2 Preferences](assets/iTerm2%20Profiles.png)
 
 Here are a few useful regular expressions: 
 - Paths: `(/?[\w\.\-~]+/)+([\w\.\-~]+)*`
 - Filenames: `(?>([\w\!-]*\.)+[\w\!-]+)(?!\/)`
 - URLs: `[A-Za-z]+://\S+`
 
+You can [download](https://gist.github.com/Levent0z/a8f3b8557f2f707c113c74fc55ec069e#file-iterm2-profile-json) the triggers I've defined and import them into iTerm2 under `Other Actions...` in the `Profiles` tab.
 
 
 # CLI Patterns
@@ -629,13 +630,13 @@ Source is a way to call other scripts.
 One of the things that you may want to configure is how your prompt looks in the REPL. This is done by setting the `PS1` environment variable. It has its own little syntax, but it allows you to optionally inject the **time**, the **hostname**, and the current **working directory** and specify colors. This is what I use:
 
 ```bash
-export PS1='\n\[\e[1;37m\]**\t** \[\e[1;33m\]**\h** \[\e[1;36m\]**\w**\no>\[\e[0;37m\]'
+export PS1='\n\[\e[1;37m\]\t \[\e[1;33m\]\h \[\e[1;36m\]\w\no>\[\e[0;37m\]'
 ```
 
 ... and this is what it looks like:
-> TODO: [Image: image.png]
+![Prompt Screenshot](assets/Prompt.png)
 
-It even supports emoticons!
+It even supports emoticons 😃!
 
 
 ## Making a Script Executable
@@ -657,42 +658,49 @@ chmod +x script.sh
 
 # Bash Scripting (Intermediate)
 
-**Comments**
+And with that, let me present you a quick reference for scripting.
+
+## Comments
 Anything after the # is a comment until a new line, except in quoted strings and the first line if followed by a !.
 
-**Variables**
+## Variables
 Case-sensitive. Use ALL_UPPERCASE for naming convention.
 
-**Setting**: 
-`VAR_NAME=value` # no spaces before or after =
-`declare VAR_NAME=value`
+### Setting 
+- `VAR_NAME=value`
+- `declare VAR_NAME=value`
 
-**Accessing**:
-`$VAR_NAME` or `${VAR_NAME}`
+**Important**: There must be no spaces before or after the equals sign.
 
-**Clearing:**
-`unset VAR_NAME`
-or
-`VAR_NAME=` 
-Note: Do not use the second method because of white-space errors. It doesn’t clear the variable, it clears the value of the variable.
+### Accessing
+- `$VAR_NAME`
+- `${VAR_NAME}`
+
+The curly braces are recommended. 
+
+### Clearing
+- `unset VAR_NAME`
+- `VAR_NAME=` 
+
+**Important** Always prefer `unset` as the second method may cause white-space errors: It doesn’t clear the variable, it clears the value of the variable.
 
 
-**Scope:**
+### Scope
 
-* Variables are valid in the scope of the script that they’re defined.
-* Variables preceded with **`local`** inside a function definition are local to that function
-* Variables that are `export`ed remain in the environment after the script has exited.
+- Variables are valid in the scope of the script that they’re defined.
+- Variables preceded with `local` inside a function definition are local to that function
+- Variables that are `export`ed remain in the environment after the script has exited.
 
 ### Strings and Quotations
 
-* Double-quoted strings expand variables enclosed within.
-* Single-quoted strings are verbatim - no processing.
-    * Single-quoted strings prefixed with `$` can embed new-line character `\n`. 
-* Text enclosed in back-ticks are executed as a command line.
+- Double-quoted strings expand variables enclosed within.
+- Single-quoted strings are verbatim - no processing.
+    - Single-quoted strings prefixed with **`$`** can embed the new-line character `\n`. 
+- Text enclosed in back-ticks (**`**) are executed as a command line.
 
 ## Branching and Code Flow
 
-**Testing for values**
+### Testing for Values
 The `test` command takes in a boolean expression and sets the return code (**`$?`**) to 0 if true, 1 if false.
 
 ```bash
@@ -715,7 +723,7 @@ Test shortcuts: Use single our double square brackets. Make sure to leave spaces
 [[ $a == 2 ]]
 
 
-### The if statement
+### The `if` statement
 
 ```bash
  if [[ expression1 ]]; then
@@ -728,21 +736,20 @@ Test shortcuts: Use single our double square brackets. Make sure to leave spaces
 ```
 
 
-`[[ **-z** $VAR ]]` →  true if var is empty or unset
-`[[ **-f** $FILEPATH ]]` → true if file exists
-`[[ **-d** $DIRPATH ]]` → true if directory exists
-`[[ $VAR1 **-gt** $VAR2 ]]` → true if VAR1 is greater than VAR2. Other operators are `==`, `-eq`, `!=`, `-lt`, `-ge`, `-le`.
-`[[ **!** $VAR1 **-gt** $VAR2 ]]` → true if VAR1 is not greater than VAR2. 
+- `[[ -z $VAR ]]` → true if var is empty or unset
+- `[[ -f $FILEPATH ]]` → true if file exists
+- `[[ -d $DIRPATH ]]` → true if directory exists
+- `[[ $VAR1 -gt $VAR2 ]]` → true if VAR1 is greater than VAR2. Other operators are `==`, - `-eq`, `!=`, `-lt`, `-ge`, `-le`.
+- `[[ ! $VAR1 -gt $VAR2 ]]` → true if VAR1 is not greater than VAR2. 
 
-Multiple expressions require multiple square brackets. Logical operator for AND is **`&&` **and for OR is **`||`**.
+Multiple expressions require multiple square brackets. The logical operators for AND and OR are **`&&`** and **`||`** respectively.
 
 If testing for the return value of a command, the square brackets are unnecessary.
 
 
 **To exit a script:**
-`exit`
-`exit $SOME_RETURN_CODE`
-
+- `exit`
+- `exit $SOME_RETURN_CODE`
 
 ## Loops
 
@@ -804,7 +811,7 @@ or
 
 ## Select/Case
 
-Select allows you to display options which the user can select by entering the corresponding number. Invalid inputs will be ignored. The user can cancel out via `CTRL+C`. 
+`Select` allows you to display options which the user can select by entering the corresponding number. Invalid inputs will be ignored. The user can cancel out via `CTRL+C`. 
 
 **Example**:
 
@@ -839,8 +846,6 @@ function se() {
 }
 ```
 
-
-
 ## List of Special Variables:
 
 - `$?` Return value of the last command
@@ -853,32 +858,22 @@ function se() {
 - ... there are others.
 
 
-# Gotchas
+# Gotchas - a Reminder
 
 * Check for missing spaces or extra spaces
     * When setting values to variables, there are no spaces before or after the equals.
 * Check for missing or extra semi-colons 
-    * For `while` and `for` loops and the `select`, the keyword `do` needs to be on its own line. To keep it on the same line use a semi-colon after the expression, before `do`.
+    * For `while`, `for` and `select`, the keyword `do` needs to be on its own line. To keep it on the same line use a semi-colon after the expression, before `do`.
     * For `if` statment, the keyword `then` needs to be on its own line. To keep it on the same line use a semi-colon after the expression, before `then`.
-* Ensure that arguments that use double dashes `"--"`  aren’t replaced by the hyphen `"—"`.
-* Ensure that any double-quotes have no direction. They should look like `"` not “like these”.
-* Use correct type of quotes.
+* Ensure that arguments that use double dashes "`--`"  aren’t replaced by the hyphen "`—`".
+* Ensure that any double-quotes have no direction. They should look like `"` not `“`like these`”`.
+* Use correct type of quotes based on whether you need variable expansion or not.
 
-# Appendix:
-
+# Appendix
 
 Echo without a new line: Use either: `echo -n`  or `printf`
 
-
-> To access arguments using an array: the **`args`****`=("$@")` **line puts **all** the **arguments** in the **args** array. 
+To access arguments using an array: the **`args=("$@")`** line puts **all** the **arguments** in the **args** array. 
 To access them use ${**args**[index]}
 
-
-Arrays: https://linuxconfig.org/how-to-use-arrays-in-bash-script
-“Associative arrays” are not supported in the built-in Bash in macOS (must upgrade via `brew`)
-
-
-**Why should I write a script?**
-An advantage of writing scripts over writing full-blown applications is that for the most part, your scripts will “just work” on any standard machine or docker container without requiring external dependencies. It’s also typically a lot easier to get some things done in a few commands if you know how (that comes with experience).
-
-
+As of writing, “associative arrays” are not supported in the built-in Bash in macOS (must upgrade via `brew`).
