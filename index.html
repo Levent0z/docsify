@@ -22,17 +22,21 @@
   <div id="app">Loading...</div>
   <script>
     window.$docsify = {
+      requestHeaders: {
+        'cache-control': 'no-cache'
+      },
       name: '<span style="font-family: \'Lexend Tera\', script; font-size:28px;">LEVENT OZ</span>',
       repo: undefined,
       loadNavbar: true,
-      ga: 'UA-168126773-1', // Google Anayltics
+      ga: 'UA-168126773-1', // Google Analytics
       // loadSidebar: 'sidebar.md',
       // disqus: 'levent0z',
       loadSidebar: true,
       // loadNavbar: true,
       // mergeNavbar: true,
       maxLevel: 4,
-      subMaxLevel: 2,
+      // subMaxLevel: 0, // Buggy for non-zero
+      auto2top: true,
       search: {
         noData: {
           '/de-de/': 'Keine Ergebnisse!',
