@@ -1,11 +1,9 @@
-# Blogs
+# 2020
 
-## 2020
-
-- [How to Hot Reload your LWC-based Electron App](2020/hot-reload-lwc-electron.md)
+- [Hot Reload your LWC-based Electron App](2020/hot-reload-lwc-electron.md)
 - [Terminal and Bash](2020/terminal-and-bash.md)
 
-## 2018
+# 2018
 - [How to Add Your Existing Local Git Repo to GitHub](2018/add-local-repo-to-github.md)
 - [Adding PrimeNG to your Angular Project](2018/adding-primeng-to-angular-project.md)
 - [Key Concepts in Angular](2018/angular-key-concepts.md)
