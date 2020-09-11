@@ -9,11 +9,6 @@
     }
 </style>
 
-<details><summary style="font-size:1.5em">Prologue</summary>
-Here's the second in a series of posts where I list vocabulary I came across in the previous year. If you like this post, check out <a href="./vocabulary-2016.html">previous year's list</a>. 
-</details>
-
-## TL;DR
 See how many of these words you know by guessing their meaning and then expanding the section to reveal the definition.
 
 <details><summary>Affable</summary>

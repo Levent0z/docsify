@@ -1,12 +1,12 @@
-# How to Hot Reload your LWC-based Electron App
+# How to Hot-Reload your LWC-based Electron App
 
-If you've created your Lightning Web Components app using  `create-lwc-app`, your package.json already has the ability to hot reload (aka live reload) any changes you make to the source. This functionality, initiated by `npm run watch` only works when you're using the provided localhost web server. It doesn't work for Electron.
+If you've created your Lightning Web Components app using  `create-lwc-app`, your package.json already has the ability to hot reload (AKA live reload) any changes you make to the source. This functionality, initiated by `npm run watch` only works when you're using the provided localhost web server. It doesn't work for Electron.
 
-What we want is to have `lwc-services` build the project so that the artifacts are deployed to the local `dist` folder where Electron is sourcing them from. Here are the steps:
+What we want is to have lwc-services build the project so that the artifacts are deployed to the local `dist` folder where Electron is sourcing them from. Here are the steps:
 
-1. Watch for changes in the `src` folder
-2. Upon changes, call `npm run build:development` which will in turn `lwc-services build` and deploy binaries to `dist`.
-3. We need Electron itself to be watching changes to the `dist` folder so it can reload itself.
+1. Watch for changes in the `src` folder. When that happens,
+2. Call `npm run build:development`, which will in turn run `lwc-services build` and deploy binaries to `dist`
+3. Have Electron watch changes in the `dist` folder so it can reload itself.
 
 So let's get to it. 
 
@@ -58,10 +58,10 @@ If something doesn't work right, here's a few things to look at:
 
 - Ensure that the paths are correct in `main.js`
 - Check the scripts in `package.json`
-- Make sure that when you make a change, lwc-services rebuilds the code, and that code ends up in the `dist` folder.
-- See if any [chokidar](https://github.com/paulmillr/chokidar) options will help. (Electron-reloader accepts the same properties in the object passed as the 2nd argument in the `require` line). For example, `awaitWriteFinish` option allows to override defaults.
+- Make sure that when you make a change, lwc-services rebuilds the code, and that the `dist` folder is updated. Since we enabled `noclear`, some types of changes (e.g. file deletions) will not take affect until a clean build, so keep that in mind.
+- See if any [chokidar](https://github.com/paulmillr/chokidar) options will help. (Electron-reloader accepts the same properties in the object passed as the second argument in the `require` line). For example, `awaitWriteFinish` option allows to override defaults.
 
-And for reference here's my environment:
+And for reference, here's my environment:
 
 || version | 
 | --- | --- |

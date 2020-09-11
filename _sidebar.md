@@ -1,16 +1,16 @@
 # 2020
 
-- [Hot Reload your LWC-based Electron App](2020/hot-reload-lwc-electron.md)
+- [LWC: Hot Reload in Electon](2020/hot-reload-lwc-electron.md)
 - [Terminal and Bash](2020/terminal-and-bash.md)
 
 # 2018
-- [How to Add Your Existing Local Git Repo to GitHub](2018/add-local-repo-to-github.md)
-- [Adding PrimeNG to your Angular Project](2018/adding-primeng-to-angular-project.md)
-- [Key Concepts in Angular](2018/angular-key-concepts.md)
-- [Getting Started with Angular](2018/getting-started-with-angular.md)
-- [Debugging Child Node Processes In VS Code](2018/debugging-child-node-processes-in-vs-code.md)
-- [Tips for Switching between Windows and MacOS](2018/windows-and-mac.md)
+- [GitHub: Add Existing Git Repo](2018/add-local-repo-to-github.md)
+- [Angular: Add PrimeNG](2018/adding-primeng-to-angular-project.md)
+- [Angular: Key Concepts](2018/angular-key-concepts.md)
+- [Angular: Getting Started](2018/getting-started-with-angular.md)
+- [Node: Debug Child Processes In VS Code](2018/debugging-child-node-processes-in-vs-code.md)
+- [Tips: Windows -> MacOS](2018/windows-and-mac.md)
 
-# Vocabulary
+# New Vocabulary
 - [2017](2018/vocabulary-2017.md)
 - [2016](2018/vocabulary-2016.md)

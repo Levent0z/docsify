@@ -9,11 +9,6 @@
     }
 </style>
 
-<details><summary style="font-size:1.5em">Prologue</summary>
-2016 was the year of the US election. Reading the news articles, I realized there are quite a few words that I didn't know or quite understand, and that's when I decided to make lists of these words to improve my vocabulary. I've been using <a href="https://www.wunderlist.com/" target="_blank">Wunderlist</a> to keep track of them on a yearly basis. Check'em out!
-</details>
-
-## TL;DR
 See how many of these words you know by guessing their meaning and then expanding the section to reveal the definition.
 
 <details><summary>Acrimonious</summary>

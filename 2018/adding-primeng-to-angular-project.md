@@ -1,15 +1,3 @@
----
-title: Adding PrimeNG Components to Your Angular Project
-categories: 
-- Web Development
-- Angular
-- PrimeNG
-tags:
-- web-development
-- front-end
-- web-ui
-- npm
----
 # Adding PrimeNG Components to Your Angular Project
 
 <details><summary style="font-size:1.5em">Prologue</summary>

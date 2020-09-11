@@ -4,10 +4,6 @@
 
 If you're new to the world of command-line programming on the Mac using Bash, or you just need a quick refresher then this post is for you. We will talk about how to install a better terminal (iTerm2), and go over the essential concepts and commands, before we look at scripting commands. 
 
-### Disclaimer
-
-I’m not a terminal or Bash scripting "expert", if there's such a thing. I’ve decided to write this blog because I had to write a number of scripts and learned quite a few things in the process, and I want to spread the knowledge of what I now know. Bash and scripting is a huge world, and it’s not very user-friendly. It’s not always clear what is going on (or not). This technology is decades old, but please keep in mind that it is also very powerful. 
-
 ## A Little Back Story
 
 For about 2 decades, I’ve developed software primarily on the Windows platform. It’s been a couple of years since I switched to using macOS. As anyone’s who’s made the switch will concur, it can be quite disorienting at first. Basic tasks I was fluent in suddenly became things I needed to figure out how to do. Applications were different, keyboard shortcuts were different, the command console was different. I remember spending a bunch of time trying to figure out how to delete a character, since the MacBook keyboard lacks a dedicated delete key, and only has backspace.
