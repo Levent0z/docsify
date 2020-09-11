@@ -1,6 +1,6 @@
 # How to Hot-Reload your LWC-based Electron App
 
-If you've created your Lightning Web Components app using  `create-lwc-app`, your package.json already has the ability to hot reload (AKA live reload) any changes you make to the source. This functionality, initiated by `npm run watch` only works when you're using the provided localhost web server. It doesn't work for Electron.
+If you've created your Lightning Web Components app using  [create-lwc-app](https://lwc.dev/guide/install), your package.json already has the ability to hot reload (AKA live reload) any changes you make to the source. This functionality, initiated by `npm run watch` only works when you're using the provided localhost web server. It doesn't work for Electron.
 
 What we want is to have lwc-services build the project so that the artifacts are deployed to the local `dist` folder where Electron is sourcing them from. Here are the steps:
 
