@@ -2,6 +2,7 @@
 
 ## 2020
 
+- [How to Hot Reload your LWC-based Electron App](2020/hot-reload-lwc-electron.md)
 - [Terminal and Bash](2020/terminal-and-bash.md)
 
 ## 2018
