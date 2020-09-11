@@ -10,7 +10,6 @@
 </p>
 </details>
 
-## TL;DR
 This post walks you through installing packages you need to incorporate PrimeNG components (and dependencies) into your Angular project and editing the files `app.module.ts`, `angular.json` and `index.html` to link them all up.
 
 ## 1. Installing NPM Packages

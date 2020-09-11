@@ -1,7 +1,5 @@
 # Terminal and Bash
 
-## TL;DR
-
 If you're new to the world of command-line programming on the Mac using Bash, or you just need a quick refresher then this post is for you. We will talk about how to install a better terminal (iTerm2), and go over the essential concepts and commands, before we look at scripting commands. 
 
 ## A Little Back Story

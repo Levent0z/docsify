@@ -8,7 +8,6 @@
 <p>Here, I will show you a better way. If, like me, you have multiple GitHub accounts you may hit some roadblocks. Your GitHub account and your local environment must be properly configured, and that Git must be using the correct configuration.</p>
 </details>
 
-## TL;DR
 This post walks you though the less-common path of pushing your local changes to a brand new GitHub repo (as opposed to pushing to a GitHub repo that you'd cloned from). It also touches on how to manage multiple GitHub accounts in the Troubleshooting section at the bottom.
 
 > **Note**: I use the term **console** to refer to Command Prompt on Windows and Terminal on MacOS.

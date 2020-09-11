@@ -4,7 +4,6 @@
 Setting up debugging should be straightforward. In the case of child-process debugging for Node, it isn't. Like the proverbial planets, all the configurations have to align. However, once setup, the full-power of the debugger with breakpoints, watches, call-stacks and immediate-windows will be at your disposal. Say goodbye to console logs!
 </details>
 
-## TL;DR
 To enable child process debugging for Node, the child Node process must be launched with certain arguments. In addition, if using VS Code, the editor should be configured to auto-attach to child processes.
 
 

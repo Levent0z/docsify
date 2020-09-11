@@ -5,7 +5,6 @@
 As a long-time user of Windows, I'm here to tell you that switching to a MacOS doesn't have to be painful. Had I had access to a post like this, I'm sure it would have saved me tons of time. If you've just received your first Macbook (or Windows machine) and want to get a head-start and become productive quickly, read on!
 </details>
 
-## TL;DR
 Are you switching from Windows to macOS, or vice-versa? Here are some tips to hit the ground running.
 
 
