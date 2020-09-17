@@ -43,7 +43,7 @@ module.exports = {
 
 5. In a separate terminal window, in the root project folder, run the following:
 ```bash
-> fswatch src | while read; do npm run build:development; done
+> fswatch src | while read; do npm run build:development </dev/null; done
 ```
 
 6. Run Electron
