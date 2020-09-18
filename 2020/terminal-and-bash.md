@@ -731,8 +731,10 @@ Test shortcuts: Use single our double square brackets. Make sure to leave spaces
 
 
 - `[[ -z $VAR ]]` → true if var is empty or unset
+- `[[ -n $VAR ]]` → true if var is not an empty string
 - `[[ -f $FILEPATH ]]` → true if file exists
 - `[[ -d $DIRPATH ]]` → true if directory exists
+- `[[ -e $PATH ]]` → true if file or directory exists
 - `[[ $VAR1 -gt $VAR2 ]]` → true if VAR1 is greater than VAR2. Other operators are `==`, - `-eq`, `!=`, `-lt`, `-ge`, `-le`.
 - `[[ ! $VAR1 -gt $VAR2 ]]` → true if VAR1 is not greater than VAR2. 
 
