@@ -1,4 +1,5 @@
 # 2020
+- [Code Coverage with Jest](2020/code-coverage-with-jest.md)
 - [Jest with TypeScript](2020/jest-with-typescript.md)
 - [LWC: Hot Reload in Electon](2020/hot-reload-lwc-electron.md)
 - [Terminal and Bash](2020/terminal-and-bash.md)

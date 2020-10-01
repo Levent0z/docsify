@@ -7,8 +7,12 @@ $ git config --local user.name "FIRST LAST" # Replace with your full name
 $ git add * # adds most files, but not those that start with '.'
 ```
 
+
+### Tags
 ```sh
-$ git tag TAGNAME REF
+$ git tag TAGNAME REF # Add tag
+$ git tag -d TAGNAME # Delete local tag (from HEAD)
+$ git push --delete origin TAGNAME # Delete remote tag
 ```
 
 
