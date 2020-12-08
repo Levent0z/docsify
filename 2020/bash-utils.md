@@ -276,3 +276,17 @@ du -kd0 ~/sdb*/sdb* | sort -rnk1
 
 ## Ask
 read -p 'y/n ' RESP; [[ $RESP == 'y' ]] && echo 'y' || echo 'n'
+
+
+## Make an HTTP POST
+[curl](https://ss64.com/osx/curl.html)
+
+```sh
+curl -X POST \
+    -x PROXYHOST:PORT \
+    -k \
+    DESINATION_URL \
+    --data 'key1=value1' \
+    --data 'key2=value2' \
+    --data-urlencode 'key3=value3' 
+    --data-urlencode 'key4=value4'
