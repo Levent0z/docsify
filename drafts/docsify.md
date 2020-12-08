@@ -17,5 +17,5 @@ Plugins:
 https://github.com/mrpotatoes/docsify-toc
 
 
-Side Panel --> _sidebar.md
-Main Panel --> README.md
+- Side Panel --> _sidebar.md
+- Main Panel --> README.md
