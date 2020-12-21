@@ -106,3 +106,7 @@ gpg --list-keys --keyid-format LONG
 gpg --armor --export keyID
 # Next, copy output with begin/end terminators into GitHub
 ```
+
+
+## Troubleshooting with GPG
+- [gpg failed to sign the data](https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/55646482#55646482)

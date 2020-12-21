@@ -44,7 +44,18 @@ npm list -g --depth 0
 npm outdated
 https://docs.npmjs.com/updating-packages-downloaded-from-the-registry
 
-npm update 
+[npm update](https://docs.npmjs.com/cli/v6/commands/npm-update)
+Updates outdated packages but
+- ^ will not touch packages with major version < 1
+- ^ will not upgrade to major versions
+
+Manually update package.json then:
+```
+npm update packagename
+```
+
+
+
 caret semantics for version < 1.0.0
 
 https://stackoverflow.com/questions/16073603/how-do-i-update-each-dependency-in-package-json-to-the-latest-version
@@ -62,4 +73,10 @@ yarn config set "strict-ssl" false
 cat ~/.yarnrc
 
 npm config set strict-ssl false
+```
+
+# Publish
+```
+npm version NEWVERSION -m 'COMMITMESSAGE'
+npm publish ./dist --loglevel verbose
 ```
