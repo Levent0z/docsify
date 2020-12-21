@@ -79,3 +79,79 @@ Add Z-index to data-allocation-index
 
 Other presenting in auto mode:
 zWfAib Z319Jd __gmgv-btb-resize __gmgv-rtb-resize Qtgubc a1pVef CUJC3
+
+
+
+--------
+Not presenting:
+document.querySelector('.zWfAib').classList
+DOMTokenList(6) ["zWfAib", "Z319Jd", "t4HJue", "eFmLfc", "a1pVef", "CUJC3", value: "zWfAib Z319Jd t4HJue `eFmLfc` a1pVef CUJC3"]
+
+Presenting:
+document.querySelector('.zWfAib').classList
+DOMTokenList(6) ["zWfAib", "Z319Jd", "t4HJue", "a1pVef", "CUJC3", "Qtgubc", value: "zWfAib Z319Jd t4HJue a1pVef CUJC3 `Qtgubc`"]
+
+Item Pinned (not presenting):
+document.querySelector('.zWfAib').classList
+DOMTokenList(5) ["zWfAib", "Z319Jd", "n9oEIb", "QhPhw", "a1pVef", value: "zWfAib Z319Jd `n9oEIb` QhPhw a1pVef"]
+
+Item Pinned (presenting, of presentation):
+document.querySelector('.zWfAib').classList
+DOMTokenList(5) ["zWfAib", "Z319Jd", "n9oEIb", "QhPhw", "a1pVef", value: "zWfAib Z319Jd `n9oEIb` QhPhw a1pVef"]
+
+Item Pinned (presenting, of presenter):
+document.querySelector('.zWfAib').classList
+DOMTokenList(6) ["zWfAib", "Z319Jd", "n9oEIb", "QhPhw", "a1pVef", "CUJC3", value: "zWfAib Z319Jd n9oEIb QhPhw a1pVef CUJC3"]
+
+
+document.querySelector('.zWfAib > [data-allocation-index="0"]').style.width
+"536px"
+document.querySelector('.zWfAib > [data-allocation-index="0"]').clientWidth
+536
+
+
+document.querySelector('.zWfAib > [data-allocation-index="0"]').style.left = "calc(100vw - 536px)"
+Use this instead to accomodate opening of the sidebar
+document.querySelector('.zWfAib > [data-allocation-index="0"]').style.left = "calc(100% - 536px)"
+
+
+
+
+document.querySelectorAll('.zWfAib > :not([data-allocation-index="0"])')[0].style.transform = 'translate(20px, 20px)'
+
+
+When somebody leaves, styles are reset
+When something is pinned, it's the only child of .zWfAib with data-allocation-index="0"
+
+When the sidebar appears:
+.mKBhCf.kjZr4 {
+    transition-delay: .24s;
+    transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
+    transform: translate3d(0,0,0);
+}
+.mKBhCf.qwU8Me {
+    transform: translate3d(100%,0,0);   /* overridden above */
+    right: 0;
+}
+
+
+
+When landscape and presenting:
+document.querySelector('.zWfAib > [data-allocation-index="0"]').clientHeight
+716
+document.querySelector('.zWfAib').clientHeight
+713
+document.querySelector('.zWfAib').clientWidth
+2844
+document.querySelector('.zWfAib > [data-allocation-index="0"]').clientWidth
+1432
+
+When portrait and presenting
+document.querySelector('.zWfAib').clientWidth
+1679
+document.querySelector('.zWfAib > [data-allocation-index="0"]').clientWidth
+1679
+document.querySelector('.zWfAib').clientHeight
+1193
+document.querySelector('.zWfAib > [data-allocation-index="0"]').clientHeight
+873
