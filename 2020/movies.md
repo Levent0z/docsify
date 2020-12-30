@@ -114,6 +114,7 @@
 - [T2] Terminator 2: Judgment Day (1991)
 
 ### 1992
+- A Few Good Men (1992) - Drama
 - [A3] Alien 3 (1992) - Action, Drama, Science Fiction
 - My Cousin Vinny (1992) - Joe Pesci, Marisa Tomei, Ralph Maccio
 - Scent of a Woman (1992) - Drama
@@ -128,6 +129,7 @@
 - [BHC3] Beverly Hills Cop III (1994) - Action, Adventure, Comedy
 - Forrest Gump (1994) - Comedy, Drama, Historical
 - Four Weddings and a Funeral (1994) - Drama
+- Interview With the Vampire: The Vampire Chronicles (1994) - Horror, Drama
 - The Mask (1994) - Comedy
 - [NG3] The Naked Gun 33 1/3: The Final Insult (1994) - Comedy, Suspense
 - [PA7] Police Academy 7: Mission to Moscow (1994)
@@ -185,6 +187,7 @@
 - Gladiator (2000) - Action, Adventure, Drama
 - [MI2] Mission Impossible II (2000)
 - What Women Want (2000) - Comedy, Fantasy
+- [X1] X-Men (2000) - Action, Science Fiction
 
 ### 2001
 - A Beautiful Mind (2001) - Drama, Suspense
@@ -201,6 +204,7 @@
 - Catch Me If You Can (2002) - Suspense
 - [MB2] Men In Black II (2002) - Science Fiction, Comedy, Action
 - The Minority Report (2002) - Action, Adventure, Drama, Science Fiction, Suspense
+- [SP1] Spider-Man (2002) - Science Fiction, Action
 - [SW5, Ep.II] Star Wars: Attack of the Clones (2002)
 - Undercover Brother (2002) - Action, Comedy, Young Adult Audience
 
@@ -213,6 +217,7 @@
 - [MX3] The Matrix Revolutions (2003) - Action, Science Fiction, Suspense
 - The Pianist (2003) - Drama
 - [T3] Terminator 3: Rise of the Machines (2003)
+- [X2] X2 (2003) - Action 
 
 ### 2004
 - The Aviator (2004) - Drama
@@ -222,6 +227,7 @@
 - The Machinist (2004) - Drama, Suspense
 - The Notebook (2004) - Drama
 - Ray (2004) - Drama
+- [SP2] Spider-Man 2 - Science Fiction, Action
 
 ### 2005
 - [BM1] Batman Begins (2005) - Action, Adventure
@@ -238,9 +244,11 @@
 - The Illusionist (2006) - Drama, Suspense
 - [MI3] Mission Impossible III (2006)
 - The Prestige (2006) - Drama, Suspense
+- [X3] X-Men: The Last Stand (2006) - Action, Adventure, Drama, Suspense
 
 ### 2007
 - [DH4] Live Free or Die Hard (2007) - Action, Adventure, Suspense
+- [SP3] Spider-Man 3 (2007) - Action, Science Fiction
 
 ### 2008
 - [BM2] The Dark Knight (2008) - Action, Suspense, Drama
@@ -256,6 +264,7 @@
 - [ST1] Star Trek (2009) - Action, Adventure, Drama
 - [T4] Terminator 4: Salvation (2009)
 - The Time Traveler's Wife (2009) - Drama, Science Fiction, Fantasy
+- [X4] X-Men Origins: Wolverine (2009) - Action
 
 ### 2010
 - Inception (2010) - Science Fiction, Action, Suspense
@@ -267,6 +276,7 @@
 - Moneyball (2011) - Drama, Action
 - Super 8 (2011) - Science Fiction, Suspense
 - Too Big to Fail (2011) - Drama, Special Interest
+- [X5] X-Men: First Class (2011) - Action, Science Fiction, Adventure
 
 ### 2012
 - [BB2] Bad Boys II (2012) - Action, Comedy, Suspense
@@ -292,6 +302,7 @@
 - Interstellar (2014) - Science Fiction, Action
 - Live Die Repeat (Edge of Tomorrow) (2014) - Action, Military and War, Drama, Science Fiction
 - Selma (2014) - Drama
+- [X6] X-Men: Days of Future Past (2014) - Action
 
 ### 2015
 - The Big Short (2015) - Drama, Comedy
@@ -311,6 +322,7 @@
 - Sully (2016) - Drama
 - [ST3] Star Trek Beyond (2016) - Science Fiction, Action
 - War Dogs (2016) - Comedy, Drama, Military and War
+- [X7] X-Men: Apocalypse (2016) - Action, Adventure
 
 ### 2017
 - [A5] Alien: Covenant (2017) - Science Fiction, Action, Adventure, Suspense, Horror
@@ -320,6 +332,7 @@
 - Founder (2017) - Drama, Comedy, Historical, Arthouse
 - The Post (2017) - Drama
 - [SW8, Ep.VIII] Star Wars: The Last Jedi (2017)
+- [X8] Logan (2017) - Action
 
 ### 2018
 - Bohemian Rhapsody (2018) - Drama
@@ -332,35 +345,24 @@
 - [Rambo4] Rambo: Last Blood (2019) - Action, Adventure
 - [SW9, Ep.IX] Star Wars: The Rise of Skywalker (2019)
 - [T6] Terminator: Dark Fate (2019)
+- [X9] X-Men: Dark Phoenix (2019) - Action, Adventure, Science Fiction
 
 ### 2020
 - 1917 (2020) - Drama, Suspense
 - [BB3] Bad Boys For Life (2020) - Action, Drama, Suspense
 - [B2] Borat Subsequent Movie Film (2020) - Comedy
-- The Gentlemen (2020) - 	Action, Comedy
+- The Gentlemen (2020) - Action, Comedy
 - The Queen's Gambit (2020)
-
-
-
-- [X1] X-Men (2000) - Action, Science Fiction
-- [X2] X2 (2003) - Action 
-- [X3] X-Men: The Last Stand (2006) - Action, Adventure, Drama, Suspense
-- [X4] X-Men Origins: Wolverine (2009) - Action
-- [X5] X-Men: First Class (2011) - Action, Science Fiction, Adventure
-- [X6] X-Men: Days of Future Past (2014) - Action
-- [X7] X-Men: Apocalypse (2016) - Action, Adventure
-- [X8] Logan (2017) - Action
-- [X9] X-Men: Dark Phoenix (2019) - Action, Adventure, Science Fiction
 
 
 # TV Shows
 
+- The X-Files (1993-2020) - Science Fiction, Suspense, Drama
 - Mad Men (2007-2015) - Drama
 - Breaking Bad (2008-2012) - Drama, Suspense
-- The Crown (-2020) - 
 - Game of Thrones (2011-2019) - Adventure, Drama, Fantasy
-- Westworld (2016-2020) - Science Fiction, Suspense, Western, Drama
-- The X-Files (1993-2020) - Science Fiction, Suspense, Drama
+- Westworld (2016-) - Science Fiction, Suspense, Western, Drama
+- The Crown (2016-) - Drama 
 
 
 
