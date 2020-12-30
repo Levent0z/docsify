@@ -1,5 +1,20 @@
 # Recommended Movies
 
+### 1939 
+- Gone with the Wind (1939) - Drama, Romance
+
+### 1962 
+- Lawrence of Arabia (1962) - Drama, Action
+
+### 1964
+- [MWNN1] A Fistful of Dollars (1964)
+
+### 1965
+- [MWNN2] For a Few Dollars More (1965)
+
+### 1967
+- [MWNN3] The Good, the Bad and the Ugly (1967) - Drama, Western, Action
+
 ### 1968
 - 2001: A Space Odyssey (1968) - Science Fiction
 - Planet of the Apes (1968) - Science Fiction
@@ -17,7 +32,7 @@
 - Jaws (1975) - Horror, Suspense
 
 ### 1976
-- [Rocky1] Rocky (1976)
+- [Rocky1] Rocky (1976) - Action, Drama, Sports
 
 ### 1977
 - Close Encounters of the Third Kind (1977) - Drama, Suspense
@@ -28,8 +43,8 @@
 
 ### 1979
 - [A1] Alien (1979) - Action, Adventure, Horror, Science Fiction, Suspense
-- Mad Max (1979) - Science Fiction, Drama, Action
-- [Rocky2] Rocky II (1979)
+- [MM1] Mad Max (1979) - Science Fiction, Drama, Action
+- [Rocky2] Rocky II (1979) - Action, Adventure, Sports, Drama
 
 ### 1980
 - Airplane! (1980) - Comedy
@@ -42,9 +57,9 @@
 ### 1982
 - Airplane II: The Sequel (1982) - Comedy, Science Fiction
 - [BR1] Blade Runner (1982) - Science Fiction, Action
-- Mad Max 2: The Road Warrior (1982) - Action, Adventure, Fantasy
-- [Rambo 1] Rambo: First Blood (1982) - Action, Adventure
-- [Rocky3] Rocky III (1982)
+- [MM2] Mad Max 2: The Road Warrior (1982) - Action, Adventure, Fantasy
+- [Rambo1] Rambo: First Blood (1982) - Action, Adventure
+- [Rocky3] Rocky III (1982) - Action, Drama
 
 ### 1983
 - [SW3, Ep.VI] Star Wars: Return of the Jedi (1983)
@@ -54,19 +69,21 @@
 - [BHC1] Beverly Hills Cop (1984) - Action, Comedy, Suspense
 - [GB1] Ghostbusters (1984) - Comedy, Science Fiction
 - [IJ2] Indiana Jones and the Temple of Doom (1984)
-- [PA1] Police Academy (1984)
-- [T1] The Terminator (1984)
+- [PA1] Police Academy (1984) - Comedy
+- Scarface (1984) - Drama 
+- [T1] The Terminator (1984) - Action
 
 ### 1985
 - [BTTF1] Back to the Future (1985) - Science Fiction, Comedy, Action
-- [PA2] Police Academy 2: Their First Assignment (1985)
+- [MM3] Mad Max Beyond Thunderdome - Action, Adventure
+- [PA2] Police Academy 2: Their First Assignment (1985) - Comedy
 - [Rambo2] Rambo: First Blood II (1985) - Action, Adventure
-- [Rocky4] Rocky IV (1985) 
+- [Rocky4] Rocky IV (1985) - Action, Drama
 
 ### 1986
 - [A2] Aliens (1986) - Action, Science Fiction
 - Ferris Bueller's Day Off (1986) - Comedy
-- [PA3] Police Academy 3: Back in Training (1986)
+- [PA3] Police Academy 3: Back in Training (1986) - Action, Comedy
 - Platoon (1986) - Drama, Military and War
 - Top Gun (1986) - Action, Adventure, Drama
 
@@ -74,7 +91,8 @@
 - [BHC2] Beverly Hills Cop II (1987) - Comedy, Action, Suspense
 - Dirty Dancing (1987) - Drama, Romance
 - Overboard (1987) - Comedy
-- [PA4] Police Academy 4: Citizens on Patrol (1987)
+- [LW1] Lethal Weapon (1987) - Action, Suspense
+- [PA4] Police Academy 4: Citizens on Patrol (1987) - Comedy
 - Robocop (1987) - Action, Adventure, Suspense
 - The Running Man (1987) - Action, Science Fiction, Suspense
 - The Untouchables (1987) - Drama, Suspense
@@ -83,15 +101,16 @@
 - Beetlejuice (1988) - Comedy, Fantasy
 - [DH1] Die Hard (1988) - Action, Adventure, Drama, Suspense
 - My Stepmother is an Alien (1988) - Comedy, Science Fiction
-- [PA5] Police Academy 5: Assignment: Miami Beach (1988)
+- [PA5] Police Academy 5: Assignment: Miami Beach (1988) - Action, Comedy
 
 ### 1989
 - [BTTF2] Back to the Future Part II (1989) - Science Fiction, Action, Comedy
 - Dead Poets Society (1989) - Drama
 - [GB2] Ghostbusters II (1989) - Comedy
 - [IJ3] Indiana Jones and the Last Crusade (1989) - Action, Adventure, Suspense
+- [LW2] Lethal Weapon 2 (1989) - Action, Adventure, Comedy
 - [NG1] Naked Gun: From the Files of Police Squad! (1988) - Comedy, Suspense
-- [PA6] Police Academy 6: City Under Siege (1989)
+- [PA6] Police Academy 6: City Under Siege (1989) - Action, Comedy
 - Road House (1989) - Action
 
 ### 1990
@@ -104,18 +123,19 @@
 - The Hunt for Red October (1990) - Action, Drama, Military and War, Suspense
 - Mr. Destiny (1990) - Comedy
 - Pretty Woman (1990) - Comedy
-- [Rocky5] Rocky V (1990)
+- [Rocky5] Rocky V (1990) - Action
 - Robocop 2 (1990) - Action, Drama, Science Fiction
 - Total Recall (1990) - Science Fiction, Action
 
 ### 1991
 - [NG2] The Naked Gun 2 1/2: The Smell of Fear - Comedy
 - The Silence of the Lambs (1991) - Suspense
-- [T2] Terminator 2: Judgment Day (1991)
+- [T2] Terminator 2: Judgment Day (1991) - Action, Adventure
 
 ### 1992
 - A Few Good Men (1992) - Drama
 - [A3] Alien 3 (1992) - Action, Drama, Science Fiction
+- [LW3] Lethal Weapon 3 (1992) - Action, Suspense
 - My Cousin Vinny (1992) - Joe Pesci, Marisa Tomei, Ralph Maccio
 - Scent of a Woman (1992) - Drama
 
@@ -130,9 +150,10 @@
 - Forrest Gump (1994) - Comedy, Drama, Historical
 - Four Weddings and a Funeral (1994) - Drama
 - Interview With the Vampire: The Vampire Chronicles (1994) - Horror, Drama
+- Léon: The Professional (1994) - Action, Drama, Suspense
 - The Mask (1994) - Comedy
 - [NG3] The Naked Gun 33 1/3: The Final Insult (1994) - Comedy, Suspense
-- [PA7] Police Academy 7: Mission to Moscow (1994)
+- [PA7] Police Academy 7: Mission to Moscow (1994) - Comedy
 - Pulp Fiction (1994) - Suspense, Drama
 - The Shawshank Redemption (1994) - Drama
 - Speed (1994) - Action, Drama, Suspense, Adventure
@@ -146,6 +167,7 @@
 - Desperado (1995) - Action, Drama, Suspense
 - [DH3] Die Hard: With a Vengeance (1995) - Action, Adventure
 - Johnny Nmemonic (1995) - Science Fiction
+- Se7en (1995) - Drama, Suspense
 - The Usual Suspects (1995) - Drama, Suspense
 
 ### 1996
@@ -167,12 +189,14 @@
 - Armageddon (1998) - Action, Adventure
 - The Big Lebowski (1998) - Comedy
 - Cube (1998) - Drama, Horror, Suspense
-- Enemey of The State (1998) - Suspense, Action
+- Enemy of The State (1998) - Suspense, Action
+- [LW4] Lethal Weapon 4 (1998) - Action, Suspense
 - Saving Private Ryan (1998) - Action, Adventure, Drama, Military and War
 - U.S. Marshals (1998) - Action, Adventure, Suspense
 - You've Got Mail (1998) - Comedy, Romance, Drama
 
 ### 1999
+- American Beauty (1999) - Drama
 - [AP2] Austin Powers: The Spy Who Shagged Me (1999) - Comedy, - Action, Adventure, Suspense
 - Entrapment (1999) - Action, Drama, Suspense
 - Fight Club (1999) - Drama, Suspense
@@ -209,6 +233,7 @@
 - Undercover Brother (2002) - Action, Comedy, Young Adult Audience
 
 ### 2003
+- Finding Nemo (2003) - Kids, Animation
 - How to Lose A Guy In 10 Days (2003) - Comedy
 - [LB2] Legally Blonde 2 (2003) - Comedy
 - Identity (2003) - Suspense
@@ -249,14 +274,17 @@
 
 ### 2007
 - [DH4] Live Free or Die Hard (2007) - Action, Adventure, Suspense
+- Ratatouille (2007) - Kids, Animation
 - [SP3] Spider-Man 3 (2007) - Action, Science Fiction
 
 ### 2008
 - [BM2] The Dark Knight (2008) - Action, Suspense, Drama
 - [IJ4] Indiana Jones and the Kingdom of the Crystal Skull (2008)
 - [JB2] Quantum of Solace (2008) - Action
+- Slumdog Millionaire (2008) - International, Drama, Action, Arthouse
 - Valkyrie (2008) - Drama, Action, Suspense
 - W. (2008) - Drama
+- Wall-E (2008) - Science Fiction, Animation, Action, Kids
 - The X-Files: I Want To Believe (2008) - Science Fiction
 
 ### 2009
@@ -281,6 +309,7 @@
 
 ### 2012
 - [BB2] Bad Boys II (2012) - Action, Comedy, Suspense
+- Django Unchained (2012) - Action, Drama, Western
 - Life of Pi (2012) - Action, Adventure, Drama, Fantasy
 - Lincoln (2012) - Drama
 - [MB3] Men In Black 3 (2012) - Science Fiction, Comedy, Action
@@ -304,6 +333,7 @@
 - Live Die Repeat (Edge of Tomorrow) (2014) - Action, Military and War, Drama, Science Fiction
 - Selma (2014) - Drama
 - The Theory of Everything (2014) - Drama, Romance
+- Whiplash (2014) - Drama
 - [X6] X-Men: Days of Future Past (2014) - Action
 
 ### 2015
@@ -342,6 +372,7 @@
 
 ### 2019
 - Ford v Ferrari (2019) - Drama
+- Joker (2019) - Drama, Suspense
 - Knives Out (2019) - Comedy
 - Once Upon a Time in Hollywood (2019) - Action, Adventure, Drama, Suspense
 - [Rambo4] Rambo: Last Blood (2019) - Action, Adventure
@@ -359,12 +390,14 @@
 
 # TV Shows
 
+- Seinfeld (1989-1998) - Comedy
 - The X-Files (1993-2020) - Science Fiction, Suspense, Drama
 - Mad Men (2007-2015) - Drama
 - Breaking Bad (2008-2012) - Drama, Suspense
 - Game of Thrones (2011-2019) - Adventure, Drama, Fantasy
 - Westworld (2016-) - Science Fiction, Suspense, Western, Drama
 - The Crown (2016-) - Drama 
+- Devs (2020)
 
 
 
