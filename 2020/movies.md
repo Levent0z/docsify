@@ -217,6 +217,7 @@
 - [MX3] The Matrix Revolutions (2003) - Action, Science Fiction, Suspense
 - The Pianist (2003) - Drama
 - [T3] Terminator 3: Rise of the Machines (2003)
+- The Last Samurai (2003) - Action, Adventure, Drama
 - [X2] X2 (2003) - Action 
 
 ### 2004
@@ -302,6 +303,7 @@
 - Interstellar (2014) - Science Fiction, Action
 - Live Die Repeat (Edge of Tomorrow) (2014) - Action, Military and War, Drama, Science Fiction
 - Selma (2014) - Drama
+- The Theory of Everything (2014) - Drama, Romance
 - [X6] X-Men: Days of Future Past (2014) - Action
 
 ### 2015
@@ -329,7 +331,7 @@
 - [BR2] Blade Runner 2049 (2017) - Science Fiction, Action, Drama, Suspense
 - Darkest Hour (2017) - Drama
 - Dunkirk (2017) - Action, Military and War, Suspense, Historical, Drama
-- Founder (2017) - Drama, Comedy, Historical, Arthouse
+- The Founder (2017) - Drama, Comedy, Historical, Arthouse
 - The Post (2017) - Drama
 - [SW8, Ep.VIII] Star Wars: The Last Jedi (2017)
 - [X8] Logan (2017) - Action
