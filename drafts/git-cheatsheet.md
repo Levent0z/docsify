@@ -7,12 +7,30 @@ $ git config --local user.name "FIRST LAST" # Replace with your full name
 $ git add * # adds most files, but not those that start with '.'
 ```
 
+```sh
+$ git remote -v
+$ git remote add upstream 
+```
+
+```sh
+$ git pull
+...
+Automatic merge failed; fix conflicts and then commit the result.
+$ git merge --abort
+,,,
+
 
 ### Tags
 ```sh
 $ git tag TAGNAME REF # Add tag
 $ git tag -d TAGNAME # Delete local tag (from HEAD)
 $ git push --delete origin TAGNAME # Delete remote tag
+```
+
+
+### Diffing
+```sh
+$ git difftool HEAD~1 HEAD
 ```
 
 
@@ -61,8 +79,30 @@ function git_branch_text() {
   [[ -n "$gb" ]] && echo "$gb$(parse_git_dirty)"  
 }
 
-export PS1="\n\[\e[1;37m\]\t \[\e[1;33m\]\h \[\e[1;36m\]\w \[\e[1;31m\]\$(git_branch_text)\n\[\e[1;36m\]o>\[\e[0;37m\]"
 
 #export GIT_SSH_COMMAND="ssh -i /Users/levent0z/.ssh/levent0z_id_rsa"
 
+```
+
+
+# Cherry-Pick from another branch
+```sh
+# First add the remote to the source branch. If the repo is on local, use absolute path for REPOURL
+$ git remote add REMOTELABEL REPOURL
+$ git fetch REMOTELABEL
+# Switch to the git branch you want to cherry-pick into, use -b if crating new branch:
+$ git checkout TARGETBRANCH
+$ git cherry-pick SHA
+# If there are merge conflicts, fix them in a code editor, add them with `git add` and then:
+$ git cherry-pick --continue
+```
+
+# GPG
+
+```sh
+brew install gnupg
+gpg --full-generate-key   // Use 4096 byte size
+gpg --list-keys --keyid-format LONG
+gpg --armor --export keyID
+# Next, copy output with begin/end terminators into GitHub
 ```

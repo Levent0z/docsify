@@ -35,7 +35,7 @@
       // loadNavbar: true,
       // mergeNavbar: true,
       maxLevel: 4,
-      // subMaxLevel: 0, // Buggy for non-zero
+      // subMaxLevel: 0, // Buggy for non-zero (should be 1)
       auto2top: true,
       search: {
         noData: {
@@ -50,7 +50,8 @@
           '/zh-cn/': '搜索',
           '/tr-tr/': 'Arama',
           '/': 'Search'
-        }
+        },
+        //hideOtherSidebarContent: true,
       },
       tabs: {
         persist: true,      // default
@@ -58,15 +59,37 @@
         theme: 'classic', // default
         tabComments: true,      // default
         tabHeadings: true       // default
-      }
+      }//,
+    //  toc: { // https://github.com/mrpotatoes/docsify-toc
+    //    headings: 'h2, h3',
+    //    scope: '.markdown-section',
+    //    title: 'Table of Contents'
+    //  },
+    //  plugins: [
+    //    (hook, vm) => {
+    //      hook.beforeEach((markdown) => {
+    //      });
+    //      hook.afterEach((html, next) => {
+    //        // https://web.dev/native-lazy-loading/
+    //        next(html.replace(/<img/ig, '<img loading="lazy"'));
+    //      });
+    //      hook.mounted(() => {
+    //      });
+    //    }
+    //  ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script> -->
 
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
   <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+
+  <!-- "node_modules/docsify-copy-code/dist/docsify-copy-code.js" 
+  "node_modules/docsify-toc/dist/toc.js"
+  "node_modules/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.js" -->
 
   <!-- https://github.com/PrismJS/prism/tree/gh-pages/components -->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
@@ -75,4 +98,5 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
 
 </body>
+
 </html>
