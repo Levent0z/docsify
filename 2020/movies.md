@@ -290,6 +290,7 @@
 ### 2009
 - Defiance (2009) - Drama, Military and War, Suspense, Action
 - Inglorious Basterds (2009) - Drama
+- Moon (2009) - Action, Science Fiction, Suspense, Drama
 - [ST1] Star Trek (2009) - Action, Adventure, Drama
 - [T4] Terminator 4: Salvation (2009)
 - The Time Traveler's Wife (2009) - Drama, Science Fiction, Fantasy
@@ -385,7 +386,6 @@
 - [BB3] Bad Boys For Life (2020) - Action, Drama, Suspense
 - [B2] Borat Subsequent Movie Film (2020) - Comedy
 - The Gentlemen (2020) - Action, Comedy
-- The Queen's Gambit (2020)
 
 
 # TV Shows
@@ -395,6 +395,7 @@
 - Mad Men (2007-2015) - Drama
 - Breaking Bad (2008-2012) - Drama, Suspense
 - Game of Thrones (2011-2019) - Adventure, Drama, Fantasy
+- House of Cards (2013-2018) - Drama, Suspense
 - Westworld (2016-) - Science Fiction, Suspense, Western, Drama
 - The Crown (2016-) - Drama 
 - Devs (2020)
