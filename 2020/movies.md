@@ -180,6 +180,7 @@
 - Con Air (1997) - Action, Suspense
 - Contact (1997) - Science Fiction, Drama, Action, Suspense
 - Devil's Advocate (1997) - Drama, Suspense
+- The Fifth Element (1997) - Science Fiction, Action
 - Good Will Hunting (1997) - Drama
 - Liar Liar (1997) - Comedy
 - [MB1] Men In Black (1997) - Science Fiction, Comedy, Action
@@ -392,15 +393,16 @@
 
 - Seinfeld (1989-1998) - Comedy
 - The X-Files (1993-2020) - Science Fiction, Suspense, Drama
+- The Tudors (2007-2010) - Drama, Historical
 - Mad Men (2007-2015) - Drama
 - Breaking Bad (2008-2012) - Drama, Suspense
 - Game of Thrones (2011-2019) - Adventure, Drama, Fantasy
 - House of Cards (2013-2018) - Drama, Suspense
+- Vikings (2013-2019) - Action, Adventure, Drama
+- Better Call Saul (2015-) - Comedy, Drama
 - Westworld (2016-) - Science Fiction, Suspense, Western, Drama
 - The Crown (2016-) - Drama 
-- Devs (2020)
-
-
+- Devs (2020) - Science Fiction
 
 
 
