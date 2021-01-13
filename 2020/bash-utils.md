@@ -290,3 +290,9 @@ curl -X POST \
     --data 'key2=value2' \
     --data-urlencode 'key3=value3' 
     --data-urlencode 'key4=value4'
+
+
+## Time a command's duration
+```sh
+time
+```
