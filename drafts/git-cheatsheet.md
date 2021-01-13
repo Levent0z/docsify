@@ -110,3 +110,10 @@ gpg --armor --export keyID
 
 ## Troubleshooting with GPG
 - [gpg failed to sign the data](https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/55646482#55646482)
+
+
+
+# GitHub Markdown
+
+To create an anchor to a heading in github flavored markdown. Add - characters between each word in the heading and wrap the value in parens (#some-markdown-heading) so your link should look like so:
+[Heading Example](#heading-example)

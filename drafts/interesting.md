@@ -14,3 +14,37 @@
 https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
 
 > The password to your VM is "Passw0rd!"
+
+
+## Graphviz
+
+[Quick Introduction](https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html)
+[Online Playground](http://magjac.com/graphviz-visual-editor)
+[Documentation](https://www.graphviz.org/documentation/)
+
+### Invisible node
+```
+node_		 [
+			fixedsize=true,
+			height=0,
+			shape="",
+			style=invis,
+			width=0];
+```
+
+### Connect subgraphs
+
+put `compound=true` in the graph.
+Use this approach:
+```
+v1 -> v2 [ltail=cluster0,lhead=cluster1];
+```
+
+
+### Portrait vs Landscape
+
+[Example](https://stackoverflow.com/questions/28913213/graphviz-arranging-clusters-left-to-right-with-contents-top-to-bottom)
+// rankdir can be top-bottom (TB) or left-right (LR).
+// Default is TB, which lays out clusters LR.
+// If you want cluster nodes to be TB, set graph's rankdir to LR.
+graph [rankdir=LR]
