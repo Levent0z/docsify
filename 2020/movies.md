@@ -227,6 +227,7 @@
 ### 2002
 - [AP3] Austin Powers in Goldmember (2002) - Comedy
 - Catch Me If You Can (2002) - Suspense
+- Gangs Of New York (2002) - Drama
 - [MB2] Men In Black II (2002) - Science Fiction, Comedy, Action
 - The Minority Report (2002) - Action, Adventure, Drama, Science Fiction, Suspense
 - [SP1] Spider-Man (2002) - Science Fiction, Action
@@ -303,6 +304,7 @@
 - The Social Network (2010) - Comedy, Drama
 
 ### 2011
+- The Iron Lady (2011) - Drama
 - [MI4] Mission Impossible IV - Ghost Protocol (2011)
 - Moneyball (2011) - Drama, Action
 - Super 8 (2011) - Science Fiction, Suspense
@@ -393,6 +395,7 @@
 
 - Seinfeld (1989-1998) - Comedy
 - The X-Files (1993-2020) - Science Fiction, Suspense, Drama
+- Curb Your Enthusiasm (2000-2020) - Comedy
 - The Tudors (2007-2010) - Drama, Historical
 - Mad Men (2007-2015) - Drama
 - Breaking Bad (2008-2012) - Drama, Suspense
@@ -402,6 +405,7 @@
 - Better Call Saul (2015-) - Comedy, Drama
 - Westworld (2016-) - Science Fiction, Suspense, Western, Drama
 - The Crown (2016-) - Drama 
+- Ramy (2019-2020) - Comedy
 - Devs (2020) - Science Fiction
 
 
