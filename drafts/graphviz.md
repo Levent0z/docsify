@@ -1,6 +1,6 @@
 # Graphviz
 
-This is a quick description of Graphviz, a set of graphing technologies originally developed by AT&T. Graphviz generates visuals based on text-based description of graphs. To be clear, "graph" in this context is a set of nodes optionally connected to other node. Graphviz is not an all-purpose diagraming technology like Visio, Lucid Chart or Draw.io or even (gasp!) PowerPoint, but is quite powerful none-the-less. 
+This is a quick description of Graphviz, a set of graphing technologies originally developed by AT&T. Graphviz generates visuals based on the text-based description of a graph. To be clear, a "graph" in this context is a set of nodes optionally connected to other nodes. Graphviz is not an all-purpose diagraming technology like Visio, Lucid Chart or Draw.io or even (gasp!) PowerPoint, but is quite powerful none-the-less. 
 
 ## Why Graphviz?
 Using text to describe a graph, which is easily understood visually, seems curious. So why bother? Graphviz automatically generates the graph layout (i.e. positions the nodes and the edges) so the author can focus on the essence of the graph: the elements and their relationships.
@@ -15,7 +15,7 @@ The decision to use Graphviz instead of an alternative will depend on several fa
 
 2. The familiarity of the author(s) with the Graphviz language.
 
-    All collaborators need to be familiar with the Graphviz language, which may be a deal breaker. It's easy to get started with Graphviz, the learning curve is reasonable, and generating simple graphs is straightforward. Knowledge of more advanced features are needed to achieve a certain look for the graph.
+    All collaborators need to be familiar with the Graphviz language, which may be a deal-breaker. It's easy to get started with Graphviz, the learning curve is reasonable, and generating simple graphs is straightforward. Knowledge of more advanced features are needed to achieve a certain look for the graph.
 
 3. The availability of Graphviz tools on the chosen platform.
 
