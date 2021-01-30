@@ -117,3 +117,9 @@ gpg --armor --export keyID
 
 To create an anchor to a heading in github flavored markdown. Add - characters between each word in the heading and wrap the value in parens (#some-markdown-heading) so your link should look like so:
 [Heading Example](#heading-example)
+
+
+# To reset the folder back to factory-settings (i.e. remove generated folders)
+```sh
+git clean -fdx
+```

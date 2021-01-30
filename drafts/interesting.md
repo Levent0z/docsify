@@ -48,3 +48,11 @@ v1 -> v2 [ltail=cluster0,lhead=cluster1];
 // Default is TB, which lays out clusters LR.
 // If you want cluster nodes to be TB, set graph's rankdir to LR.
 graph [rankdir=LR]
+
+
+## Turn off bouncing icon
+
+```sh
+$ defaults write com.apple.dock no-bouncing -bool TRUE
+$ killall Dock
+```
