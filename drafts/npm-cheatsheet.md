@@ -80,3 +80,23 @@ npm config set strict-ssl false
 npm version NEWVERSION -m 'COMMITMESSAGE'
 npm publish ./dist --loglevel verbose
 ```
+
+# Upgrade NPM
+```
+npm install npm@latest -g
+```
+
+# Upgrade Node
+Method 1, using Node Version Manager
+(Updates node in $HOME/.nvm/versions/node, adds to path)
+``` 
+nvm install node --reinstall-packages-from=node
+```
+
+Method 2
+Using brew, Updates node in /usr/local/bin/node
+```sh
+brew upgrade node
+```
+
+
