@@ -17,6 +17,7 @@ $ npm config set registry http://registry.npmjs.org/
 ```
 
 ## Example contents of .npmrc
+
 ```
 //npm-url-path/:always-auth=true
 //npm-url-path/:_authToken="gobbledygook"
@@ -26,6 +27,7 @@ registry=https://registry.npmjs.org
 ```
 
 To get the authtoken, you can do:
+
 ```
 echo -n USERNAME:PASSWORD | base64
 ```
@@ -34,39 +36,31 @@ echo -n USERNAME:PASSWORD | base64
 npm version (major|minor|patch)  # Set the new version to a number
 ```
 
-
 https://nodejs.dev/learn/find-the-installed-version-of-an-npm-package
 npm list PACKAGENAME
 npm list -g PACKAGENAME
 npm list -g --depth 0
-
 
 npm outdated
 https://docs.npmjs.com/updating-packages-downloaded-from-the-registry
 
 [npm update](https://docs.npmjs.com/cli/v6/commands/npm-update)
 Updates outdated packages but
+
 - ^ will not touch packages with major version < 1
 - ^ will not upgrade to major versions
 
 Manually update package.json then:
+
 ```
 npm update packagename
 ```
-
-
 
 caret semantics for version < 1.0.0
 
 https://stackoverflow.com/questions/16073603/how-do-i-update-each-dependency-in-package-json-to-the-latest-version
 
-
-
 npm completion >> ~/.bash_profile
-
-
-
-
 
 ```
 yarn config set "strict-ssl" false
@@ -76,27 +70,55 @@ npm config set strict-ssl false
 ```
 
 # Publish
+
 ```
 npm version NEWVERSION -m 'COMMITMESSAGE'
 npm publish ./dist --loglevel verbose
 ```
 
 # Upgrade NPM
+
 ```
 npm install npm@latest -g
 ```
 
 # Upgrade Node
+
 Method 1, using Node Version Manager
 (Updates node in $HOME/.nvm/versions/node, adds to path)
-``` 
+
+```
 nvm install node --reinstall-packages-from=node
 ```
 
 Method 2
 Using brew, Updates node in /usr/local/bin/node
+
 ```sh
 brew upgrade node
 ```
 
+# Using badges in markdown
 
+Example
+
+```markdown
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![Version](https://img.shields.io/npm/v/doppler-cli.svg)](https://npmjs.org/package/doppler-cli)
+[![Downloads/week](https://img.shields.io/npm/dw/doppler-cli.svg)](https://npmjs.org/package/doppler-cli)
+[![License](https://img.shields.io/npm/l/doppler-cli.svg)](https://github.com/loz/doppler-cli/blob/master/package.json)
+```
+
+# Using config vars in package.json
+
+Prefix config key with `$npm_package_config_`:
+
+```json
+    "config": {
+        "KEYNAME": "value"
+    },
+    "scripts": {
+        "script": "cliname -argname=$npm_package_config_KEYNAME"
+    }
+
+```
