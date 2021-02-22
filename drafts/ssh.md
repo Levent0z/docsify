@@ -3,9 +3,11 @@
 Local: 
 Remote: loz-wsm
 
-Note: Remove unnecessary entries from `~/.ssh/known_hosts`
-
-
+Note: Remove  entries for the REMOTEHOST from `~/.ssh/known_hosts`
+Note: May need to flushdns
+```sh
+alias flushdns='sudo killall -HUP mDNSResponder; say dns cleared successfully'
+```
 
 ```sh
 REMOTEHOST='MYREMOTEHOST.MYDOMAIN.com' # Set this to the FQDN of your remote host
@@ -24,4 +26,9 @@ alias sish="ssh -i $HOME/.ssh/$KEYNAME -o StrictHostKeyChecking=no -o UserKnownH
 sicp ~/.bash_profile $REMOTEHOST:/Users/loz/
 sish $REMOTEHOST
 ```
+
+
+
+
+https://superuser.com/questions/141344/dont-add-hostkey-to-known-hosts-for-ssh
 
