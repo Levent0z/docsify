@@ -123,3 +123,8 @@ To create an anchor to a heading in github flavored markdown. Add - characters b
 ```sh
 git clean -fdx
 ```
+
+
+# Turn of GPG commit signing locally
+git config commit.gpgsign false
+
