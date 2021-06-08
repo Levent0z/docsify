@@ -296,3 +296,14 @@ curl -X POST \
 ```sh
 time
 ```
+
+## Strip substrings from a variable
+Example: Substitute https with nothing:
+```sh
+URL_WITHOUT_HTTPS=$( echo ${URL//https:} )
+```
+
+Example: Substitute https with http:
+```sb
+URL='https://blah' && echo ${URL/https/http}
+```

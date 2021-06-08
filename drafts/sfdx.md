@@ -106,3 +106,12 @@ sfdx force:data:soql:query -q "SELECT Id, name, industry, Type, NumberOfEmployee
 ```
 sfdx force:org:delete
 ```
+
+# Packages
+```
+sfdx force:package:list
+
+sfdx force:package:install --package demo-pkgA@0.1.0.1 --targetusername sub1 --instalationkey test1234 --wait 20
+```
+
+In unlocked packages and 2GPs (2nd gen), `@namespaceAccessible` classes will be accessible only by classes in the same namespace. 
