@@ -1,3 +1,5 @@
+# NPM Cheatsheet
+
 ```sh
 $ npm init # creates package.json
 ```
@@ -69,20 +71,20 @@ cat ~/.yarnrc
 npm config set strict-ssl false
 ```
 
-# Publish
+## Publish
 
 ```
 npm version NEWVERSION -m 'COMMITMESSAGE'
 npm publish ./dist --loglevel verbose
 ```
 
-# Upgrade NPM
+## Upgrade NPM
 
 ```
 npm install npm@latest -g
 ```
 
-# Upgrade Node
+## Upgrade Node
 
 Method 1, using Node Version Manager
 (Updates node in $HOME/.nvm/versions/node, adds to path)
@@ -98,7 +100,7 @@ Using brew, Updates node in /usr/local/bin/node
 brew upgrade node
 ```
 
-# Using badges in markdown
+## Using badges in markdown
 
 Example
 
@@ -109,7 +111,10 @@ Example
 [![License](https://img.shields.io/npm/l/doppler-cli.svg)](https://github.com/loz/doppler-cli/blob/master/package.json)
 ```
 
-# Using config vars in package.json
+## Get version from package.json
+npm -s run env echo '$npm_package_version'
+
+## Using config vars in package.json
 
 Prefix config key with `$npm_package_config_`:
 
@@ -122,3 +127,17 @@ Prefix config key with `$npm_package_config_`:
     }
 
 ```
+
+## Check whether the current package version is already published
+```sh
+    PACKVER=`npm -s run env echo '$npm_package_version'` # Get version
+    PACKNAME=`npm -s run env echo '$npm_package_name'` # Get package name
+    npm view $PACKNAME@$PACKVER dist.tarball # Display the path if exists, nothing otherwise
+```
+
+
+[Lerna Commands](https://github.com/lerna/lerna/tree/main/commands)
+
+[Migrating to Lerna](https://riner.codes/moving-a-component-library-to-lerna-part-1/)
+
+

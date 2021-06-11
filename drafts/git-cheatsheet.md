@@ -107,6 +107,9 @@ gpg --armor --export keyID
 # Next, copy output with begin/end terminators into GitHub
 ```
 
+# Turn of GPG commit signing locally
+git config commit.gpgsign false
+
 
 ## Troubleshooting with GPG
 - [gpg failed to sign the data](https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/55646482#55646482)
@@ -124,7 +127,19 @@ To create an anchor to a heading in github flavored markdown. Add - characters b
 git clean -fdx
 ```
 
+# Clone via HTTPS & Personal Access Token
 
-# Turn of GPG commit signing locally
-git config commit.gpgsign false
+1. In GitHub.com, go to your User > Settings > Developer settings > Personal access tokens
+2. Generate new token, copy the text 
+3. You can now do:
+   
+   ```sh
+   git clone https://USERNAME:PERSONALACCESSTOKEN@GITHOST/ORG/REPO.git
+   ```
 
+# Deep-Clean
+
+```sh
+git clean -n -dX # Dry run
+git clean -f -dX # The real thing (include untracked files and folders)
+```

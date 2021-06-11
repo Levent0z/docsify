@@ -27,8 +27,13 @@ sicp ~/.bash_profile $REMOTEHOST:/Users/loz/
 sish $REMOTEHOST
 ```
 
+## Basic Copy Example
+```sh
+scp USERNAME@HOSTNAME:/Users/USERNAME/FILE* .
+# Asks for password
+# If 2FA is enabled, check your authenticator. If it times out, it will ask for "Verification Code"
+```
 
-
-
+## Misc
 https://superuser.com/questions/141344/dont-add-hostkey-to-known-hosts-for-ssh
 

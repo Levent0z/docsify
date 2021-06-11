@@ -307,3 +307,14 @@ Example: Substitute https with http:
 ```sb
 URL='https://blah' && echo ${URL/https/http}
 ```
+
+## Create a multi-line file
+Pick a keyword known not to exist in the contents of the file to be created, e.g. EOFKEY
+
+```sh
+cat << EOFKEY > FILENAME
+LINE1
+LINE2
+...
+EOFKEY
+```
