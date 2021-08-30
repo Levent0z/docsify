@@ -141,3 +141,23 @@ Prefix config key with `$npm_package_config_`:
 [Migrating to Lerna](https://riner.codes/moving-a-component-library-to-lerna-part-1/)
 
 
+## Publish Scoped
+```sh
+mkdir tmp
+cd tmp
+npm init # use packaage name = @MYSCOPE/test1
+cat << EOFKEY > index.js
+console.log('hello');
+EOFKEY
+npm login --registry=https://registry.npmjs.org --scope=MYSCOPE
+npm pack
+npm publish --registry=https://registry.npmjs.org --scope=MYSCOPE --access=public
+```
+
+## Publish non-scoped
+- use a unique name in package.json that doesn't exist in NPM. (Don't prefix with `@`)
+- follow the steps above (scope arg is ignored)
+- Login to npmjs.com with the user that published the package
+- Go to Organizations > Teams > developers > Packages
+- Put in the name of the package and click `+ Add Existing Package`
+- The package should now be available under the org

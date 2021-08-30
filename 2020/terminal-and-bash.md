@@ -851,7 +851,7 @@ function se() {
 - `$_` The last argument of previous command
 - `$@` Expands to all command-line parameters separated by spaces
 - `$#` Number of arguments received by the script
-- ... there are others.
+- ... there are others. [GNU reference](https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html)
 
 
 # Gotchas - a Reminder
