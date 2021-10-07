@@ -1,2 +1,7 @@
 {
+    "window.title": "LOZ Docsify",
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#228888",
+        "activityBar.background": "#006666"
+    }
 }

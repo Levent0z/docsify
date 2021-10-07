@@ -318,3 +318,7 @@ LINE2
 ...
 EOFKEY
 ```
+
+## More Utility Scripts
+https://github.com/alrra/dotfiles/blob/main/src/os/utils.sh
+
