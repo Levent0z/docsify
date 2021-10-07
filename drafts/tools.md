@@ -35,4 +35,6 @@
 - [Quip](https://quip.com/) - Living Documents
   - `brew install --cask quip`
 
-## Windows Only
+## Chrome Extensions
+
+- [Snippets](https://chrome.google.com/webstore/detail/snippets/fakjeijchchmicjllnabpdkclfkpbiag)
