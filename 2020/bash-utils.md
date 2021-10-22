@@ -322,3 +322,32 @@ EOFKEY
 ## More Utility Scripts
 https://github.com/alrra/dotfiles/blob/main/src/os/utils.sh
 
+## Grep replacement
+`rg`
+
+## Using sed to replace lines in place
+
+```sh
+sed -i '' -E 's/^REPLACETHIS.+$/WITHTHIS/g' FILENAME
+```
+
+## Sorted list of files (folders shown first, includes coloring)
+```sh
+script -q /dev/null ls -hpGol1 | sort
+```
+
+
+## Replace back-tick with newline?
+```sh
+sed $'s/`/\\\n/g'
+```
+
+## SSH using key example
+```sh
+alias sshvm='ssh -i ~/vm.key vm@IP.AD.DR.ESS'
+```
+
+## All function arguments but the first one:
+- `"${@:2}"` - retains new lines
+- `"${*:2}"` - runs all of the arguments together as a single argument with spaces
+  

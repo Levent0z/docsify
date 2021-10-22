@@ -1,12 +1,30 @@
 # Tools
 
-## Developer Tools
+## Developer Tools (CLI)
 
-- [Android Studio](https://developer.android.com/studio/)
-  - `brew install --cask android-studio`
+- [Bat](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration.
+  - `brew install bat`
 - [Brew](https://brew.sh) - Package Manager
   - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
   - This will take a while.
+- [Fuzzy Find (fzf)](https://github.com/junegunn/fzf)
+  - `brew install fzf`
+- [grc/grcat](https://github.com/garabik/grc) - Generic Colorizer
+  - `brew install grc`
+- [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) - Node Version Manager
+  - `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash`
+- [Powerlevel10k](https://github.com/romkatv/powerlevel10k#homebrew) - A zsh theme
+  - `brew install romkatv/powerlevel10k/powerlevel10k`
+  - `echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc`
+- [Volta]()
+  - `curl https://get.volta.sh | bash`
+- [Yarn]() - Node Package Manager
+  - `npm install -g yarn`
+
+## Developer Tools (GUI)
+
+- [Android Studio](https://developer.android.com/studio/)
+  - `brew install --cask android-studio`
 - Docker
   - `brew install --cask docker`
 - [Iterm2](https://iterm2.com) - Terminal
@@ -16,6 +34,8 @@
 
 ## UI Utilities
 
+- [AltTab](https://alt-tab-macos.netlify.app/) - Window Switcher
+  - `brew install alt-tab`
 - [Kap](https://getkap.co/) Screen Recorder
   - `brew install --cask kap`
 - [Karabiner Elements](https://karabiner-elements.pqrs.org/) - Keyboard Customizer, can disable built-in keyboard upon having another
