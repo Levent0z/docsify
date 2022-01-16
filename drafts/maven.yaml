@@ -1,0 +1,57 @@
+project:
+  modelVersion: "4.0.0"
+  groupId: ""
+  artifactId: ""
+  version: ""
+  pacakaging: "" # "pom", "jar", "war"
+  name: ""
+  url: ""
+  inceptionYear: ""
+  properties:
+    "maven.compiler.source": 11
+    "maven.compiler.target": 11
+    "java.version": 11
+    "global.version": ""
+  dependencies:
+    - dependency:
+        groupId: ""
+        artifactId: ""
+        version: ""
+        scope: ""
+        optional: false # true
+  build:
+    resources:
+      - resource:
+          directory: ""
+          includes:
+            include: ""
+    plugins:
+      - plugin:
+          groupId: ""
+          artifactId: ""
+          version: ""
+          configuration:
+            someProperty: ""
+          executions:
+            - execution:
+                id: ""
+                goals:
+                  - goal: ""
+                phase: "" # "generate-sources", "test", "validate", "package", "deploy"
+  profiles:
+    - profile:
+        id: "",
+        activation: 
+          property:
+            name: ""
+            value: ""
+        # overrides for properties, build, istribution management
+  distributionManagement:
+    repository:
+      id: ""
+      url: ""
+    snapshotRepository:
+      id: ""
+      url: ""
+
+

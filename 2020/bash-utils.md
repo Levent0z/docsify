@@ -351,3 +351,7 @@ alias sshvm='ssh -i ~/vm.key vm@IP.AD.DR.ESS'
 - `"${@:2}"` - retains new lines
 - `"${*:2}"` - runs all of the arguments together as a single argument with spaces
   
+
+## List Functions
+- `typeset -f`
+- `typeset -F`

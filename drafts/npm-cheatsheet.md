@@ -112,6 +112,7 @@ Example
 ```
 
 ## Get version from package.json
+
 npm -s run env echo '$npm_package_version'
 
 ## Using config vars in package.json
@@ -129,19 +130,19 @@ Prefix config key with `$npm_package_config_`:
 ```
 
 ## Check whether the current package version is already published
+
 ```sh
     PACKVER=`npm -s run env echo '$npm_package_version'` # Get version
     PACKNAME=`npm -s run env echo '$npm_package_name'` # Get package name
     npm view $PACKNAME@$PACKVER dist.tarball # Display the path if exists, nothing otherwise
 ```
 
-
 [Lerna Commands](https://github.com/lerna/lerna/tree/main/commands)
 
 [Migrating to Lerna](https://riner.codes/moving-a-component-library-to-lerna-part-1/)
 
-
 ## Publish Scoped
+
 ```sh
 mkdir tmp
 cd tmp
@@ -155,9 +156,14 @@ npm publish --registry=https://registry.npmjs.org --scope=MYSCOPE --access=publi
 ```
 
 ## Publish non-scoped
+
 - use a unique name in package.json that doesn't exist in NPM. (Don't prefix with `@`)
 - follow the steps above (scope arg is ignored)
 - Login to npmjs.com with the user that published the package
 - Go to Organizations > Teams > developers > Packages
 - Put in the name of the package and click `+ Add Existing Package`
 - The package should now be available under the org
+
+## Misc
+
+When `NPM_CONFIG_PRODUCTION` is true, npm automatically runs all scripts in a subshell where `NODE_ENV` is "production".
