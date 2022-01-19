@@ -355,3 +355,9 @@ alias sshvm='ssh -i ~/vm.key vm@IP.AD.DR.ESS'
 ## List Functions
 - `typeset -f`
 - `typeset -F`
+
+## POST file to a URL
+
+```sh
+curl -v -H"Content-Type:text/plain" -d "@sampleCoreEnvelope.txt" "http://localhost:3002/api/uitelemetry_csv"
+```
