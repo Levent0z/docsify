@@ -2,22 +2,23 @@
 
 ## Online Tools
 
+- [Arrows](https://arrows.app)
 - [AST Explorer](https://astexplorer.net/) Abstract Syntax Tree playground
 - [AxiomSSO](http://axiomsso.herokuapp.com/Home.action) Single Sign-On testing and troubleshooting suite
 - [Groovy Online](https://www.tutorialspoint.com/execute_groovy_online.php) Playground for the Groovy language
-- [Hasher](http://s12v.github.io/hasher/) Encoder, Decoder, Hasher, etc. 
+- [Hasher](http://s12v.github.io/hasher/) Encoder, Decoder, Hasher, etc.
 - [JSONPlaceHolder](https://jsonplaceholder.typicode.com/) Fake Online REST API for Testing and Prototyping
 - [JSON Schema Tool](https://jsonschema.net/) Generate JSON schema
-from JSON
+  from JSON
 - [JSON Schema to POJO](http://www.jsonschema2pojo.org/) - Generate Plain Old Java Objects from JSON or JSON-Schema
 - [JSON Web Tokens](https://jwt.io/) Allows you to decode, verify and generate JWT
 - [Kotlin Playground](https://play.kotlinlang.org/) Online sandbox to explore Kotlin
-programming language. Browse code samples directly in the browser
+  programming language. Browse code samples directly in the browser
 - [Lightning Web Components Playground](https://developer.salesforce.com/docs/component-library/tools/playground)
 - [LWC Viewer](https://lwc-viewer.herokuapp.com/)
 - [Mockaroo](https://mockaroo.com/) Lets you generate up to 1,000 rows of realistic test data in CSV, JSON, SQL, and Excel formats.
 - [Raw.GitHack.Com](https://raw.githack.com/) Serves raw files directly from GitHub, Bitbucket or GitLab with proper Content-Type headers
-- [Repl.it](https://repl.it/) Free, collaborative, in-browser IDE to code in 50+ languages 
+- [Repl.it](https://repl.it/) Free, collaborative, in-browser IDE to code in 50+ languages
 - [RunKit + npm](https://npm.runkit.com/) Try any Node.js package right in your browser
 - [Salesforce Event Log File Browser](https://salesforce-elf.herokuapp.com/)
 - [ShellCheck](https://www.shellcheck.net/) Finds bugs in your shell scripts
@@ -31,6 +32,7 @@ programming language. Browse code samples directly in the browser
 ## JavaScript Libraries, Components & Frameworks
 
 - [Chai](https://www.chaijs.com/) A BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework
+- [Chakra.UI](https://chakra-ui.com/) A simple, modular and accessible component library that gives you the building blocks you need to build your React applications
 - [Dexie.JS](https://dexie.org/) A Minimalistic Wrapper for IndexedDB. ([Samples](https://dexie.org/docs/Samples))
 - [esm](https://github.com/standard-things/esm) The brilliantly simple, babel-less, bundle-less ECMAScript module loader.
 - [expo](https://expo.io/) With Expo tools, services, and React, you can build, deploy, and quickly iterate on native Android, iOS, and web apps from the same JavaScript codebase.
@@ -39,6 +41,7 @@ programming language. Browse code samples directly in the browser
 - [Lerna](https://github.com/lerna/lerna) A tool for managing JavaScript projects with multiple packages.
 - [LoopBack 4](https://loopback.io/doc/en/lb4/index.html) Highly extensible, open-source Node.js and TypeScript framework based on Express that enables you to quickly create APIs and microservices composed from backend systems such as databases and SOAP or REST services
 - [Monaco Editor](https://microsoft.github.io/monaco-editor/) The Monaco Editor is the code editor that powers VS Code.
+- [Papa Parse](https://www.papaparse.com/) The powerful, in-browser CSV parser for big boys and girls
 - [Popper](https://popper.js.org/) Tooltip & Popover Positioning Engine
 - [Querystring](https://www.npmjs.com/package/querystring) Node's querystring module for all engines
 - [Rebound](https://www.npmjs.com/package/rebound) Simple library that models Spring dynamics for the purpose of driving physical animations.
@@ -48,16 +51,16 @@ programming language. Browse code samples directly in the browser
 - [Velocity](http://velocityjs.org/) Animation engine with the same API as jQuery's $.animate()
 - [Vulcan.JS](http://vulcanjs.org/) The full-stack React+GraphQL framework
 
-
 ## Chrome Extensions
+
 - [Salesforce Lightning Inspector](https://chrome.google.com/webstore/detail/salesforce-lightning-insp/pcpmcffcomlcjgpcheokdfcjipanjdpc)
 - [Salesforce Workbench Tools for Google Chrome](https://chrome.google.com/webstore/detail/salesforce-workbench-tool/nanhambbggdgkloeldahjngdmngjgmhk)
 - [Snippets](https://chrome.google.com/webstore/detail/snippets/fakjeijchchmicjllnabpdkclfkpbiag?hl=en-US)
 - [Tab to Window/Popup](https://chrome.google.com/webstore/detail/tab-to-windowpopup-keyboa/adbkphmimfcaeonicpmamfddbbnphikh/related?hl=en)
 
 ## Chrome Extension Development
-[Sample Extensions](https://developer.chrome.com/extensions/samples)
 
+[Sample Extensions](https://developer.chrome.com/extensions/samples)
 
 ## Documentation
 
@@ -83,6 +86,7 @@ programming language. Browse code samples directly in the browser
 - [Software Engineering Daily](https://softwareengineeringdaily.com/)
 
 ## Interesting Web Sites
+
 - [100,000 Stars](http://stars.chromeexperiments.com/)
 - [The 12-Factor App](https://12factor.net/)
 - [APIs](https://apis.guru/browse-apis/)
@@ -100,6 +104,7 @@ programming language. Browse code samples directly in the browser
 ## Installable Applications
 
 - [HTTP Toolkit](https://httptoolkit.tech/)
+
   - Intercept & view all your HTTP(S)
   - Mock endpoints or entire servers
   - Rewrite, redirect, or inject errors
@@ -107,6 +112,7 @@ programming language. Browse code samples directly in the browser
 - [Tig](https://jonas.github.io/tig/) - Text-mode interface for Git
 
 ## CLI Reference
+
 - [Bash](https://ss64.com/osx/) An A-Z Index of the Apple macOS command line
 - [Bazel](https://docs.bazel.build/versions/master/command-line-reference.html)
 - [P4](https://www.perforce.com/manuals/v15.1/cmdref/chapter.introduction.html#introduction.help)
@@ -126,15 +132,14 @@ programming language. Browse code samples directly in the browser
 
 - [Code Interview](https://codeinterview.io/) Lets you conduct hassle-free technical interviews in a real-time shared coding environment.
 - [Planoly](https://www.planoly.com) Simplifying
-Social Marketing
+  Social Marketing
 - [Travis CI](https://travis-ci.org)
-
 
 ## Curated Lists
 
 - [Awesome GRPC](https://github.com/grpc-ecosystem/awesome-grpc)
 - [JSON Schema Store](https://www.schemastore.org/json/)
-- [Resources for Staff-plus engineers](https://lethain.com/staff-plus-eng-resources/) 
+- [Resources for Staff-plus engineers](https://lethain.com/staff-plus-eng-resources/)
 
 ## More
 

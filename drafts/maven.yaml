@@ -12,6 +12,11 @@ project:
     "maven.compiler.target": 11
     "java.version": 11
     "global.version": ""
+  parent:
+    groupId: ""
+    version: ""
+    artifactId: ""
+    relativePath: ""
   dependencies:
     - dependency:
         groupId: ""
@@ -23,8 +28,19 @@ project:
     resources:
       - resource:
           directory: ""
+          targetPath: ""
           includes:
-            include: ""
+            - include: ""
+          excludes:
+            - exclude: ""
+    testResources:
+    - testResource:
+        directory: ""
+        targetPath: ""
+        includes:
+          - include: ""
+        excludes:
+          - exclude: ""     
     plugins:
       - plugin:
           groupId: ""
