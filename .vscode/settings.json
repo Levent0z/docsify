@@ -3,5 +3,6 @@
     "workbench.colorCustomizations": {
         "titleBar.activeBackground": "#228888",
         "activityBar.background": "#006666"
-    }
+    },
+    "editor.minimap.enabled": false
 }
