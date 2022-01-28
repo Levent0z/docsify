@@ -67,6 +67,8 @@
 
 ## Web
 
-- ## [query-string](https://www.npmjs.com/package/query-string)
+- [passport](https://www.npmjs.com/package/passport)
+  - Express-compatible authentication middleware
+- [query-string](https://www.npmjs.com/package/query-string)
 - [serve](https://www.npmjs.com/package/serve)
   - serve a static site, single page application or just a static file (no matter if on your device or on the local network)
