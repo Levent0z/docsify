@@ -64,6 +64,8 @@
   - A collection of common interactive command line user interfaces.
 - [semver](https://www.npmjs.com/package/semver)
   - The semantic versioner for npm
+- [xterm](https://www.npmjs.com/package/xterm)
+  - lets applications bring fully-featured terminals to their users in the browser
 
 ## Web
 
