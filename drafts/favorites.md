@@ -7,6 +7,7 @@
 - [AxiomSSO](http://axiomsso.herokuapp.com/Home.action) Single Sign-On testing and troubleshooting suite
 - [Groovy Online](https://www.tutorialspoint.com/execute_groovy_online.php) Playground for the Groovy language
 - [Hasher](http://s12v.github.io/hasher/) Encoder, Decoder, Hasher, etc.
+- [Hexed](https://hexed.it/) Hex Editor
 - [JSONPlaceHolder](https://jsonplaceholder.typicode.com/) Fake Online REST API for Testing and Prototyping
 - [JSON Schema Tool](https://jsonschema.net/) Generate JSON schema
   from JSON
