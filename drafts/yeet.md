@@ -155,3 +155,32 @@ document.querySelector('.zWfAib').clientHeight
 1193
 document.querySelector('.zWfAib > [data-allocation-index="0"]').clientHeight
 873
+-------------
+```javascript
+let ob = new MutationObserver((list) => { f(list); });
+
+const parent = document.querySelector(`.zWfAib`);
+
+ob.observe(parent, { attributes: true, attributeFilter: ['class'], attributeOldValue: true });
+
+f = (list) => { for (const mut of list) {  if (mut.oldValue !== mut.target.classList.value) { console.log('before', mut.oldValue, 'after', mut.target.classList.value); } } };
+
+let f = mutationsList => {
+        for (const mutation of mutationsList) {
+            if (mutation.oldValue !== mutation.target.classList.value) {
+                const before = mutation.oldValue ? mutation.oldValue.split(' ') : [];
+                const after = mutation.target.classList ? mutation.target.classList.value.split(' ') : [];
+
+                const beforeOnly = before.filter(b => !after.contains(b));
+                const afterOnly = after.filter(a => !before.contains(a));
+
+                console.log('---', beforeOnly, afterOnly);
+            }
+        }
+    }
+
+
+let first = document.querySelector('[data-allocation-index="0"]')
+
+```
+
