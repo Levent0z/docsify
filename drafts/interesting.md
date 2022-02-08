@@ -1,20 +1,17 @@
-
 [Time-box Bomb](https://jsfiddle.net/pqL65vrc/2/) - Check for high-CPU util?
 
-
-
 ## CSS conditional selector example
+
 ```css
 :host:not(:last-child):not(:empty) {
 }
 ```
 
-
 ## Old Windows & Internet Explorer Virtual Machines
+
 https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
 
 > The password to your VM is "Passw0rd!"
-
 
 ## Graphviz
 
@@ -23,6 +20,7 @@ https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
 [Documentation](https://www.graphviz.org/documentation/)
 
 ### Invisible node
+
 ```
 node_		 [
 			fixedsize=true,
@@ -36,10 +34,10 @@ node_		 [
 
 put `compound=true` in the graph.
 Use this approach:
+
 ```
 v1 -> v2 [ltail=cluster0,lhead=cluster1];
 ```
-
 
 ### Portrait vs Landscape
 
@@ -49,10 +47,13 @@ v1 -> v2 [ltail=cluster0,lhead=cluster1];
 // If you want cluster nodes to be TB, set graph's rankdir to LR.
 graph [rankdir=LR]
 
-
 ## Turn off bouncing icon
 
 ```sh
 $ defaults write com.apple.dock no-bouncing -bool TRUE
 $ killall Dock
 ```
+
+## Highglight HTML element on hover
+
+[Example](https://stackoverflow.com/questions/4445102/google-chrome-extension-highlight-the-div-that-the-mouse-is-hovering-over)

@@ -26,3 +26,12 @@ transformIgnorePatterns: [
     "/node_modules/(?!MODULESUBFOLDERNAME)",
     "\\.pnp\\.[^\\\/]+$"
 ]
+
+
+## Before all
+
+> Here the beforeAll ensures that the database is set up before tests run. If setup was synchronous, you could just do this without beforeAll. The key is that Jest will wait for a promise to resolve, so you can have asynchronous setup as well.
+
+
+[API docs](https://jest-bot.github.io/jest/docs/api.html)
+
