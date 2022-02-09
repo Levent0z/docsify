@@ -1,7 +1,7 @@
 # React Native: Getting Started
 
 ## Documentation
-[Getting Started (Official)](https://facebook.github.io/react-native/docs/gettings-started.html)
+[Getting Started (Official)](https://reactnative.dev/docs/getting-started)
 
 ## Setup
 ```bash

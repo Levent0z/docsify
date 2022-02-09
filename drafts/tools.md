@@ -58,3 +58,7 @@
 ## Chrome Extensions
 
 - [Snippets](https://chrome.google.com/webstore/detail/snippets/fakjeijchchmicjllnabpdkclfkpbiag)
+
+## IDEA Themes
+
+- [VSCode Dark Plus Theme](https://plugins.jetbrains.com/plugin/12255-visual-studio-code-dark-plus-theme) - Install it as a plugin (not a theme)

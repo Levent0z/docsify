@@ -11,4 +11,13 @@
 - [The JWT Handbook](https://assets.ctfassets.net/2ntc334xpx65/o5J4X472PQUI4ai6cAcqg/13a2611de03b2c8edbd09c3ca14ae86b/jwt-handbook-v0_14_1.pdf)
 - [SPDX License List](https://spdx.org/licenses/)
 - [Open API Resources](https://gist.github.com/emckean/ea9797ff3eb526f4f8e9271920786a6b)
-  
+
+
+- [RebelLabs Cheat Sheets](./../assets/cheat-sheets.pdf)
+  - Java 8 Streams
+  - Java Collections
+  - Git
+  - Maven
+  - SQL
+  - Regex
+

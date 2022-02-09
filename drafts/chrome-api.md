@@ -1,7 +1,7 @@
 # Chrome API
 
-```JavaScript
-chrome.storage.sync.get(string | strin[], function(items) { } );
+```TypeScript
+chrome.storage.sync.get(string | string[], function(items) { } );
 
 chrome.storage.sync.set(object, function() {} );
 
@@ -40,7 +40,7 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 	chrome.pageAction.show(tabs[0].id);
 });
 
-content scripts are attached to a page URL, but can't utilize Chrome APIs - must use messaging API
+//content scripts are attached to a page URL, but can't utilize Chrome APIs - must use messaging API
 
 chrome.runtime.sendMessage(anyobject)
 
@@ -57,5 +57,3 @@ chrome.runtime.on
 ```
 
 Idea: add CSS automatically to the first item through content_script CSS
-
-
