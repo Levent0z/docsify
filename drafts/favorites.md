@@ -5,6 +5,7 @@
 - [Arrows](https://arrows.app)
 - [AST Explorer](https://astexplorer.net/) Abstract Syntax Tree playground
 - [AxiomSSO](http://axiomsso.herokuapp.com/Home.action) Single Sign-On testing and troubleshooting suite
+- [Excalidraw](https://excalidraw.com/) Virtual whiteboard for sketching hand-drawn like diagrams
 - [Groovy Online](https://www.tutorialspoint.com/execute_groovy_online.php) Playground for the Groovy language
 - [Hasher](http://s12v.github.io/hasher/) Encoder, Decoder, Hasher, etc.
 - [Hexed](https://hexed.it/) Hex Editor
