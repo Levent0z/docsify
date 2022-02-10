@@ -11,8 +11,13 @@
   - `brew install fzf`
 - [grc/grcat](https://github.com/garabik/grc) - Generic Colorizer
   - `brew install grc`
+- [ImageMagick](https://imagemagick.org/) - Create, edit, compose, or convert digital images.
+  - `brew install imagemagick`
+  - Example: `convert -loop 0 -delay 100 *.png out.webm ':include :type=video controls height=400px width=100%'`
 - [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) - Node Version Manager
   - `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash`
+- [Pandoc](https://pandoc.org/) - A universal document converter
+  - `brew install pandoc`
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k#homebrew) - A zsh theme
   - `brew install romkatv/powerlevel10k/powerlevel10k`
   - `echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc`
@@ -39,6 +44,8 @@
 - [Kap](https://getkap.co/) Screen Recorder
   - `brew install --cask kap`
 - [Karabiner Elements](https://karabiner-elements.pqrs.org/) - Keyboard Customizer, can disable built-in keyboard upon having another
+- [KeyCastr](https://github.com/keycastr/keycastr) - An open-source keystroke visualizer
+  - `brew install --cask keycastr`
 - [LiceCAP](https://www.cockos.com/licecap/) - Simple animated screen captures
   - `brew install --cask karabiner-elements`
 - [Rectangle](https://rectangleapp.com/) - Window Manager (replaces Spectacle)

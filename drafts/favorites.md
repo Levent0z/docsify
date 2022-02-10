@@ -36,6 +36,7 @@
 - [Chai](https://www.chaijs.com/) A BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework
 - [Chakra.UI](https://chakra-ui.com/) A simple, modular and accessible component library that gives you the building blocks you need to build your React applications
 - [Dexie.JS](https://dexie.org/) A Minimalistic Wrapper for IndexedDB. ([Samples](https://dexie.org/docs/Samples))
+- [EditorConfig](https://editorconfig.org/) Maintain consistent coding styles across various editors and IDEs.
 - [esm](https://github.com/standard-things/esm) The brilliantly simple, babel-less, bundle-less ECMAScript module loader.
 - [expo](https://expo.io/) With Expo tools, services, and React, you can build, deploy, and quickly iterate on native Android, iOS, and web apps from the same JavaScript codebase.
 - [Husky](https://github.com/typicode/husky) Git hooks made easy
@@ -139,6 +140,7 @@
 
 ## Curated Lists
 
+- [Awesome Docsify](https://github.com/docsifyjs/awesome-docsify)
 - [Awesome GRPC](https://github.com/grpc-ecosystem/awesome-grpc)
 - [JSON Schema Store](https://www.schemastore.org/json/)
 - [Resources for Staff-plus engineers](https://lethain.com/staff-plus-eng-resources/)
