@@ -1,0 +1,21 @@
+# TLDR
+
+- https://www.joshwcomeau.com/css/make-beautiful-gradients/
+- Clay.CSS (GitHub Website)
+    - micro CSS util class for applying 3D claymorphism styles to elements.
+- hacker-laws (GitHub Repo)
+    - collection of laws that people discuss when talking about development
+- Dura (GitHub Repo)
+    - snapshots changes in a repository automatically so that developers can revert their code back to any time.
+- Lancet (GitHub Repo)
+    - comprehensive, efficient, and reusable go util function library.
+- SeaTunnel (GitHub Repo)
+    - distributed data integration platform that supports real-time synchronization of massive data.
+- SynapseML (GitHub Repo)
+    - open source library for creating scalable machine learning pipelines.
+- Leaf 3 (GitHub Repo)
+    - a PHP framework for creating web apps and APIs with a clean, simple, and flexible structure.
+- sish (GitHub Repo)
+    - open source alternative to serveo/ngrok. It implements an SSH server that only handles forwarding. 
+- pytailwindcss (GitHub Repo)
+    -  standalone Tailwind CSS CLI interface that is ideal for Tailwind projects that don't need Node.js or npm.
