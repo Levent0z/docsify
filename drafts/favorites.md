@@ -44,6 +44,7 @@
 - [Lerna](https://github.com/lerna/lerna) A tool for managing JavaScript projects with multiple packages.
 - [LoopBack 4](https://loopback.io/doc/en/lb4/index.html) Highly extensible, open-source Node.js and TypeScript framework based on Express that enables you to quickly create APIs and microservices composed from backend systems such as databases and SOAP or REST services
 - [Monaco Editor](https://microsoft.github.io/monaco-editor/) The Monaco Editor is the code editor that powers VS Code.
+- [NextUI](https://nextui.org/) Beautiful, fast and modern React UI Library
 - [Papa Parse](https://www.papaparse.com/) The powerful, in-browser CSV parser for big boys and girls
 - [Popper](https://popper.js.org/) Tooltip & Popover Positioning Engine
 - [Querystring](https://www.npmjs.com/package/querystring) Node's querystring module for all engines
@@ -82,6 +83,7 @@
 - [Web Extensions made with Angular](https://cito.github.io/blog/web-ext-with-angular/)
 - [Deploy Angular Application to Heroku](https://itnext.io/how-to-deploy-angular-application-to-heroku-1d56e09c5147)
 - [How to Use Query Parameters in Angular](https://www.digitalocean.com/community/tutorials/angular-query-parameters)
+
 
 ## Podcasts
 
@@ -147,4 +149,5 @@
 
 ## More
 
+- [GitHub Actions by Example](https://www.actionsbyexample.com)
 - [JavaScript Event Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0) - Animated Video

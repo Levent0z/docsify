@@ -52,6 +52,10 @@
 - [shelljs](https://www.npmjs.com/package/shelljs)
   - Unix shell commands for Node.js
 
+## UI
+
+- [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti)
+
 ## Utilities
 
 - [base-64](https://www.npmjs.com/package/base-64)

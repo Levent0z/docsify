@@ -21,6 +21,7 @@
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k#homebrew) - A zsh theme
   - `brew install romkatv/powerlevel10k/powerlevel10k`
   - `echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc`
+- [Rich CLI](https://github.com/Textualize/rich-cli) - A command line toolbox for fancy output in the terminal 
 - [Volta]()
   - `curl https://get.volta.sh | bash`
 - [Yarn]() - Node Package Manager
