@@ -45,7 +45,10 @@
 - [LoopBack 4](https://loopback.io/doc/en/lb4/index.html) Highly extensible, open-source Node.js and TypeScript framework based on Express that enables you to quickly create APIs and microservices composed from backend systems such as databases and SOAP or REST services
 - [Monaco Editor](https://microsoft.github.io/monaco-editor/) The Monaco Editor is the code editor that powers VS Code.
 - [NextUI](https://nextui.org/) Beautiful, fast and modern React UI Library
+- [Noty](https://ned.im/noty/#/) A Dependency-free notification library
+- [Palettify](https://dobromir-hristov.github.io/palettify/#/) An eye catching image effect plugin
 - [Papa Parse](https://www.papaparse.com/) The powerful, in-browser CSV parser for big boys and girls
+- [Perfect Scrollbar](https://perfectscrollbar.com/) Minimalistic but perfect custom scrollbar plugin
 - [Popper](https://popper.js.org/) Tooltip & Popover Positioning Engine
 - [Querystring](https://www.npmjs.com/package/querystring) Node's querystring module for all engines
 - [Rebound](https://www.npmjs.com/package/rebound) Simple library that models Spring dynamics for the purpose of driving physical animations.
@@ -54,6 +57,7 @@
 - [Tiny Validator](https://www.npmjs.com/package/tv4) Use json-schema draft v4 to validate simple values and complex objects using a rich validation vocabulary.
 - [Velocity](http://velocityjs.org/) Animation engine with the same API as jQuery's $.animate()
 - [Vulcan.JS](http://vulcanjs.org/) The full-stack React+GraphQL framework
+- [Zooming](https://github.com/kingdido999/zoomingƒ) Image zoom that makes sense
 
 ## Chrome Extensions
 
@@ -146,6 +150,8 @@
 - [Awesome GRPC](https://github.com/grpc-ecosystem/awesome-grpc)
 - [JSON Schema Store](https://www.schemastore.org/json/)
 - [Resources for Staff-plus engineers](https://lethain.com/staff-plus-eng-resources/)
+- [Structured Text Tools](https://github.com/dbohdan/structured-text-tools)
+- [You need to know CSS](https://lhammer.cn/You-need-to-know-css/#/)
 
 ## More
 
