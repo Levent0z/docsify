@@ -14,6 +14,8 @@
 - [ImageMagick](https://imagemagick.org/) - Create, edit, compose, or convert digital images.
   - `brew install imagemagick`
   - Example: `convert -loop 0 -delay 100 *.png out.webm ':include :type=video controls height=400px width=100%'`
+- [jq]() - lightweight and flexible command-line JSON processor
+  - `brew install jq`
 - [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) - Node Version Manager
   - `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash`
 - [Pandoc](https://pandoc.org/) - A universal document converter
@@ -21,9 +23,14 @@
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k#homebrew) - A zsh theme
   - `brew install romkatv/powerlevel10k/powerlevel10k`
   - `echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc`
-- [Rich CLI](https://github.com/Textualize/rich-cli) - A command line toolbox for fancy output in the terminal 
+  - `p10k configure`
+- [Rich CLI](https://github.com/Textualize/rich-cli) - A command line toolbox for fancy output in the terminal
 - [Volta]()
   - `curl https://get.volta.sh | bash`
+- [xml2](https://web.archive.org/web/20160719191401/http://ofb.net/~egnor/xml2/) - Makes XML and HTML more amenable to classic UNIX text tools
+  - `brew install xml2`
+- [xq / yq](https://github.com/kislyuk/yq) - jq wrapper for YAML, XML, TOML documents
+  - `pip3 install yq`
 - [Yarn]() - Node Package Manager
   - `npm install -g yarn`
 
