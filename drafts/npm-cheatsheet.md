@@ -28,10 +28,11 @@ cafile=/absolute/local/path/somefile.pem
 registry=https://registry.npmjs.org
 ```
 
-To get the authtoken, you can do:
+To set the auth token, you can do:
 
-```
-echo -n USERNAME:PASSWORD | base64
+```sh
+AUTHTOKEN=`echo -n $NEXUS_USERNAME:$NEXUS_PASSWORD | base64`
+npm config set 'NPMREGISTRY:_authToken' '${AUTHTOKEN}'"
 ```
 
 ```sh
@@ -167,3 +168,9 @@ npm publish --registry=https://registry.npmjs.org --scope=MYSCOPE --access=publi
 ## Misc
 
 When `NPM_CONFIG_PRODUCTION` is true, npm automatically runs all scripts in a subshell where `NODE_ENV` is "production".
+
+```sh
+npm whoami --registry='https://registry.npmjs.org'
+sh "npm config set proxy $PROXYURL"
+sh "npm config set https-proxy $PROXYURL"
+```

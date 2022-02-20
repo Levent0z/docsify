@@ -31,6 +31,8 @@
   - `brew install xml2`
 - [xq / yq](https://github.com/kislyuk/yq) - jq wrapper for YAML, XML, TOML documents
   - `pip3 install yq`
+  - Using docker image to update project version in a pom.xml:
+    - `docker run --rm -v "${PWD}":/workdir mikefarah/yq -px -ox '.project.version |= "MAJOR.MINOR.BUILD"' pom.xml`
 - [Yarn]() - Node Package Manager
   - `npm install -g yarn`
 

@@ -9,7 +9,7 @@ $ git add * # adds most files, but not those that start with '.'
 
 ```sh
 $ git remote -v
-$ git remote add upstream 
+$ git remote add upstream
 ```
 
 ```sh
@@ -17,22 +17,21 @@ $ git pull
 ...
 Automatic merge failed; fix conflicts and then commit the result.
 $ git merge --abort
-,,,
-
+```
 
 ### Tags
+
 ```sh
 $ git tag TAGNAME REF # Add tag
 $ git tag -d TAGNAME # Delete local tag (from HEAD)
 $ git push --delete origin TAGNAME # Delete remote tag
 ```
 
-
 ### Diffing
+
 ```sh
 $ git difftool HEAD~1 HEAD
 ```
-
 
 # Bash Profile Additions (~/.bash_profile)
 
@@ -54,7 +53,7 @@ function gf() {
 
 # Returns 1 if git branch has changes
 function gd() {
-  if [[ $(git status 2> /dev/null | tail -n1) != *"working tree clean"* ]]; then 
+  if [[ $(git status 2> /dev/null | tail -n1) != *"working tree clean"* ]]; then
     return 1
   else
     return 0
@@ -76,7 +75,7 @@ function parse_git_branch_dirty() {
 function git_branch_text() {
   #outputs a text to use in export PS1 statement
   local gb=$(parse_git_branch)
-  [[ -n "$gb" ]] && echo "$gb$(parse_git_dirty)"  
+  [[ -n "$gb" ]] && echo "$gb$(parse_git_dirty)"
 }
 
 
@@ -84,8 +83,8 @@ function git_branch_text() {
 
 ```
 
-
 # Cherry-Pick from another branch
+
 ```sh
 # First add the remote to the source branch. If the repo is on local, use absolute path for REPOURL
 $ git remote add REMOTELABEL REPOURL
@@ -108,21 +107,20 @@ gpg --armor --export keyID
 ```
 
 # Turn of GPG commit signing locally
+
 git config commit.gpgsign false
 
-
 ## Troubleshooting with GPG
+
 - [gpg failed to sign the data](https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/55646482#55646482)
-
-
 
 # GitHub Markdown
 
 To create an anchor to a heading in github flavored markdown. Add - characters between each word in the heading and wrap the value in parens (#some-markdown-heading) so your link should look like so:
 [Heading Example](#heading-example)
 
-
 # To reset the folder back to factory-settings (i.e. remove generated folders)
+
 ```sh
 git clean -fdx
 ```
@@ -130,9 +128,9 @@ git clean -fdx
 # Clone via HTTPS & Personal Access Token
 
 1. In GitHub.com, go to your User > Settings > Developer settings > Personal access tokens
-2. Generate new token, copy the text 
+2. Generate new token, copy the text
 3. You can now do:
-   
+
    ```sh
    git clone https://USERNAME:PERSONALACCESSTOKEN@GITHOST/ORG/REPO.git
    ```
@@ -142,4 +140,17 @@ git clean -fdx
 ```sh
 git clean -n -dX # Dry run
 git clean -f -dX # The real thing (include untracked files and folders)
+```
+
+# Restore a file after it has been deleted
+
+```sh
+git rev-list HEAD -- FILENAME -n 1  # get the SHA for the latest commit that changed FILENAME
+git checkout SHA^ FILENAME # Get the file from the last commit before the SHA
+```
+
+# Clone as user with token
+
+```sh
+git clone https://$SOME_USER:$SOME_TOKEN@GITHUBHOST/ORG/REPO.git --branch BRANCH PATH
 ```
