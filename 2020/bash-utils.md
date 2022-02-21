@@ -29,6 +29,7 @@ kill -9 <pid>
 
 # Get Base64 token
 
+This can be used with `npm config set` to set the `_auth` value in `.npmrc`.
 ```sh
 echo -n 'username:password' | base64
 ```
