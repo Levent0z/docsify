@@ -141,6 +141,7 @@ git clean -fdx
 git clean -n -dX # Dry run
 git clean -f -dX # The real thing (include untracked files and folders)
 ```
+Also, check out using `-dx` argument instead.
 
 # Restore a file after it has been deleted
 

@@ -72,3 +72,13 @@ To increment the build version unconditionally:
 ```sh
 mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion} versions:commit
 ```
+
+## Mvn Arguments:
+
+- `--strict-checksums`: Fail the build if checksums don’t match
+- `--batch-mode prevents`: Maven from polluting the log with progress messages
+- `--update-snapshots`: Forces a check for updated releases and snapshots on remote repositories
+
+One can also "define" key-value pairs. For example
+
+- `-Denforcer.skip=true`: Skips checks for the [maven-enforcer-plugin](https://maven.apache.org/enforcer-archives/enforcer-1.4/maven-enforcer-plugin/
