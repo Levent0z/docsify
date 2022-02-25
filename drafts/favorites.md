@@ -35,6 +35,7 @@
 
 - [Chai](https://www.chaijs.com/) A BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework
 - [Chakra.UI](https://chakra-ui.com/) A simple, modular and accessible component library that gives you the building blocks you need to build your React applications
+- [CookieConsent](https://github.com/osano/cookieconsent/) A lightweight JavaScript plugin for alerting users about the use of cookies on your website
 - [Dexie.JS](https://dexie.org/) A Minimalistic Wrapper for IndexedDB. ([Samples](https://dexie.org/docs/Samples))
 - [EditorConfig](https://editorconfig.org/) Maintain consistent coding styles across various editors and IDEs.
 - [esm](https://github.com/standard-things/esm) The brilliantly simple, babel-less, bundle-less ECMAScript module loader.
