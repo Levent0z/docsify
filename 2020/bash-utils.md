@@ -1,16 +1,18 @@
-
 Prompt and read user input into a variable
+
 ```sh
 read -p 'Please input your name: ' USER
 read -sp 'Please input your password: ' PWD
 ```
 
 Get Date time
+
 ```sh
 NOW=`date +"%Y%m%d_%H%M%S"`
 ```
 
 # Protect against the last line not having a new line, while reading from a path
+
 ```sh
 while read LINE || [ -n "$LINE" ]; do
     echo $LINE
@@ -18,11 +20,13 @@ done < "path/to/file" >/dev/null
 ```
 
 # Ignore changes in the amount of white space
+
 ```sh
 diff -b $FILE1 $FILE2
 ```
 
 # Force kill
+
 ```sh
 kill -9 <pid>
 ```
@@ -30,6 +34,7 @@ kill -9 <pid>
 # Get Base64 token
 
 This can be used with `npm config set` to set the `_auth` value in `.npmrc`.
+
 ```sh
 echo -n 'username:password' | base64
 ```
@@ -39,13 +44,13 @@ echo -n 'username:password' | base64
 [More Info](https://2ality.com/2011/12/nodejs-shell-scripting.html)
 
 1. Put a shebang at the top of the file:
-    ```sh
-    #!/usr/bin/env node
-    ```
+   ```sh
+   #!/usr/bin/env node
+   ```
 2. Make the script executable:
-    ```sh
-    chmod u+x myscript.js
-    ```
+   ```sh
+   chmod u+x myscript.js
+   ```
 
 # List Java Processes
 
@@ -54,12 +59,13 @@ jps -l
 ```
 
 # Sample call stacks
+
 ```sh
-jstack -l <java-pid> 
+jstack -l <java-pid>
 ```
 
-
 ## Using Termenu
+
 ```
 $ echo -n "Would you like to exit? " && termenu -i Yes No Maybe
 ```
@@ -109,19 +115,19 @@ nvm_get_os ()
 }
 ```
 
-
 Create folders and sub folders:
+
 ```sh
 mkdir -p a/b/c
 ```
 
 Bash Prompt example:
+
 ```bash
 export PS1="\n\[\e[1;37m\]\t \[\e[1;33m\]\h \[\e[1;36m\]\w \[\e[1;31m\]\$(git_branch_text)\n\[\e[1;36m\]o>\[\e[0;37m\]"
 ```
 
 `local` is only usable inside a function, outside, prefer to use `declare`
-
 
 Use cat to conCATenate multiple files before sending to a processor like `terser` for JavaScript or `csso` for CSS.
 
@@ -132,7 +138,8 @@ ProductVersion:	10.15.7
 BuildVersion:	19H15
 ```
 
-### Directory Service Command Line (dscl) 
+### Directory Service Command Line (dscl)
+
 ```sh
 dscl # interactive mode, use cd to change directory, ls to list
 dscl "/Active Directory/SFDC/All Domains" -list /Groups
@@ -141,8 +148,8 @@ dscl "/Active Directory/SFDC/All Domains" -read /Groups/CodeCollab
 
 dscacheutil
 
-
 ### Identity
+
 ```sh
 $ id -nG loz # All groups loz is in
 SFDC\Domain Users localdb everyone ....
@@ -156,9 +163,11 @@ user is a member of the group
 ```
 pkg=$(cat package.json) && echo <"$pkg"
 ```
+
 ---
 
-### NPM Run 
+### NPM Run
+
 ```sh
 function npmrun() {
   echo OPTIONS
@@ -187,24 +196,23 @@ $ tput rmam # Disable line wrapping
 $ tput smam # Enable line wrapping
 ```
 
-
-
-
 ## Create Symbolic Links
+
 If you run this script from the root of the project, it will create a new rootref folder that you can then include as an entry under directories in .bazelproject:
 
 ```sh
 mkdir rootref; ls -1p | grep -v / | grep -v BUILD | grep -v bazel- | while read line; do bs=$(basename $line); ln -s $(pwd)/$bs $(pwd)/rootref/$bs; done
 ```
 
-
 ## Force RSA key for SSH-KEYGEN
+
 Specify the `-m PEM` option:
+
 ```sh
 ssh-keygen -t rsa -b 4096 -m PEM
 ```
 
-## fzf 
+## fzf
 
 [YouTube](https://www.youtube.com/watch?v=qgG5Jhi_Els)
 
@@ -222,11 +230,13 @@ fzf | xargs ls -l   # Use tab/shift-tab to select multiple items (must enable mu
 ```
 
 ### Go to folder of selected file
+
 ```sh
 cd `fzf | xargs dirname`
 ```
 
 ### Set Preview options
+
 ```sh
 fzf --preview='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300'
 ```
@@ -241,7 +251,7 @@ FD_OPTIONS="--follow --exclude .git --exclude node_modules"
 #export FZF_DEFAULT_OPTS="--no-mouse --height 50% -1 --reverse --multi --inline-info --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f3:execute(bat --style=numbers {} || less -f {}),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-y:execute-silent(echo {+} | pbcopy)'"
 export FZF_DEFAULT_OPTS="--height 50% -1 --reverse --multi --inline-info --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f3:execute(bat --style=numbers {} || less -f {}),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-y:execute-silent(echo {+} | pbcopy)'"
 
-# Use git-ls-files inside git repo, otherwise fd 
+# Use git-ls-files inside git repo, otherwise fd
 export FZF_DEFAULT_COMMAND="git ls-files --cached --others --exclude-standard I fd --type f --type l $FD_OPTIONS"
 export FZF_CTRL_T_COMMAND="fd $FD_OPTIONS"
 export FZF_ALT_C_COMMAND="fs --type d $FD_OPTIONS"
@@ -250,7 +260,6 @@ export BAT_PAGER="less -R"
 ```
 
 Ctrl+R in bash: Reverse History search
-
 
 ## URL Decode using Python
 
@@ -266,28 +275,31 @@ cat abc.txt | sed 's/^"//' | sed 's/"$//' > abc2.txt
 ```
 
 ## Find occurrences of the keyword `rimraf` in package.json in the current directory and below
+
 ```sh
 find . -type f -name "package.json" | xargs grep rimraf
 ```
 
-
 ## Display contents of file.ext in current folder and immediate subfolders
+
 ```sh
 find . -name file.ext -maxdepth 2 | xargs cat
 ```
 
 ## Find file or folders that contain keyword
+
 ```sh
 find . | grep KEYWORD
 ```
 
 ## Get Folder sizes in kilobytes (-k) of all child folders (-d0) in the given pattern, sorted as numbers (-n) in reverse order (-r) using first column (-k1)
+
 ```sh
 du -kd0 ~/sdb*/sdb* | sort -rnk1
 ```
 
-
 ## Assign default value to var
+
 ```sh
 [[ -z $1 ]] && v1='default' || v1=$1
 ```
@@ -302,11 +314,13 @@ function chexit() {
 ```
 
 ## Prompt for user input
+
 ```sh
 read -p 'y/n ' RESP; [[ $RESP == 'y' ]] && echo 'y' || echo 'n'
 ```
 
 ## Make an HTTP POST
+
 [curl](https://ss64.com/osx/curl.html)
 
 ```sh
@@ -316,27 +330,32 @@ curl -X POST \
     DESINATION_URL \
     --data 'key1=value1' \
     --data 'key2=value2' \
-    --data-urlencode 'key3=value3' 
+    --data-urlencode 'key3=value3'
     --data-urlencode 'key4=value4'
 ```
 
 ## Time a command's duration
+
 ```sh
 time
 ```
 
 ## Strip substrings from a variable
+
 Example: Substitute https with nothing:
+
 ```sh
 URL_WITHOUT_HTTPS=$( echo ${URL//https:} )
 ```
 
 Example: Substitute https with http:
+
 ```sb
 URL='https://blah' && echo ${URL/https/http}
 ```
 
 ## Create a multi-line file
+
 Pick a keyword known not to exist in the contents of the file to be created, e.g. EOFKEY
 
 ```sh
@@ -348,9 +367,11 @@ EOFKEY
 ```
 
 ## More Utility Scripts
+
 https://github.com/alrra/dotfiles/blob/main/src/os/utils.sh
 
 ## Grep replacement
+
 `rg`
 
 ## Using sed to replace lines in place
@@ -360,27 +381,30 @@ sed -i '' -E 's/^REPLACETHIS.+$/WITHTHIS/g' FILENAME
 ```
 
 ## Sorted list of files (folders shown first, includes coloring)
+
 ```sh
 script -q /dev/null ls -hpGol1 | sort
 ```
 
-
 ## Replace back-tick with newline?
+
 ```sh
 sed $'s/`/\\\n/g'
 ```
 
 ## SSH using key example
+
 ```sh
 alias sshvm='ssh -i ~/vm.key vm@IP.AD.DR.ESS'
 ```
 
 ## All function arguments but the first one:
+
 - `"${@:2}"` - retains new lines
 - `"${*:2}"` - runs all of the arguments together as a single argument with spaces
-  
 
 ## List Functions
+
 - `typeset -f`
 - `typeset -F`
 
