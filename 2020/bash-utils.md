@@ -59,15 +59,15 @@ jstack -l <java-pid>
 ```
 
 
-https://github.com/elifiner/termenu
-Can install through gitter (linked)
-
+## Using Termenu
+```
 $ echo -n "Would you like to exit? " && termenu -i Yes No Maybe
+```
 
 o>/usr/libexec/java_home
 /Library/Java/JavaVirtualMachines/sfdc-openjdk_11.0.8_11.41.54.jdk/Contents/Home
 
-
+```
 grep -r expression .
 
 while read LINE; do grep function $LINE; done <<< `find . -type f -name "*.js"`
@@ -75,14 +75,14 @@ while read LINE; do grep function $LINE; done <<< `find . -type f -name "*.js"`
 find . -type f -name "*.js" | xargs grep function
 find . -type f -name “*.js” | xargs -P4 grep expression # parallel execution, max 4 procs
 
-
 find ~/blt/app/228/patch/core/ext -type d -name "org.apache_*"
-
 
 dirname
 basename
 yes
+```
 
+```sh
 nvm_get_os ()
 {
     local NVM_UNAME;
@@ -107,51 +107,59 @@ nvm_get_os ()
     esac;
     nvm_echo "${NVM_OS-}"
 }
+```
 
 
+Create folders and sub folders:
+```sh
 mkdir -p a/b/c
+```
 
-
-
+Bash Prompt example:
+```bash
 export PS1="\n\[\e[1;37m\]\t \[\e[1;33m\]\h \[\e[1;36m\]\w \[\e[1;31m\]\$(git_branch_text)\n\[\e[1;36m\]o>\[\e[0;37m\]"
-
+```
 
 `local` is only usable inside a function, outside, prefer to use `declare`
 
 
 Use cat to conCATenate multiple files before sending to a processor like `terser` for JavaScript or `csso` for CSS.
 
-
-o>/usr/bin/sw_vers
+```sh
+$ /usr/bin/sw_vers
 ProductName:	Mac OS X
 ProductVersion:	10.15.7
 BuildVersion:	19H15
+```
 
-
-Directory Service Command Line (dscl) 
-
+### Directory Service Command Line (dscl) 
+```sh
 dscl # interactive mode, use cd to change directory, ls to list
 dscl "/Active Directory/SFDC/All Domains" -list /Groups
 dscl "/Active Directory/SFDC/All Domains" -read /Groups/CodeCollab
+```
 
 dscacheutil
 
-$ id
 
+### Identity
+```sh
 $ id -nG loz # All groups loz is in
 SFDC\Domain Users localdb everyone ....
 
 $ dsmemberutil checkmembership -U loz -G "SFDC\Domain Users"
 user is a member of the group
+```
 
 ---
 
+```
 pkg=$(cat package.json) && echo <"$pkg"
-
+```
 ---
 
 ### NPM Run 
-```bash
+```sh
 function npmrun() {
   echo OPTIONS
   # Show all key/value pairs in the "scripts" section, removing first and last lines
@@ -185,7 +193,7 @@ $ tput smam # Enable line wrapping
 ## Create Symbolic Links
 If you run this script from the root of the project, it will create a new rootref folder that you can then include as an entry under directories in .bazelproject:
 
-```bash
+```sh
 mkdir rootref; ls -1p | grep -v / | grep -v BUILD | grep -v bazel- | while read line; do bs=$(basename $line); ln -s $(pwd)/$bs $(pwd)/rootref/$bs; done
 ```
 
@@ -264,7 +272,14 @@ find . -type f -name "package.json" | xargs grep rimraf
 
 
 ## Display contents of file.ext in current folder and immediate subfolders
+```sh
 find . -name file.ext -maxdepth 2 | xargs cat
+```
+
+## Find file or folders that contain keyword
+```sh
+find . | grep KEYWORD
+```
 
 ## Get Folder sizes in kilobytes (-k) of all child folders (-d0) in the given pattern, sorted as numbers (-n) in reverse order (-r) using first column (-k1)
 ```sh
@@ -273,11 +288,23 @@ du -kd0 ~/sdb*/sdb* | sort -rnk1
 
 
 ## Assign default value to var
+```sh
 [[ -z $1 ]] && v1='default' || v1=$1
+```
 
-## Ask
+## Fail Fast with message
+
+```sh
+function chexit() {
+    # Check and exit if last return value is not 0, after echoing the message provided as the first argument.
+    [[ $? != 0 ]] && echo "$1" && exit 1
+}
+```
+
+## Prompt for user input
+```sh
 read -p 'y/n ' RESP; [[ $RESP == 'y' ]] && echo 'y' || echo 'n'
-
+```
 
 ## Make an HTTP POST
 [curl](https://ss64.com/osx/curl.html)
@@ -291,7 +318,7 @@ curl -X POST \
     --data 'key2=value2' \
     --data-urlencode 'key3=value3' 
     --data-urlencode 'key4=value4'
-
+```
 
 ## Time a command's duration
 ```sh

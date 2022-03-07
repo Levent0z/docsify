@@ -59,6 +59,8 @@ mvn dependency:tree
 
 ## Versions
 
+[Baeldung Article](https://www.baeldung.com/maven-dependency-latest-version)
+
 [Versions plugin](http://www.mojohaus.org/versions-maven-plugin/)
 
 ```sh
@@ -82,3 +84,16 @@ mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorV
 One can also "define" key-value pairs. For example
 
 - `-Denforcer.skip=true`: Skips checks for the [maven-enforcer-plugin](https://maven.apache.org/enforcer-archives/enforcer-1.4/maven-enforcer-plugin/
+
+## Example POM [Model Interpolation](https://maven.apache.org/ref/3.8.4/maven-model-builder/#Model_Interpolation) Strings
+
+- `${project.basedir}`: root folder of the module/project. Note: Also see multiModuleProjectDirectory.
+- `${project.build.directory}`: target folder
+- `${project.build.outputDirectory}`: target/classes folder
+- `${project.build.testOutputDirectory}`: target/test-classes folder
+- `${project.build.sourceDirectory}`: src/main/java folder
+- `${project.build.testSourceDirectory}`: src/test/java folder
+- `${maven.multiModuleProjectDirectory}`: root folder of a multi-pom project
+- `${project.version}`: Useful in multi-modules to get inherited version
+- `${env.VARNAME}`: Can reference environment variables
+- `${settings.VARNAME}`: Can reference properties in settings XML

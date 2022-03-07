@@ -9,11 +9,15 @@
   - This will take a while.
 - [Fuzzy Find (fzf)](https://github.com/junegunn/fzf)
   - `brew install fzf`
+- [gitter](https://github.com/elifiner/gitter) - adds non-intrusive interactive menus to the common git commands
+  - `sudo pip install gitter`
 - [grc/grcat](https://github.com/garabik/grc) - Generic Colorizer
   - `brew install grc`
 - [ImageMagick](https://imagemagick.org/) - Create, edit, compose, or convert digital images.
   - `brew install imagemagick`
   - Example: `convert -loop 0 -delay 100 *.png out.webm ':include :type=video controls height=400px width=100%'`
+- [jless](https://jless.io/) - a command-line JSON viewer
+  - `brew install jless`
 - [jq]() - lightweight and flexible command-line JSON processor
   - `brew install jq`
 - [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) - Node Version Manager
@@ -25,6 +29,8 @@
   - `echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc`
   - `p10k configure`
 - [Rich CLI](https://github.com/Textualize/rich-cli) - A command line toolbox for fancy output in the terminal
+- [termenu](https://github.com/elifiner/termenu) - A command line utility and Python library for displaying console based interactive menus
+  - Install via gitter (above)
 - [Volta]()
   - `curl https://get.volta.sh | bash`
 - [xml2](https://web.archive.org/web/20160719191401/http://ofb.net/~egnor/xml2/) - Makes XML and HTML more amenable to classic UNIX text tools

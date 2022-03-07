@@ -1,3 +1,4 @@
+# A subset of the model described in https://maven.apache.org/ref/3.8.4/maven-model/maven.html as YAML
 project:
   modelVersion: "4.0.0"
   groupId: ""

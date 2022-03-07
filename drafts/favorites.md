@@ -136,6 +136,7 @@
 - [IntelliJ IDEA](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
 - [Perforce (P4V)](https://www.perforce.com/pdf/perforce-helix-cheatsheet.pdf)
 - [Regular Expressions](https://cheatography.com/davechild/cheat-sheets/regular-expressions/pdf/)
+- [Rollup.js](https://devhints.io/rollup)
 - [VSCode](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
 ## Online Services
