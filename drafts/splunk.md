@@ -21,9 +21,9 @@ Avoid NOTS (e.g. use A AND C AND D AND E)
 spath input=field
 
 
-TERM directive (all-caps)
+`TERM()` directive (all-caps)
 prevents breaking on minor segmenters --> `/ : = @ . - $ # \\ _`
-
+(Use TERM to match values, which might have minor segmenters, exactly instead of using wild chars and partial match).
 
 Use fields instead of table (latter is a formatting command, not a filtering command)
 
