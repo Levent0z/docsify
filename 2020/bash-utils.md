@@ -413,3 +413,6 @@ alias sshvm='ssh -i ~/vm.key vm@IP.AD.DR.ESS'
 ```sh
 curl -v -H"Content-Type:text/plain" -d "@sampleCoreEnvelope.txt" "http://localhost:3002/api/uitelemetry_csv"
 ```
+
+## Count how many colors xterm actually supports
+[xterm-color-count.sh](https://github.com/l0b0/xterm-color-count)
