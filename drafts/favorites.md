@@ -46,6 +46,7 @@
 - [LoopBack 4](https://loopback.io/doc/en/lb4/index.html) Highly extensible, open-source Node.js and TypeScript framework based on Express that enables you to quickly create APIs and microservices composed from backend systems such as databases and SOAP or REST services
 - [Monaco Editor](https://microsoft.github.io/monaco-editor/) The Monaco Editor is the code editor that powers VS Code.
 - [NextUI](https://nextui.org/) Beautiful, fast and modern React UI Library
+- [Nivo](https://nivo.rocks/) Provides a rich set of dataviz components, built on top of D3 and React.
 - [Noty](https://ned.im/noty/#/) A Dependency-free notification library
 - [Palettify](https://dobromir-hristov.github.io/palettify/#/) An eye catching image effect plugin
 - [Papa Parse](https://www.papaparse.com/) The powerful, in-browser CSV parser for big boys and girls
