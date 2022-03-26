@@ -7,6 +7,8 @@
 - [Brew](https://brew.sh) - Package Manager
   - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
   - This will take a while.
+- [exa](https://the.exa.website/) - A modern replacement for ls.
+  - `brew install exa`
 - [Fuzzy Find (fzf)](https://github.com/junegunn/fzf)
   - `brew install fzf`
 - [gitter](https://github.com/elifiner/gitter) - adds non-intrusive interactive menus to the common git commands
