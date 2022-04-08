@@ -14,6 +14,11 @@ To sort a limited number of positive integers $a_1,\cdots,a_n$, where all is $< 
 ## Insertion Sort
 > Time: $O(n^2)$
 
+Idea: Find the minimum in the "current range" in the array, (which gets smaller in each iteration). Move the current minimum to the right of the previous.
+
+<details>
+<summary>Code</summary>
+
 Given an array $a$ of size $n$,
 1. Track two indexes $i$ and $j$. 
 2. Outer loop: $0 <= i < n-1$, assume $a[i]$ is minimum.
@@ -24,22 +29,27 @@ Given an array $a$ of size $n$,
 function insertionSort(array) {
 	for (let i = 0; i < array.length - 1; i += 1) {
 		let minIndex = i;
-		let val = array[minIndex]
+		let val = array[minIndex];
 		
 		for (let j = i;  j < array.length; j+= 1) {
 			if (array[j] < val) {
-				minIndex = j
+				minIndex = j;
 				val = array[j];
             }
         }
 				
-		tmp = array[i]
-		array[i] = val
-        array[minIndex] = tmp
+		tmp = array[i];
+		array[i] = val;
+        array[minIndex] = tmp;
     }
 }
 ```
+
+</details>
+
 [Run it on replit.com](https://replit.com/@leventoz/InsertionSort)
+
+<hr>
 
 ## Shell Sort
 > Time: $O(n^{7/6})$
@@ -50,8 +60,6 @@ function insertionSort(array) {
 1. Build a [min_heap](6%20-%20Heap.md), which takes $O(n)$ (on average)
 2. Delete_Root is $O(\log n)$ --> Deleting all elements is $O(n \cdot \log n )$
 
-## Quick Sort
-> Time: $O(n \cdot \log n )$
 
 ## Merge Sort
 > Time: $O(n \cdot \log n )$
@@ -60,9 +68,109 @@ Uses `divide and conquer`:
 1. Recursively calls itself for the left and right half of the array until 1 element
 2. On the way back, merge the array pairs while sorting
 
+Implementation:
+1. Use a temporary array the same size as the input
+2. In each recursion
+   1. Divide the range in half, and pass the correct left/right indexes to self to process the left and the right halves. 
+   2. Merge the two sides
+
+<details>
+<summary>Code</summary>
 
 ```JavaScript
+function mergeSort(source) {
+    const tmpArray = new Array(source.length);
+	msort(source, tmpArray, 0, source.length - 1);
+}	
 
+function msort (source, tmpArray, left, right) {
+	if (left < right) {
+		const center = Math.floor((left + right) / 2);
+		msort(source, tmpArray, left, center)
+		msort(source, tmpArray, center + 1, right)
+		merge(source, tmpArray, left, center + 1, right)
+    }
+}
+
+function merge(source, tmpArray, left, right, rightEnd) {
+    const count = rightEnd - left + 1;
+	const leftEnd = right - 1;
+	let tmp = left;    
+
+    function copyFromLeft() {
+        tmpArray[tmp] = source[left];
+        left += 1;
+        tmp += 1;
+    }
+    function copyFromRight() {
+        tmpArray[tmp] = source[right];
+        right += 1;
+        tmp += 1;
+    }
+
+    // While both half has more entries to compare
+	while (left <= leftEnd && right <= rightEnd) {
+		if (source[left] <= source[right]) {
+            copyFromLeft();
+        } else {
+            copyFromRight();
+        }
+    }
+
+    // If the right half ended first, copy the remaining from the left
+	while (left <= leftEnd) {
+        copyFromLeft();        
+    }
+
+    // If the left half ended first, copy the remaining from the right
+	while (right <= rightEnd) {
+        copyFromRight();
+    }
+
+    // Copy it back at the correct indexes. Use rightEnd since it hasn't mutated.
+    for (let i = 0; i < count; i += 1, rightEnd -= 1) {
+        source[rightEnd] = tmpArray[rightEnd];
+    }s
+}
 ```
+
+</details>
+
 [Run it on replit.com](https://replit.com/@leventoz/MergeSort#index.js)
+
+## Quick Sort
+> Average time: $O(n \cdot \log n )$
+>
+> Worst time:  $O(n^2)$
+
+Uses `divide and conquer`. Given an array $A$ of size $n$:
+1. If $A$ has <= 1 elements, return.
+2. Pick a pivot index $p$, where $A[p] = v$
+   1. Choice of pivot affects performance. A good pivot is the median of $A[0], A[\lfloor n/2 \rfloor], A[n-1]$.
+3. Partition $A - v$ such that
+   1. $A_{left}$ has only values $<= v$ 
+   2. $A_{right}$ has only values $>= v$
+4. Return $qs(A_{left}) + v + qs(A_{right})$, where $qs$ is the recursive call to this algorithm.
+
+<details>
+<summary>Implementation</summary>
+
+1. If two elements, sort manually if needed and return. If one element, return.
+2. Pick a pivot (median of three: Pick the first, last and middle elements, sort and pick the one in the middle of the three)
+3. Move the pivot out of the way by swapping it out to the right - 1.
+4. let $i$ = left, $j$ = right - 1 
+5. $i$ moves to the right, skips over values smaller than pivot.
+6. $j$ moves to the left, skips over values larger than pivot.
+7. If $i$ is to the left of $j$, the items are swapped and loop continues from step #5.
+8. Swap the pivot with what's pointed by $i$.
+9. Call Qsort once for the left-side array of the pivot and once the right-side array of the pivot. 
+
+Note: This is a rough explanation, click link below to see code.
+</details>
+
+[Run it on replit.com](https://replit.com/@leventoz/QuickSort#index.js)
+
+> Quick Sort is faster [than Merge Sort] because the partitioning step can be performed in place and very efficiently.
+>
+> For efficiency employ a cut-off for small array sizes and leverage Insertion Sort in the algorithm.
 
