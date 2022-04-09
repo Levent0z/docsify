@@ -12,7 +12,9 @@ To sort a limited number of positive integers $a_1,\cdots,a_n$, where all is $< 
 
 
 ## Insertion Sort
-> Time: $O(n^2)$
+> Worst-case Time and Average-case Time: $O(n^2)$
+> 
+> Best-case Time: $O(n)$ - For presorted arrays
 
 Idea: Find the minimum in the "current range" in the array, (which gets smaller in each iteration). Move the current minimum to the right of the previous.
 
@@ -51,11 +53,19 @@ function insertionSort(array) {
 
 <hr>
 
-## Shell Sort
-> Time: $O(n^{7/6})$
+## Shell Sort (aka diminishing increment sort)
+> Worst Time: $O(n^2)
+> 
+> Average Time: $O(n^{7/6})$ - For certain increment sequences
+
+Idea:
+- Pick an increment sequence which starts with 1. (e.g. 1, 2, 4, 8, ... or 1, 3, 5, ...)
+- For each increment (in decreasing order), run a version of insertion sort of the subset of elements at indicated by that increment.
 
 ## Heap Sort
 > Time: $O(n \cdot \log n )$
+> 
+> Uses an extra array so space requirement is doubled
 
 1. Build a [min_heap](6%20-%20Heap.md), which takes $O(n)$ (on average)
 2. Delete_Root is $O(\log n)$ --> Deleting all elements is $O(n \cdot \log n )$
