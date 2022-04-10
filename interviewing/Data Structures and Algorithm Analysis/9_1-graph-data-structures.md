@@ -4,24 +4,21 @@ For each vertex, keep track of adjacent vertices. Use `adjacency matrix` for den
 Walking the list of a vertex in the adjacency list, by definition, gives all the adjacent vertices.
 
 ```TypeScript
-class AdjVertex 
-{
+class AdjVertex {
 	w: Vertex;
     distVtoW: number;
 }
 
-class Vertex
-{
+class Vertex {
 	adjList: AdjVertex[] = [];
 
     // Working fields used by algorithms
-    known: boolean;
+    known: boolean;   // Another name is "visited"
     distance: number; // Can set this to Infinity if need be
     previous: Vertex;
 }
 
-class Graph
-{
+class Graph {
 	vertices: Vertex[];
     constructor(numVertices: number)
 	{
