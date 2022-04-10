@@ -1,8 +1,9 @@
-# Binary tree
-A tree where a node can have at most two children.
-
+# Trees 
 - General implementation: A root node. List of children per node. 
 - Example: Unix file system
+
+# Binary tree
+A tree where a node can have at most two children.
 
 ## Expression Tree
 Leaf nodes are operands, ancestors are operators.
@@ -53,4 +54,34 @@ To delete "2":
   	    \
          4
 ```
+
+</details>
+
+<details>
+<summary>Pseudo-code</summary>
+
+```
+Remove (key, node)
+	if  node == null
+		error
+	elseif (key < node.key)
+		Remove (key, node.left)
+	elseif (key > node.key)
+		Remove (key, node.right)
+	elseif (node.left != null && node.right != null)
+		// Two children
+		tmpNode = FindMin(node.right)
+		node.key = tmpNode.key;
+		// node.data = tmpNode.data;
+		Remove (tmpNode.Key, node.right)
+	else
+		// 0 or 1 child
+		tmpNode = node;
+		if (node.left == null)
+			node = node.right     // This works in c++ because node is passed in as a reference to a pointer
+		else if (node.right == null)
+			node = node.Left;
+       delete tmpNode
+```
+
 </details>
