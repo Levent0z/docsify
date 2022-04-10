@@ -16,33 +16,31 @@ To sort a limited number of positive integers $a_1,\cdots,a_n$, where all is $< 
 > 
 > Best-case Time: $O(n)$ - For presorted arrays
 
-Idea: Find the minimum in the "current range" in the array, (which gets smaller in each iteration). Move the current minimum to the right of the previous.
+Observe: A single item is sorted by definition. Consider elements to the right of the first element unsorted. 
+
+Idea: Maintain a growing sorted array starting with the first element from the left (which grows towards the right). Take the next element from the unsorted range, and shift it leftward into the correct position.
 
 <details>
 <summary>Code</summary>
 
 Given an array $a$ of size $n$,
 1. Track two indexes $i$ and $j$. 
-2. Outer loop: $0 <= i < n-1$, assume $a[i]$ is minimum.
-3. Inner loop: $i+1 <= j < n$. If $a[j]$ < minimum, $a[j]$ becomes the new minimum.
-4. When inner loop exits, swap $a[i]$ with min. 
+2. Outer loop (incrementing): $1 <= i < n$
+3. Set $val = a[i]$
+4. Inner loop (decrementing): $i-1 >= j >= 0.
+5. While $a[j] > val$, swap the last two elements
+6. When inner loop exits, insert the value at the correct spot.
 
 ```JavaScript
 function insertionSort(array) {
-	for (let i = 0; i < array.length - 1; i += 1) {
-		let minIndex = i;
-		let val = array[minIndex];
-		
-		for (let j = i;  j < array.length; j+= 1) {
-			if (array[j] < val) {
-				minIndex = j;
-				val = array[j];
-            }
+	for (let i = 1; i < array.length; i += 1) {
+        const val = array[i];
+
+        let j;
+		for (j = i-1; val < array[j]; j -= 1) {
+            array[j + 1] = array[j];
         }
-				
-		tmp = array[i];
-		array[i] = val;
-        array[minIndex] = tmp;
+        array[j + 1] = val;
     }
 }
 ```
@@ -50,6 +48,8 @@ function insertionSort(array) {
 </details>
 
 [Run it on replit.com](https://replit.com/@leventoz/InsertionSort)
+
+Also see [Selection Sort](7x-sorting.md), which is similar.
 
 <hr>
 
