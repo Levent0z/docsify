@@ -44,7 +44,7 @@ function unweightedShortestPath(g: Graph, start: Vertex): void {
 
 ## For a directed, weighted, connected graph
 
-Use `Dijsktra's Algorithm`. It's a `greedy` algorithm that takes the shortest path from available options at that iteration. 
+Use `Dijkstra's Algorithm`. It's a `greedy` algorithm that takes the shortest path from available options at that iteration. 
 
 In each iteration, pick the closest new vertex seen to be the next current vertex.
 
@@ -53,7 +53,7 @@ In each iteration, pick the closest new vertex seen to be the next current verte
 
 ```TypeScript
 // Note: This hasn't been tested, use at your own risk.
-function dijsktra(g: Graph, v: Vertex): void {
+function dijkstra(g: Graph, v: Vertex): void {
     v.distance = 0;
     do {
         v.known = true;
