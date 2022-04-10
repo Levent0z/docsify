@@ -13,8 +13,10 @@ class AdjVertex
 class Vertex
 {
 	adjList: AdjVertex[] = [];
+
+    // Working fields used by algorithms
     known: boolean;
-    dist: number = Infinity;
+    distance: number; // Can set this to Infinity if need be
     previous: Vertex;
 }
 
