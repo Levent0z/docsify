@@ -1,6 +1,6 @@
 # Topological Sort
 
-`Topological Sort` is the ordering of vertices in a directed acyclic graph, such that if there is a path from $v_i$ to $v_j$,  then the former comes first.
+`Topological Sort` is the ordering of vertices in a **directed acyclic graph**, such that if there is a path from $v_i$ to $v_j$,  then the former comes first.
 - It is not possible if the graph has a cycle.
 - Orderings are not necessarily unique.
 
@@ -26,30 +26,42 @@
 See [graph data structures](9_1-graph-data-structures.md) for referenced types below.
 
 ```TypeScript
+function getInDegrees(g: Graph): Map<Vertex, number> {
+    const inDegrees = new Map<Vertex, number>();
+    g.vertices.forEach(v => {
+        v.adjList.forEach(w => {
+            inDegrees.set(w, (inDegrees.get(w) || 0) + 1);
+        });
+    });
+    return inDegrees;
+}
+
 function topoSort(g: Graph): Map<Vertex, number> {
+    const inDegrees: Map<Vertex, number> = getInDegrees(g);
     const orders = new Map<Vertex, number>();
     const queue = new Array<Vertex>();
 
-    g.vertices.forEach(v => {
-        if (v.inDegree === 0) {
-            queue.push(v);
+    inDegrees.forEach((_v, k) => {
+        if (inDegrees.get(k) === 0) {
+            queue.push(k);
         }
     });
 
     order = 1;
     while(queue.length) {
         const v = queue.shift();
-        orders[v] = order++;
+        orders.set(v, order++);
         v.adjList.forEach(w => { 
-            w.inDegree -= 1; 
-            if (w.inDegree === 0) {
+            // Decrement w's indegree
+            inDegrees.set(inDegrees.get(w) - 1); 
+            if (inDegrees.get(w) === 0) {
                 queue.push(w);
             }
         });
     }
 
     if (order <= g.vertices.length) {
-        throw new Error();
+        throw new Error('Graph has a cycle');
     }
     return orders;
 }
