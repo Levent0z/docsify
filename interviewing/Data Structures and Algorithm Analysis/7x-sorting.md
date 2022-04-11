@@ -1,7 +1,20 @@
 # More on Sorting 
-This section is not from the book.
+
+## Radix Sort
+Note: This section is from Chapter 3.2.
+
+This is a generalization of [Bucket Sort](7-sorting.md) and should be used when the range of values to be sorted is too many (i.e. too many buckets). Instead, there can be multiple passes on a small number of buckets.
+
+For example:
+1. Have 10 buckets with linked lists (because multiple values can fall in a bucket).
+2. Iterate $p$ times, where $p$ is the number of digits of the largest number.
+3. In each pass, place the values in the correct bucket based on the current **least-significant** digit (starting from the least, moving towards the more significant digit).
+
+> Time: $O(p(n + b))$ where $b$ is the number of buckets.
 
 ## Selection Sort
+Note: This section is not from the book.
+
 > Time: $O(n^2)$
 
 Idea: Find the minimum in the "current range" in the array, (which gets smaller in each iteration). Move the current minimum to the right of the previous.
