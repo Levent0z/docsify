@@ -129,4 +129,7 @@ Infinity === Infinity // true
 Infinity === Number.POSITIVE_INFINITY // true
 Infinity === Number.NEGATIVE_INFINITY // false
 
+const a = new Array(10);
+a.length === 10 // true
+a[0] === undefined // true, in fact all entries are undefined. So be careful preinitializing arrays if using lengths
 ```
