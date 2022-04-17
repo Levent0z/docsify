@@ -123,6 +123,15 @@ Also:
 
 <br>
 
+## Power Set 
+Note: this is not in the book
+
+For a given set $S$ with $n$ elements, number of elements in $P(S) = 2^n$. As each element has two possibilities (present or absent). The powerset in includes the set itself and the empty set
+
+[See it on replit.com](https://replit.com/@leventoz/PowerSet#index.js)
+
+<br>
+
 ## Factorial
 
 $n! = n\times(n-1)\times\cdots\times1$
