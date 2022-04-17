@@ -4,6 +4,7 @@
 - [Chrome Devtools Cheatsheet](http://anti-code.com/devtools-cheatsheet/) - Is this working?
 - [Gmail Keyboard Shortcuts](https://support.google.com/mail/answer/6594?hl=en)
 - [P4 Command Reference](https://www.perforce.com/manuals/v15.1/cmdref/chapter.introduction.html#introduction.help)
+- [TypeScript](https://rmolinamir.github.io/typescript-cheatsheet/)
 - [VSCode Keyboard Shortcuts (macOS)](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
 # Various
