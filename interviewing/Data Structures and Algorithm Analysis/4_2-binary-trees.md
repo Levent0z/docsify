@@ -85,3 +85,26 @@ Remove (key, node)
 ```
 
 </details>
+<br>
+<details>
+<summary>Height</summary>
+
+```Java
+	/*
+    class Node 
+    	int data;
+    	Node left;
+    	Node right;
+	*/
+	public static int height(Node root) {        
+        int leftHeight = root.left == null ? 0 : 1 + height(root.left);
+        int rightHeight = root.right == null ? 0: 1 + height(root.right);
+        
+        if (leftHeight == 0 && rightHeight == 0) {
+            return 0;
+        }
+        
+        return leftHeight > rightHeight ? leftHeight : rightHeight;
+      	
+    }
+```

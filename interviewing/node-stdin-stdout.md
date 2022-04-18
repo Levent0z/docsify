@@ -1,7 +1,9 @@
 # Node Reading from STDIN and Writing to STDOUT
 
 ```TypeScript
+// Begin reading from stdin so the process does not exit.
 process.stdin.resume();
+
 process.stdin.setEncoding('utf-8');
 let inputString: string = '';
 let inputLines: string[] = [];

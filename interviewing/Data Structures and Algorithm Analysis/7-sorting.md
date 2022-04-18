@@ -73,6 +73,9 @@ Idea:
 
 ## Merge Sort
 > Time: $O(n \cdot \log n )$
+>
+> Space: $O(n)$
+
 
 Uses `divide and conquer`:
 1. Recursively calls itself for the left and right half of the array until 1 element
@@ -162,6 +165,12 @@ Uses `divide and conquer`. Given an array $A$ of size $n$:
    2. $A_{right}$ has only values $>= v$
 4. Return $qs(A_{left}) + v + qs(A_{right})$, where $qs$ is the recursive call to this algorithm.
 
+<br>
+<details>
+<summary>Diagram of QuickSort with first element as the pivot</summary>
+![QuickSort with first element as the pivot](https://s3.amazonaws.com/hr-challenge-images/quick-sort/QuickSort.png)
+</details>
+<br>
 <details>
 <summary>Implementation</summary>
 
@@ -177,6 +186,7 @@ Uses `divide and conquer`. Given an array $A$ of size $n$:
 
 Note: This is a rough explanation, click link below to see code.
 </details>
+<br>
 
 [Run it on replit.com](https://replit.com/@leventoz/QuickSort#index.js)
 
