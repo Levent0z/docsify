@@ -1,6 +1,6 @@
 # Chrome API
 
-```TypeScript
+```typescript
 chrome.storage.sync.get(string | string[], function(items) { } );
 
 chrome.storage.sync.set(object, function() {} );

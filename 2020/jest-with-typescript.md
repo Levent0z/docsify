@@ -12,7 +12,7 @@ This will create a package.json file based on your inputs.
 
 ### `package.json`: (Example)
 
-```JSON
+```json
 {
   "name": "jest-and-typescript",
   "version": "1.0.0",
@@ -50,7 +50,7 @@ $ npm i rimraf --save-dev           # Cross-platform recursive folder remover "r
 
 After this, the following lines will have been added to `devDependencies` section in package.json. Your versions will most likely be different.
 
-```JSON
+```json
   "devDependencies": {
     "@types/jest": "^26.0.14",
     "jest": "^26.4.2",
@@ -71,7 +71,7 @@ This will generate a tsconfig.json file. Make a backup of this file in case you 
 
 ### `tsconfig.json`:
 
-```JSON
+```json
 {
   "compilerOptions": {
     "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */
@@ -88,7 +88,7 @@ This will generate a tsconfig.json file. Make a backup of this file in case you 
 
 Make modifications so that the file now looks like the following:
 
-```JSON
+```json
 {
     "compilerOptions": {
         "target": "ES2015",                           /* Modified */
@@ -111,7 +111,7 @@ Make modifications so that the file now looks like the following:
 
 Add the missing lines into `scripts` section of package.json:
 
-```JSON
+```json
   "scripts": {
     "clean": "rimraf dist && jest --clearCache",
     "build": "tsc --build",
@@ -131,7 +131,7 @@ Copy the following text into index.ts:
 
 ### `index.ts`
 
-```TypeScript
+```typescript
 export class Main {
     hello(name: string): string {
         return `Hello ${name}!`;
@@ -249,7 +249,7 @@ Copy the following into tsconfig.test.json:
 
 ### `tsconfig.test.json`
 
-```JSON
+```json
 {
     "extends": "./tsconfig.json",
     "compilerOptions": {

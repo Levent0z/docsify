@@ -7,7 +7,7 @@ AKA `Digital Tree`, `Radix Tree`, `Prefix Tree`
 - For each possible symbol in a fixed set of symbols (i.e. letter in the English alphabet), a node has an array of pointers/references that index into the pointer for that node. (e.g. children[], index 0 -> a, index 25 -> z)
 - Nodes have a boolean flag that indicates whether they're an 'end' node.
 
-```TypeScript
+```typescript
 class TrieNode {
     readonly children: TrieNode[];
     isEnd: boolean;
@@ -26,7 +26,7 @@ Every character of input key is inserted as an individual Trie node. The key cha
 <details>
 <summary>Code</summary>
 
-```TypeScript
+```typescript
 const A = 'A'.charCodeAt(0);
 const range = 'z'.charCodeAt(0) - A + 1;
 
@@ -53,7 +53,7 @@ Search is practically the same as inserting, except instead of creating the node
 <details>
 <summary>Code</summary>
 
-```TypeScript
+```typescript
 function search(root: TrieNode, text: string): boolean {
     let start: TrieNode = root;
     Array.from(text).forEach(charStr => {
@@ -82,7 +82,7 @@ function search(root: TrieNode, text: string): boolean {
 <details>
 <summary>Code</summary>
 
-```TypeScript
+```typescript
 function deleteText(text: string): boolean {
     return deleteRecur(root, text, 0);
 }

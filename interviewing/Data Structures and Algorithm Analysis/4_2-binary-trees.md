@@ -89,7 +89,7 @@ Remove (key, node)
 <details>
 <summary>Height</summary>
 
-```Java
+```java
 	/*
     class Node 
     	int data;

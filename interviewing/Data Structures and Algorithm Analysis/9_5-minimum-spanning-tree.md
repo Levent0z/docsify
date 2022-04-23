@@ -8,7 +8,7 @@ It's essentially identical to [Dijkstra's](9_3-shortest-path-algorithms.md), exc
 <details>
 <summary>Code</summary>
 
-```TypeScript
+```typescript
 // Note: This hasn't been tested, use at your own risk.
 function minimumSpanningTree(g: Graph, v: Vertex): void {
     v.distance = 0;

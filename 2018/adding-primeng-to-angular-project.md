@@ -255,7 +255,7 @@ You can import dependency styles a few ways;
 
 You can import dependency scripts in a couple of ways:
 ### 1. Include a `<script>` tag directly in your `index.html`.
-```HTML
+```html
 <!-- For Captcha component -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 

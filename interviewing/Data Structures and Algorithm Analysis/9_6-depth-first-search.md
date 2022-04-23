@@ -1,6 +1,6 @@
 # Depth-first Search
 
-```TypeScript
+```typescript
 function dfs(g: Graph, start: Vertex): void {
     start.known = true;
     start.adjList.forEach(w => {

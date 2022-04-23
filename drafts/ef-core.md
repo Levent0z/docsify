@@ -32,7 +32,7 @@ Microsoft.EntityFrameworkCore.SqlServer (should load Microsoft.EntityFrameworkCo
 
 Package Manager Console
 Set to Default Project to a fake (empty)project
-```PowerShell
+```powershell
 Install-Package  Microsoft.EntityFrameworkCore.SqlServer
 Install-Package  Microsoft.EntityFrameworkCore.Tools # For Migrations
 get-help entityframeworkcore

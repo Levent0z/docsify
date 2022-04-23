@@ -3,7 +3,7 @@ For each vertex, keep track of adjacent vertices. Use `adjacency matrix` for den
 
 Walking the list of a vertex in the adjacency list, by definition, gives all the adjacent vertices.
 
-```TypeScript
+```typescript
 class AdjVertex {
 	w: Vertex;
     distVtoW: number;

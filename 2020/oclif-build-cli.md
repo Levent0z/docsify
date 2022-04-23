@@ -40,7 +40,7 @@ $ ./bin/run --name=Levent
 
 All this built-in logic lives in `src/index.ts`. The 4 flags are defined in the [flags](https://oclif.io/docs/flags) member:
 
-```TypeScript
+```typescript
   static flags = {
     // add --version flag to show CLI version
     version: flags.version({char: 'v'}),
@@ -56,13 +56,13 @@ Any values passed after the flag char prefixed with a single dash (e.g. '-n') or
 
 The last argument is saved into `args.file`, due to this configuration of the [args](https://oclif.io/docs/args) member:
 
-```TypeScript
+```typescript
   static args = [{name: 'file'}];
 ```
 
 We access the runtime values of flags and args by desconstructing the return value of the `parse` method:
 
-```TypeScript
+```typescript
     const { args, flags } = this.parse(DopplerCli);
 ```
 

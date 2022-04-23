@@ -2,7 +2,7 @@
 
 Example `package.json`:
 
-```JSON
+```json
 {
     "name": "project-parent",
     "private": true,
@@ -28,7 +28,7 @@ Example `package.json`:
 
 Example `lerna.json`:
 
-```JSON
+```json
 {
   "packages": ["packages/*"],
   "version": "238.5.1",

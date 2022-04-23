@@ -4,7 +4,7 @@
 
 ### Response Handling
 
-```Java
+```java
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 public class JaxUtils {
@@ -24,7 +24,7 @@ public class JaxUtils {
 
 ### Response filter
 
-```Java
+```java
 @Provider
 public class CorsFilter implements ContainerResponseFilter {
 
@@ -49,7 +49,7 @@ public class CorsFilter implements ContainerResponseFilter {
 
 To get HTTP context (Works with Spring Boot, too)
 
-```Java
+```java
 @Context HttpServletRequest req
 ```
 

@@ -1,6 +1,6 @@
 # Node Reading from STDIN and Writing to STDOUT
 
-```TypeScript
+```typescript
 // Begin reading from stdin so the process does not exit.
 process.stdin.resume();
 
@@ -28,7 +28,7 @@ function writeLine(text): void {
 ```
 
 
-```TypeScript
+```typescript
 import { WriteStream, createWriteStream } from "fs";
 
 const ws: WriteStream = createWriteStream(process.env['OUTPUT_PATH']);

@@ -2,7 +2,7 @@
 
 [From](https://www.hackerrank.com/challenges/insert-a-node-at-a-specific-position-in-a-linked-list/problem?isFullScreen=false)
 
-```TypeScript
+```typescript
 class SinglyLinkedListNode {
     data: number;
     next: SinglyLinkedListNode | null;
@@ -51,7 +51,7 @@ function printSinglyLinkedList(node: SinglyLinkedListNode | null, sep: string, w
 
 ## Solution
 
-```TypeScript
+```typescript
 function insertNodeAtPosition(llist: SinglyLinkedListNode, data: number, position: number): SinglyLinkedListNode {
     // Write your code here
     const newNode = new SinglyLinkedListNode(data);

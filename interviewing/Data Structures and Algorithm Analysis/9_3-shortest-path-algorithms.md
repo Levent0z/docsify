@@ -4,7 +4,7 @@ Problem: Starting at a given vertex, find shortest path from it to all the other
 
 Refer to the [graph data structures](9_1-graph-data-structures.md) for types used in code sections below.
 
-```TypeScript
+```typescript
 function printPath(start: Vertex, end: Vertex): void {
     if (start === end) {
         console.log(start);
@@ -22,7 +22,7 @@ Use `Breadth-First Search (BFS)`.
 <details>
 <summary>Code</summary>
 
-```TypeScript
+```typescript
 function unweightedShortestPath(g: Graph, start: Vertex): void {
     const queue = new Array<Vertex>();
     start.distance = 0;
@@ -51,7 +51,7 @@ In each iteration, pick the closest new vertex seen to be the next current verte
 <details>
 <summary>Code</summary>
 
-```TypeScript
+```typescript
 // Note: This hasn't been tested, use at your own risk.
 function dijkstra(g: Graph, v: Vertex): void {
     v.distance = 0;

@@ -8,7 +8,7 @@ Jenkins configuration file is called `Jenkinsfile`.
 
 ## Example variables
 
-```Groovy
+```groovy
 String someText = 'SOME_TEXT'
 def emptyList = []                          // def can be used to avoid using type
 def complexList = [1, 2.1, [3, 4], 'text']  // heterogeneous list
@@ -30,7 +30,7 @@ A [string](https://docs.groovy-lang.org/next/html/documentation/#all-strings) ca
 
 ### Basics
 
-```Groovy
+```groovy
 def items = [1, 2]
 for (item in items) {
     try {
@@ -47,7 +47,7 @@ for (item in items) {
 
 ## Imports
 
-```Groovy
+```groovy
 // Example library import
 @Library('SOME_LIBRARY')
 
@@ -61,7 +61,7 @@ import NAMESPACE.CLASSNAME
 
 Example:
 
-```Groovy
+```groovy
 String shout(String command) {
     return sh(script: command, returnStdout: true)?.trim()
 }
@@ -78,7 +78,7 @@ Stages correspond to visual columns in Jenkins. Long workflows should be broken 
 
 Example:
 
-```Groovy
+```groovy
 stage('Environment Summary') {
     sh 'git --version'
     sh 'node --version'
@@ -93,7 +93,7 @@ stage('Checkout') {
 
 ## Timing Blocks Manually
 
-```Groovy
+```groovy
 void someFunction() {
     long startTimeInMillis = System.currentTimeMillis()
     // some code here ...
@@ -106,7 +106,7 @@ void someFunction() {
 
 Using username and password:
 
-```Groovy
+```groovy
 withCredentials([usernamePassword(
     credentialsId: 'SOME_CREDENTIALS_ID',
     usernameVariable: 'SOME_USER_VARIABLE',
@@ -117,7 +117,7 @@ withCredentials([usernamePassword(
 
 Using access token:
 
-```Groovy
+```groovy
 withCredentials([string(
         credentialsId: 'SOME_CREDENTIALS_ID',
         variable: 'SOME_ACCESS_TOKEN'

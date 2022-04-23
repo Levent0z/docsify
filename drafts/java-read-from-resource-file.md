@@ -64,7 +64,7 @@ public class TestController {
 ```
 
 Old Alternative:
-```Java
+```java
 // This piece of code works in IDE but not in a JAR.
 File file = new File(getClass().getClassLoader().getResource("items.json").getFile());
 byte[] jsonData = Files.readAllBytes(Paths.get(file.getPath()));

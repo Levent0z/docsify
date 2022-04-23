@@ -25,7 +25,7 @@
 
 See [graph data structures](9_1-graph-data-structures.md) for referenced types below.
 
-```TypeScript
+```typescript
 function getInDegrees(g: Graph): Map<Vertex, number> {
     const inDegrees = new Map<Vertex, number>();
     g.vertices.forEach(v => {
