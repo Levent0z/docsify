@@ -1,7 +1,51 @@
 # JavaScript 
 
+## Primitives
+
+- undefined
+- number
+- string
+- object
+- function
+
+## Strings
+
+```JavaScript
+const a = '0123456';
+a.substr(0, 0)    // ''    Second argument is length
+a.substring(0, 0) // ''    Second argument is end index (not inclusive)
+
+a.substr(0, 2)    // '01'   Second argument is length
+a.substring(0, 2) // '01'   Second argument is end index (not inclusive)
+
+a.substr(1, 2)    // '12'   Second argument is length
+a.substring(1, 2) // '1'    Second argument is end index (not inclusive)
+
+a.substr(1)       // '123456'
+a.substring(1)    // '123456'
+
+'a'.charcodeAt(0)           // 97
+String.fromCharCode(97)     // 'a'    
+```
+
+**Notes**
+Mind the difference between string's `substr` and `substring`. How to remember: substr & length, substring and endIndexX have the same number of letters. (The last x reminds that the end index is eXclusive)
 
 ## Arrays
+
+Constructors:
+```javascript
+const arr = new Array(?size);
+```
+
+On an array, using `for-in` iterates over the indexes, `for-of` iterates over the values.
+
+Note: When an array is initialized with a size, its length is size but all its cells are "empty", i.e. the array has no keys.
+```javascript
+    new Array(10).map((v, i) => i);  // map lambda is not executed. This is akin to doing for-in. (for-of would still execute 10 times)
+    new Array(10).fill(0).map((v, i) => i);  // map lambda is executed 10 times
+```
+
 
 Given:
 ```javascript
@@ -49,6 +93,7 @@ const a = [0, 1, 2, 3, 4, 5]; // Reset before each example
 - In `slice`, the optional `end` argument, if positive, is exclusive. If negative, it's the count of omitted elements from the right.
 - In `splice`, the optional `items`, if provided are inserted at the `start` index, and the items to the right slide further to the right.
 - In `sort`, the array is sorted as string comparison by default, unless a compare function is provided, which should return -1, 0, or 1 for smaller, equal and greater than.
+- `splice` and `slice` always returns new arrays. `splice(x,1)` removes one element but still returns a single-element array.
 - The **iteratorFn** takes as arguments **value**, **index**, and **array**. In `map`, the return value of the iteratorFn is pushed into the returned array. 
 - The **predicateFn** takes as arguments **value**, **index**, and **array**. It needs to return a truthy value.
 - The **aggregatorFn** takes as arguments **aggregate**, **current**, **index**, and **array**. The initial value of the aggregate is the second argument to reduce.
@@ -59,7 +104,7 @@ const a = [0, 1, 2, 3, 4, 5]; // Reset before each example
 Stores unique values of any type. You can iterate through it in insertion order.
 
 Constructor:
-```
+```javascript
 new Set(?iterable) 
 ```
 where iterable is an array of values.
@@ -85,7 +130,7 @@ where iterable is an array of values.
 Stores key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.
 
 Constructor
-```
+```javascript
 new Map(?iterable)
 ```
 where iterable is an array of pairs. Each pair is an array of two elements (the kay and the value).
@@ -105,19 +150,22 @@ where iterable is an array of pairs. Each pair is an array of two elements (the 
 | `values()`                      | iterator (not an array)                         |
 
 **Notes:**
-- The iteratorFn takes as arguments **value**, **key**, and **map**. 
-
+- The `iteratorFn` takes as arguments **value**, **key**, and **map**. 
+- `Array.from(map.entries())` returns an array of arrays, where the nested arrays are pairs: entry[0] is key, entry[1] is value.
+- Always use the `get` method to access a `Map`'s elements, not indexing.
 
 ## Utility Functions
 
 - Array.isArray()
 - Number.isFinite()
-- Number.isInteger()
+- Number.isInteger() - This can't be relied on for a string to be a valid representation of an integer
 - Number.isNaN()
 - Number.isSafeInteger()
-- Number.parseInt()
-- Number.parseFloat()
-- Object.hasOwnProperty()
+- Number.parseInt(string, ?radix) - The radix defaults to 10, and indicates the base of the number used in string. `parseInt('100', 2) --> 4`
+- Number.parseFloat(string)
+- hasOwnProperty()
+- Object.keys()     - Unlike Set/Map's keys method, this returns an actual array, not an iterator.
+- Object.entries()  - Unlike Set/Map's entries method, this returns an actual array (of pairs), not an iterator.
 
 
 ## Things to know
@@ -133,3 +181,4 @@ const a = new Array(10);
 a.length === 10 // true
 a[0] === undefined // true, in fact all entries are undefined. So be careful preinitializing arrays if using lengths
 ```
+
