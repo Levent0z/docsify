@@ -8,12 +8,24 @@
     <meta name="description" content="Blogs by Levent Oz">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- LIGHT THEMES -->
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" disabled> -->
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css" disabled> -->
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" disabled> -->
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css" disabled> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+    <link rel="stylesheet" href="://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
 
+    <!-- DARK THEMES -->
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" crossorigin="anonymous"> -->
+
+    <style>
+        .markdown-section pre>code {
+            padding: 0;
+        }
+    </style>
 
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lexend+Tera">
 </head>
@@ -89,11 +101,14 @@
   "node_modules/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.js" -->
 
     <!-- https://github.com/PrismJS/prism/tree/gh-pages/components -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-prism@latest/dist/docsify-prism.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-groovy.min.js" crossorigin="anonymous"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
-
 </body>
 
 </html>
