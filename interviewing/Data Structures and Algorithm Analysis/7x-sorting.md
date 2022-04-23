@@ -28,7 +28,7 @@ Given an array $a$ of size $n$,
 3. Inner loop: $i+1 <= j < n$. If $a[j]$ < minimum, $a[j]$ becomes the new minimum.
 4. When inner loop exits, swap $a[i]$ with min. 
 
-```JavaScript
+```javascript
 function selectionSort(array) {
 	for (let i = 0; i < array.length - 1; i += 1) {
 		let minIndex = i;

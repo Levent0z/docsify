@@ -15,7 +15,7 @@ npm run watch
 
 #### Child component calls
 
-```JavaScript
+```javascript
 this.dispatchEvent(new CustomEvent('myeventname'));
 ```
 
@@ -31,7 +31,7 @@ this.dispatchEvent(new CustomEvent('myeventname'));
 ## Shadow-DOM
 
 To disable Native Shadow, add this to the top of `src/index.js`:
-```JavaScript
+```javascript
 import from '@lwc/synthetic-shadow'
 ```
 

@@ -2,7 +2,7 @@
 
 ## Test arguments
 
-```JavaScript
+```javascript
 const spy = jest.spyOn(global, 'fetch');
 // Work
 expect(spy).toHaveBeenCalledWith(

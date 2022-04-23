@@ -31,7 +31,7 @@ Given an array $a$ of size $n$,
 5. While $a[j] > val$, swap the last two elements
 6. When inner loop exits, insert the value at the correct spot.
 
-```JavaScript
+```javascript
 function insertionSort(array) {
 	for (let i = 1; i < array.length; i += 1) {
         const val = array[i];
@@ -90,7 +90,7 @@ Implementation:
 <details>
 <summary>Code</summary>
 
-```JavaScript
+```javascript
 function mergeSort(source) {
     const tmpArray = new Array(source.length);
 	msort(source, tmpArray, 0, source.length - 1);

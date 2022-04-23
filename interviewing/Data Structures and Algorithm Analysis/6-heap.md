@@ -21,7 +21,7 @@ Level 3     8     9    10   11     12   13   14   15
 
 - For level $k$: $\qquad2^k <= value < 2^{k+1}$
 - Therefore: 
-  ```JavaScript 
+  ```javascript 
   const k = Math.floor(Math.log2(value));
   ```
 

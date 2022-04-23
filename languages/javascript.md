@@ -25,7 +25,7 @@ Primitive types: `undefined`, `string`, `number`, `boolean`, `object`
 Numbers are always doubles. No built-in integer types.
 
 Watch out for decimal arithmetic:
-```JavaScript
+```javascript
     0.2 + 0.7 == 0.9                      // false
     0.2 + 0.7 == 0.8999999999999999       // true
 ```
@@ -43,7 +43,7 @@ Notations
 - String interpolation syntax only inside backtick.
 - No string builder
   
-```JavaScript
+```javascript
     'String' + 'concatenation'
     `String interpolation ${variableOrExpression}`
 ```
@@ -63,7 +63,7 @@ Notations
 - Check primitive types using `typeof`.
 - Check `new`'ed objected using `instanceof`.
 
-```JavaScript
+```javascript
     typeof undefined === 'undefined'      // true
     typeof null === 'object'              // true
     typeof [] === 'object'                // true
@@ -96,12 +96,12 @@ Notations
 ## Flow Control
 
 ### Ternary operator using `?` and `:`:
-```JavaScript
+```javascript
 const result = expression ? resultIfTrue : resultIfFalse;
 ```
 
 ### If statement
-```JavaScript
+```javascript
 if (expression1 ) {
     // body if expression1 is true
 } else if (expression2) {
@@ -112,7 +112,7 @@ if (expression1 ) {
 ```
 
 ### Switch Statement
-```JavaScript
+```javascript
 switch(expression) {
     case 'text': // hard-coded string
         // body if match
@@ -127,7 +127,7 @@ switch(expression) {
 ```
 
 ### Loops
-```JavaScript
+```javascript
 for (const variable of iterable) {
     // Iteration for each item in the iterable
 }
@@ -152,7 +152,7 @@ do {
 
 ## Functions
 
-```JavaScript
+```javascript
 function func0() {
 }
 function func1(arg1) {
@@ -189,7 +189,7 @@ Use `apply` method of a function to call it with a specified `this` and an array
 Use `call` methods of a function to call it with a specified `this` and individual arguments.
 
 ## Exceptions
-```JavaScript
+```javascript
     try {
         throw new Error('message');
     } catch (err) {
@@ -203,7 +203,7 @@ Use `call` methods of a function to call it with a specified `this` and individu
 # Operations
 ## Strings
 
-```JavaScript
+```javascript
 const str = 'Some Text';
 
 // True statements follow:
@@ -229,7 +229,7 @@ str.charCodeAt(0) === 83            // ASCII code of 'S'
 
 ## Arrays
 
-```JavaScript
+```javascript
 const arr = [];
 arr.length === 0        // True
 arr === []              // False,  Arrays are object, and these are two different empty arrays

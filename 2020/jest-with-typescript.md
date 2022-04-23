@@ -156,7 +156,7 @@ Copy the following text into index.test.js:
 
 ### `index.test.js`
 
-```JavaScript
+```javascript
 import { Main } from '../index';
 
 describe('index', () => {
@@ -216,7 +216,7 @@ Copy the following into jest.config.js:
 
 ### `jest.config.js`
 
-```JavaScript
+```javascript
 module.exports = {
     testMatch: ['<rootDir>/src/**/*.(spec|test).(ts|js)'],
     rootDir: '..',

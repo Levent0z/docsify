@@ -4,7 +4,7 @@
 ## Arrays
 
 Given:
-```JavaScript
+```javascript
 const a = [0, 1, 2, 3, 4, 5]; // Reset before each example
 ```
 
@@ -122,7 +122,7 @@ where iterable is an array of pairs. Each pair is an array of two elements (the 
 
 ## Things to know
 
-```JavaScript
+```javascript
 NaN === NaN // false. However, if NaN was a key in a Set/Map, there could only be one.
 
 Infinity === Infinity // true

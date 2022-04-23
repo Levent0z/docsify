@@ -18,7 +18,7 @@ So let's get to it.
 
 2. In `scripts/main.js`, add the following near the top of the file:
 
-```JavaScript
+```javascript
 const distPath = path.join(__dirname, '..', 'dist');
 
 require("electron-reload")(distPath, {
@@ -28,7 +28,7 @@ require("electron-reload")(distPath, {
 
 3. In `lwc-services.config.js`, set [noclear](https://github.com/muenzpraeger/create-lwc-app/blob/main/packages/lwc-services/example/lwc-services.config.js#L11) to true. With this, lwc-services will overwrite files as opposed to deleting them first. 
 
-```JavaScript
+```javascript
 module.exports = {
     resources: [{ from: 'src/resources/', to: 'dist/resources/' }],
     noclear: true

@@ -15,7 +15,7 @@ Constraints:
 <summary>Starting Point</summary>
 This was provided.
 
-```JavaScript
+```javascript
 // Installed npm packages: jquery underscore request express
 // jade shelljs passport http sys lodash async mocha chai sinon
 // sinon-chai moment connect validator restify ejs ws co when
@@ -43,7 +43,7 @@ It is very important to understand the kind of input before writing code. Depend
 
 *Note*: Original test cases from 2018 have been augmented with new ones in 2022, and any test cases that assumed maxYear = 2018 were fixed (for 2022).
 
-```JavaScript
+```javascript
 const testCases = [
   // All Invalids
   [undefined, []],
@@ -106,7 +106,7 @@ function test(testFunc) {
 <summary>Implementation from 2018</summary>
 This was the actual solution I came up with during the interview.
 
-```JavaScript
+```javascript
 'use strict';
 
 function filterInt(value) {
@@ -177,7 +177,7 @@ test(parseRange);
 <summary>Implementation from 2022</summary>
 I redid it for practice.
 
-```JavaScript
+```javascript
 'use strict';
 
 const minYear = 1999;

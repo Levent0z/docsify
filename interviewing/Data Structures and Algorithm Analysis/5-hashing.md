@@ -6,7 +6,7 @@ A `hash function` takes a serializable input ("key") and returns an index into a
 - Insertion, deletion, search is on average $O(1)$ (unless high `load factor`)
 - It should evenly distribute over the size of the array
   
-```JavaScript
+```javascript
 function hash(key, hashSize) {
     let hashVal = 0;
     for (const c of key) {

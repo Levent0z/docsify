@@ -1,6 +1,6 @@
 # Yeet
 
-```JavaScript
+```javascript
 document.querySelector('[jsname=RFn3Rd']).childElementCount
 ```
 
@@ -8,7 +8,7 @@ Add Toggle side button under this:
 class="lvE3se"
 
 To add the button:
-```JavaScript
+```javascript
 var parent = document.querySelector('.NzPR9b')
 var newdiv = document.createElement('div');
 newdiv.classList.add(...['uArJ5e', 'UQuaGc', 'kCyAyd', 'kW31ib', 'foXzLb']);

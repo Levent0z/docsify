@@ -41,7 +41,7 @@ $f(x) = a_0 + x(a_1 + a_2x^1 + \cdots + a_nx^{n-1})$
 
 $f(x) = a_0 + x(a_1 + x(a_2x + \cdots + a_nx^{n-2})$
 
-```JavaScript
+```javascript
 // Using recursion
 function hornerRecurse(a, x, i) {  
   if (!i) {

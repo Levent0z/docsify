@@ -56,7 +56,7 @@ Example `lerna.json`:
 
 Example root `jest.config.js`:
 
-```JavaScript
+```javascript
 module.exports = {
     collectCoverage: true,
     // clover will create clover.xml

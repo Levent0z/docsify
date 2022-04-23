@@ -21,7 +21,7 @@ This will add the following line into the `devDependencies` section of package.j
 Add the missing lines in your scripts/jest.config.js file:
 
 ### `jest.config.js`
-```JavaScript
+```javascript
 module.exports = {
     testMatch: ['<rootDir>/src/**/*.(spec|test).(ts|js)'],
     rootDir: '..',
