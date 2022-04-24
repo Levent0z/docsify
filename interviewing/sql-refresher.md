@@ -6,24 +6,128 @@
 
 ## CRUD for Databases
 
-### Create
-`CREATE DATABASE`
+### Reads
+```sql
+SHOW DATABASES;
+```
 
-### Update
-`ALTER DATABASE`
+### Creates
+```sql
+CREATE DATABASE databasename;
+```
+
+
+### Deletes
+```sql
+DROP DATABASE databasename;
+```
+
+### Backup:
+```sql
+BACKUP DATABASE databasename TO DISK = 'filepath';
+
+BACKUP DATABASE databasename TO DISK = 'filepath' WITH DIFFERENTIAL; -- backup only the delta since the last full backup
+```
 
 <hr>
 
 ## CRUD for Tables
 
 ### Creates
-`CREATE TABLE`
+`CREATE TABLE ... (col1 type1 constraint, col2 type2 constraint, ...);`
+
+- constraints are optional
+- multiple constraints are space-separated
+
+#### List of standard Constraints:
+- `NOT NULL`: Prevent nulls
+- `UNIQUE`
+- `PRIMARY KEY`: Combination of NOT NULL and UNIQUE.
+- `FOREIGN KEY`:
+- `CHECK`: Custom condition for values, e.g. CHECK (field_name >= value)
+- `DEFAULT`: Default value if none specified
+- `CREATE_INDEX`
+- `CONSTRAINT ... UNIQUE (col1, col2, ...)`:  Create a uniqueness on multiple columns
+
+
+```sql
+-- SQL Server, Oracle
+CREATE TABLE Items (
+    ItemID int IDENTITY(1,1) PRIMARY KEY, -- Start at 1, increment by 1
+    NumberField int,
+    TextField varchar(255),
+    OtherItemID int FOREIGN KEY REFERENCES OtherItems(OtherItemID)
+);
+
+-- MySQL
+CREATE TABLE Items (
+    ItemID int NOT NULL AUTO_INCREMENT,
+    NumberField int,
+    TextField varchar(255),
+    OtherItemID int,
+    PRIMARY KEY (ItemID),
+    FOREIGN KEY (OtherItemID) REFERENCES OtherItems(OtherItemID)
+);
+
+-- Also can use data from other tables
+CREATE TABLE DerivedTable AS
+    SELECT ... FROM ...
+
+-- Views are virtual tables based on real tables
+CREATE OR REPLACE VIEW [Virtual Table Name] AS -- "OR REPLACE" is optional
+    SELECT ... FROM ...
+```
+
+#### Date Types
+- `DATE`: YYYY-MM-DD
+- `DATETIME`: YYYY-MM-DD HH:MI:SS
+- `TIMESTAMP`: MySQL: YYYY-MM-DD HH:MI:SS, SQL Server: a unique number
+- `YEAR`: MySQL: YYYY or YY
+- `SMALDATETIME`: SQL Server: Similar to DATETIME
+
 
 ### Updates
-`ALTER TABLE`
+```sql
+-- Column add
+ALTER TABLE table_name ADD column_name datatype;
+
+-- Column delete
+ALTER TABLE table_name DROP COLUMN column_name;
+
+-- Column modify: to change data type or constraint (newconstraint is optional)
+ALTER TABLE table_name ALTER COLUMN column_name newdatatype newconstraint; -- SQL Server
+ALTER TABLE table_name MODIFY COLUMN column_name newdatatype newconstraint; -- My SQL, older Oracle
+ALTER TABLE table_name MODIFY column_name newdatatype newconstraint; -- Oracle 10G+
+
+-- Index CRUD
+ALTER TABLE table_name CREATE INDEX;
+ALTER TABLE table_name DROP INDEX;
+
+-- Constraints
+ALTER TABLE table_name ADD UNIQUE (col); -- Single Column
+ALTER TABLE table_name ADD CONSTRAINT constraint_name UNIQUE(col1, col2, ...); -- Multiple Columns
+
+ALTER TABLE table_name ADD FOREIGN KEY (other_table_id) REFERENCES other_table_name(other_table_id);
+ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY (other_table_id) REFERENCES other_table_name(other_table_id); -- Multiple Columns
+
+ALTER TABLE table_name DROP CONSTRAINT constraint_name; -- SQL Server, Oracle (also used to drop foreign keys)
+ALTER TABLE table_name DROP PRIMARY KEY; -- MySQL
+ALTER TABLE table_name DROP FOREIGN KEY foreign_key_name; --MySQL
+
+-- Increment
+ALTER TABLE table_name AUTO_INCREMENT=100; -- MySQL
+```
+
+<hr>
 
 ### Deletes
-`DROP TABLE`
+```sql
+DROP TABLE table_name; -- delete the data and schema
+
+TRUNCATE TABLE table_name; -- delete the data but keep the schema
+
+DROP VIEW view_name; 
+```
 
 <hr>
 
@@ -123,11 +227,11 @@ SELECT AVG(column_name) FROM table_name WHERE condition;
 SELECT SUM(column_name) FROM table_name WHERE condition;
 ```
 
-Other functions:
+Null functions:
 - SQL Server: `ISNULL(column_name, value_if_null)`
 - MySQL: `IFNULL(column_name, value_if_null)`
 - Oracle: `NVL(column_name, value_if_null)`
-- 
+
 
 #### Joins
 - `INNER JOIN`: Records have matching values in both tables. *Set expression:* $A \cap B$
@@ -225,15 +329,6 @@ DELETE FROM table_name WHERE condition;
 
 <hr>
 
-## CRUD for Indexes
-
-### Creates
-`CREATE INDEX`
-
-### Deletes
-`DROP INDEX`
-
-<hr>
 
 ## Stored Procedures
 
