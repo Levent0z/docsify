@@ -10,7 +10,7 @@
 
 ## Strings
 
-```JavaScript
+```javascript
 const a = '0123456';
 a.substr(0, 0)    // ''    Second argument is length
 a.substring(0, 0) // ''    Second argument is end index (not inclusive)
@@ -42,8 +42,8 @@ On an array, using `for-in` iterates over the indexes, `for-of` iterates over th
 
 Note: When an array is initialized with a size, its length is size but all its cells are "empty", i.e. the array has no keys.
 ```javascript
-    new Array(10).map((v, i) => i);  // map lambda is not executed. This is akin to doing for-in. (for-of would still execute 10 times)
-    new Array(10).fill(0).map((v, i) => i);  // map lambda is executed 10 times
+new Array(10).map((v, i) => i);  // map lambda is not executed. This is akin to doing for-in. (for-of would still execute 10 times)
+new Array(10).fill(0).map((v, i) => i);  // map lambda is executed 10 times
 ```
 
 
