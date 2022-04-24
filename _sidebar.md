@@ -1,3 +1,7 @@
+# 2022 
+- [SQL Refresher](2022/sql-refresher.md)
+- [JavaScript Refresher](2022/javascript-refresher.md)
+
 # 2020
 - [Code Coverage with Jest](2020/code-coverage-with-jest.md)
 - [Jest with TypeScript](2020/jest-with-typescript.md)
@@ -11,6 +15,7 @@
 - [Angular: Getting Started](2018/getting-started-with-angular.md)
 - [Node: Debug Child Processes In VS Code](2018/debugging-child-node-processes-in-vs-code.md)
 - [Tips: Windows -> MacOS](2018/windows-and-mac.md)
+- [Things to watch out for in C#](2018/things-to-watch-out-for-in-c-sharp.md)
 
 # Non-Technical
 - [Recommended Movies](2020/movies.md)
