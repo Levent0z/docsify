@@ -3,7 +3,7 @@
 - [JavaScript Refresher](2022/javascript-refresher.md)
 - [PostgreSQL on Node Quick Start](2022/postgresql.md)
 - [Docsify](2022/docsify.md)
-  
+
 # 2020
 - [Code Coverage with Jest](2020/code-coverage-with-jest.md)
 - [Jest with TypeScript](2020/jest-with-typescript.md)

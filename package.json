@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Levent Oz <leventoz@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "docsify-cli": "^4.4.4"
+  },
+  "scripts": {
+    "start": "docsify serve ."
+  }
 }
