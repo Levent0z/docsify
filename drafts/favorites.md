@@ -19,6 +19,7 @@
 - [Lightning Web Components Playground](https://developer.salesforce.com/docs/component-library/tools/playground)
 - [LWC Viewer](https://lwc-viewer.herokuapp.com/)
 - [Mockaroo](https://mockaroo.com/) Lets you generate up to 1,000 rows of realistic test data in CSV, JSON, SQL, and Excel formats.
+- [Photopea](https://www.photopea.com/) Photo & graphics editor which can work with raster and vector graphics
 - [Raw.GitHack.Com](https://raw.githack.com/) Serves raw files directly from GitHub, Bitbucket or GitLab with proper Content-Type headers
 - [Repl.it](https://repl.it/) Free, collaborative, in-browser IDE to code in 50+ languages
 - [RunKit + npm](https://npm.runkit.com/) Try any Node.js package right in your browser
