@@ -9,7 +9,7 @@ docker exec -it some-postgres /bin/bash
 
 2. Connect to database as user `postgres` (administrator), then:
 
-```postgresql
+```sql
 create database hellodb;
 create user hellouser with password 'hellouser';
 grant all privileges on database hellodb to hellouser;
@@ -23,7 +23,7 @@ psql postgres://hellouser:hellouser@localhost/hellodb
 
 4. Create table
 
-```postgresql
+```sql
 create table hellotable (name text);
 insert into hellotable values ('Hello World');
 ```
