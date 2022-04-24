@@ -1,4 +1,4 @@
-# PostgreSql
+# PostgreSQL on Node Quick Start
 
 1. Start a postgres instance on docker and connect to it:
 
@@ -31,26 +31,29 @@ insert into hellotable values ('Hello World');
 ## Using Postgres in Node
 
 ```javascript
-const { Pool } = require("pg");
+const { Pool } = require('pg');
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false,
+    }
 });
 
-////
+// Assuming an Express app is initialized
 app.get('/db', async (req, res) => {
     try {
-      const client = await pool.connect();
-      const result = await client.query('SELECT * FROM test_table');
-      const results = { 'results': (result) ? result.rows : null};
-      res.render('pages/db', results );
-      client.release();
+        const client = await pool.connect();
+        const result = await client.query('SELECT * FROM test_table');
+        const results = { 'results': (result) ? result.rows : null};
+
+        // Assuming there is a rendering engine installed
+        res.render('pages/db', results);
+        client.release();
     } catch (err) {
-      console.error(err);
-      res.send("Error " + err);
+        console.error(err);
+        res.send('Error ' + err);
     }
-  })
+});
 ```
 
+> To Be Continued...
