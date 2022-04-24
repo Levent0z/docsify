@@ -52,21 +52,21 @@ Add necessary lines as indicated below to the appropriate locations in `index.ht
 <body>
   <!-- Add at the end -->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
 </body>
 ```
+To add support for more languages, visit [one of the CDNs](https://www.jsdelivr.com/package/npm/prismjs?path=components).
+
 
 Prism doesn't recognize language names unless they're all lowercase (e.g. JavaScript is not recognized, but javascript is). To add support for a workaround that works in all cases, add the following:
 
 ```html
 <script src="//cdn.jsdelivr.net/npm/docsify-prism@latest/dist/docsify-prism.min.js"></script>
 ```
-
-To add support for more languages, visit [one of the CDNs](https://www.jsdelivr.com/package/npm/prismjs?path=components).
 
 ## Embed Video
 
