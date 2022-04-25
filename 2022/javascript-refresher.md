@@ -8,6 +8,36 @@
 - object
 - function
 
+## Hoisting and variable types
+- `var` variables are function-scoped, can be used before declaring.
+- `let` variables are block-scoped, can be declared anywhere in the block but can't be used before initialized.
+- `const` variables are block-scoped, must be declared and initialized at the same time, anywhere in the block.
+
+## Numbers
+
+```javascript
+(16).tostring(2)        // '10000'
+(16).toString(16)       // '10'
+
+parseInt('10000', 2)    // 16
+parseInt('10', 16)      // 16
+
+// Bitwise negation operator can be surprising (uses 32-bit signed ints internally), but results are 64-bit doubles
+~5                      // -6
+(-6).toString(2)        // '-110'
+(~5).toString(2)        // '-110'
+
+// Use the "zero-fill right-shift" operator to convert to unsigned 32-bits
+-1 >>> 0                // 4294967295 (max uint32)
+~5 >>> 0                // 4294967290
+-6 >>> 0                // 4294967290
+
+(-6 >>> 0).toString(2)  // '11111111111111111111111111111010'
+(~5 >>> 0).toString(2)  // '11111111111111111111111111111010'
+```
+
+Note: Can't calculate max uin64 accurately, because its value (18446744073709551615) is greater than `Number.MAX_SAFE_INTEGER` (9007199254740991).
+
 ## Strings
 
 ```javascript
@@ -31,9 +61,18 @@ String.fromCharCode(97)     // 'a'
 **Notes**
 Mind the difference between string's `substr` and `substring`. How to remember: substr & length, substring and endIndexX have the same number of letters. (The last x reminds that the end index is eXclusive)
 
+## Objects
+
+Defining a getter:
+```javascript
+const obj = {};
+Object.defineProperty(obj, 'pi', { value: Math.PI, writeable: false});
+console.log(obj.pi);
+```
+
 ## Arrays
 
-Constructors:
+Constructor:
 ```javascript
 const arr = new Array(?size);
 ```
