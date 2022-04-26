@@ -10,28 +10,68 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <!-- LIGHT THEMES -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" disabled> -->
+    <link class="theme light" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css" disabled> -->
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" disabled> -->
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css" disabled> -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+    <!-- <link class="theme light" rel="stylesheet"
+        href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+    <link class="theme light" rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
 
     <!-- DARK THEMES -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" crossorigin="anonymous"> -->
+    <link class="theme dark" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css"
+        crossorigin="anonymous" disabled>
+    <link class="theme dark" rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css"
+        crossorigin="anonymous" disabled>
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lexend+Tera">
 
     <style>
         .markdown-section pre>code {
             padding: 0;
         }
+
         .markdown-section {
             max-width: unset;
             margin: unset;
         }
+
+        .sidebar-toggle {
+            width: 30px;
+            /* So it doesn't cover the toggle button */
+        }
+
+        #toggle-theme-button {
+            position: fixed;
+            bottom: 10px;
+            left: 30px;
+            opacity: 0.8;
+        }
     </style>
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lexend+Tera">
+
+    <script>
+        window.addEventListener('load', () => {
+            let isDark = false;
+            let ttButton = document.createElement('button');
+            ttButton.id = 'toggle-theme-button';
+            function setToggleText() {
+                ttButton.innerText = `Switch to ${isDark ? 'light' : 'dark'} theme`;
+            }
+
+            setToggleText();
+            ttButton.addEventListener('click', () => {
+                const disableSelector = isDark ? 'link.theme.dark' : 'link.theme.light';
+                const enableSelector = isDark ? 'link.theme.light' : 'link.theme.dark';
+
+                document.querySelectorAll(disableSelector).forEach(n => n.setAttribute('disabled', ''));
+                document.querySelectorAll(enableSelector).forEach(n => n.removeAttribute('disabled'));
+                isDark = !isDark;
+                setToggleText();
+            });
+            document.querySelector('.sidebar').insertAdjacentElement('afterbegin', ttButton);
+        });
+    </script>
 </head>
 
 <body>
