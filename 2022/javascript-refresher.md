@@ -9,14 +9,14 @@
 - function
 
 ## Hoisting and variable types
-- `var` variables are function-scoped, can be used before declaring.
-- `let` variables are block-scoped, can be declared anywhere in the block but can't be used before initialized.
+- `var` variables are function-scoped, can be used before they are declared.
+- `let` variables are block-scoped, can be declared anywhere in the block but can't be used before they are initialized.
 - `const` variables are block-scoped, must be declared and initialized at the same time, anywhere in the block.
 
 ## Numbers
 
 ```javascript
-(16).tostring(2)        // '10000'
+(16).toString(2)        // '10000'
 (16).toString(16)       // '10'
 
 parseInt('10000', 2)    // 16
@@ -105,7 +105,6 @@ const a = [0, 1, 2, 3, 4, 5]; // Reset before each example
 |                                         |                                        |        | a.slice(1)                        | [1, 2, 3, 4, 5]          |                          |
 |                                         |                                        |        | a.slice(1, 1)                     | []                       |                          |
 |                                         |                                        |        | a.slice(1, 2)                     | [1]                      |                          |
-|                                         |                                        |        | a.slice(1, 2)                     | [1]                      |                          |
 |                                         |                                        |        | a.slice(1, -1)                    | [1, 2, 3, 4]             |                          |
 | `splice(start, ?deleteCount, ...items)` | new array of deleted items             | yes    | a.splice()                        | []                       | [0, 1, 2, 3, 4, 5]       |
 |                                         |                                        |        | a.splice(0)                       | [0, 1, 2, 3, 4, 5]       | []                       |
@@ -129,6 +128,7 @@ const a = [0, 1, 2, 3, 4, 5]; // Reset before each example
 
 
 **Notes**:
+- You can use `slice` without any arguments to shallow-clone an array.
 - In `slice`, the optional `end` argument, if positive, is exclusive. If negative, it's the count of omitted elements from the right.
 - In `splice`, the optional `items`, if provided are inserted at the `start` index, and the items to the right slide further to the right.
 - In `sort`, the array is sorted as string comparison by default, unless a compare function is provided, which should return -1, 0, or 1 for smaller, equal and greater than.
