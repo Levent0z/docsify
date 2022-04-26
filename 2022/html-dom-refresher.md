@@ -70,12 +70,21 @@ p2.remove();
 // NOTE: Only one element on document allowed.
 document.appendChild(div);
 
-// There's also these methods:
-div.insertBefore()
-div.insertAdjacentText()
-div.insertAdjacentElement()
-div.insertAdjacentHTML()
+div.insertBefore(/* newNode */, /* relativeToNode */);
+
+div.insertAdjacentText(/* position */, /* string */);
+div.insertAdjacentElement(/* position */, /* newNode */);
+div.insertAdjacentHTML(/* position */, /* HTML string */);
 ```
+
+Position takes the following values:
+| value           | meaning                                           |
+| --------------- | ------------------------------------------------- |
+| `'beforebegin'` | Before the target element                         |
+| `'afterbegin'`  | Inside the target element, before its first child |
+| `'beforeend'`   | Before the target element, after its last child   |
+| `'afterend'`    | After the target element                          |
+
 
 ## Other properties of nodes/elements
 ```javascript
