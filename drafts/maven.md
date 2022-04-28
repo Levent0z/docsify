@@ -2,7 +2,7 @@
 
 ## Installation
 
-```sh
+```bash
 brew install maven
 ```
 
@@ -47,13 +47,13 @@ brew install maven
 
 ## Serve with Jetty
 
-```sh
+```bash
 mvn jetty:run -Djetty.port=9877
 ```
 
 ## List all dependencies (including transitive dependencies)
 
-```sh
+```bash
 mvn dependency:tree
 ```
 
@@ -63,7 +63,7 @@ mvn dependency:tree
 
 [Versions plugin](http://www.mojohaus.org/versions-maven-plugin/)
 
-```sh
+```bash
 mvn versions:set -DnewVersion=MAJOR.MINOR.BUILD-SNAPSHOT
 mvn versions:revert # To undo
 mvn versions:commit
@@ -71,7 +71,7 @@ mvn versions:commit
 
 To increment the build version unconditionally:
 
-```sh
+```bash
 mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion} versions:commit
 ```
 

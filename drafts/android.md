@@ -1,6 +1,6 @@
 
 ## Install CLI tools
-```sh
+```bash
 $ brew cask install android-platform-tools
 ```
 
@@ -24,14 +24,14 @@ Note: `adb root` doesn't work on Google Playstore SDKs. [Stackoverflow](https://
 Go back to AVD manager and create a device using the SDK. It ill generate an emulator in ~/.android/avd
 
 ## List images
-```sh
+```bash
 $ ~/Library/Android/sdk/tools/emulator -list-avds
 ```
 
 
 ## Launch the emulator
 
-```sh
+```bash
 $ ~/Library/Android/sdk/tools/emulator -avd Pixel_3a_API_28 -writable-system
 ```
 
@@ -43,7 +43,7 @@ $ adb logcat  # look at logs
 $ adb reboot
 
 
-```sh
+```bash
 $ adb root
 $ adb remount
 $ adb push /etc/hosts /etc/hosts # copy from local machine into the emulator
@@ -52,7 +52,7 @@ adb root; adb remount; adb push /etc/hosts /etc/hosts
 
 # Adding System Certificate
 
-```sh
+```bash
 $ adb root
 $ adb shell "mount -o rw,remount /"
 # Get the output of the next command to set it in subsequent commands.

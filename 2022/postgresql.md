@@ -2,7 +2,7 @@
 
 1. Start a postgres instance on docker and connect to it:
 
-```sh
+```bash
 docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 docker exec -it some-postgres /bin/bash
 ```
@@ -17,7 +17,7 @@ grant all privileges on database hellodb to hellouser;
 
 3. Connect to database as user hellouser
 
-```sh
+```bash
 psql postgres://hellouser:hellouser@localhost/hellodb
 ```
 

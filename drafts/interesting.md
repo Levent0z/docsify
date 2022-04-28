@@ -49,7 +49,7 @@ graph [rankdir=LR]
 
 ## Turn off bouncing icon
 
-```sh
+```bash
 $ defaults write com.apple.dock no-bouncing -bool TRUE
 $ killall Dock
 ```

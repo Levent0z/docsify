@@ -5,11 +5,11 @@ Remote: loz-wsm
 
 Note: Remove  entries for the REMOTEHOST from `~/.ssh/known_hosts`
 Note: May need to flushdns
-```sh
+```bash
 alias flushdns='sudo killall -HUP mDNSResponder; say dns cleared successfully'
 ```
 
-```sh
+```bash
 REMOTEHOST='MYREMOTEHOST.MYDOMAIN.com' # Set this to the FQDN of your remote host
 KEYNAME='id_rsa_local' # change this to your liking
 
@@ -22,13 +22,13 @@ alias sish="ssh -i $HOME/.ssh/$KEYNAME -o StrictHostKeyChecking=no -o UserKnownH
 ```
 
 ## Example Usage: 
-```sh
+```bash
 sicp ~/.bash_profile $REMOTEHOST:/Users/loz/
 sish $REMOTEHOST
 ```
 
 ## Basic Copy Example
-```sh
+```bash
 scp USERNAME@HOSTNAME:/Users/USERNAME/FILE* .
 # Asks for password
 # If 2FA is enabled, check your authenticator. If it times out, it will ask for "Verification Code"

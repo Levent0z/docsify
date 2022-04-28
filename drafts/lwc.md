@@ -3,7 +3,7 @@
 [lwv.dev](https://lwc.dev/)
 
 ## Getting Started
-```sh
+```bash
 npx create-lwc-app my-app
 cd my-app
 npm run watch

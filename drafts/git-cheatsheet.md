@@ -1,18 +1,18 @@
-```sh
+```bash
 $ git config --local user.email USER@DOMAIN # Replace with your email
 $ git config --local user.name "FIRST LAST" # Replace with your full name
 ```
 
-```sh
+```bash
 $ git add * # adds most files, but not those that start with '.'
 ```
 
-```sh
+```bash
 $ git remote -v
 $ git remote add upstream
 ```
 
-```sh
+```bash
 $ git pull
 ...
 Automatic merge failed; fix conflicts and then commit the result.
@@ -21,7 +21,7 @@ $ git merge --abort
 
 ### Tags
 
-```sh
+```bash
 $ git tag TAGNAME REF # Add tag
 $ git tag -d TAGNAME # Delete local tag (from HEAD)
 $ git push --delete origin TAGNAME # Delete remote tag
@@ -29,13 +29,13 @@ $ git push --delete origin TAGNAME # Delete remote tag
 
 ### Diffing
 
-```sh
+```bash
 $ git difftool HEAD~1 HEAD
 ```
 
 # Bash Profile Additions (~/.bash_profile)
 
-```sh
+```bash
 alias glo='git log --oneline -n20'
 function gl() {
   if [ -z $1 ]; then
@@ -85,7 +85,7 @@ function git_branch_text() {
 
 # Cherry-Pick from another branch
 
-```sh
+```bash
 # First add the remote to the source branch. If the repo is on local, use absolute path for REPOURL
 $ git remote add REMOTELABEL REPOURL
 $ git fetch REMOTELABEL
@@ -98,7 +98,7 @@ $ git cherry-pick --continue
 
 # GPG
 
-```sh
+```bash
 brew install gnupg
 gpg --full-generate-key   // Use 4096 byte size
 gpg --list-keys --keyid-format LONG
@@ -121,7 +121,7 @@ To create an anchor to a heading in github flavored markdown. Add - characters b
 
 # To reset the folder back to factory-settings (i.e. remove generated folders)
 
-```sh
+```bash
 git clean -fdx
 ```
 
@@ -131,13 +131,13 @@ git clean -fdx
 2. Generate new token, copy the text
 3. You can now do:
 
-   ```sh
+   ```bash
    git clone https://USERNAME:PERSONALACCESSTOKEN@GITHOST/ORG/REPO.git
    ```
 
 # Deep-Clean
 
-```sh
+```bash
 git clean -n -dX # Dry run
 git clean -f -dX # The real thing (include untracked files and folders)
 ```
@@ -145,13 +145,13 @@ Also, check out using `-dx` argument instead.
 
 # Restore a file after it has been deleted
 
-```sh
+```bash
 git rev-list HEAD -- FILENAME -n 1  # get the SHA for the latest commit that changed FILENAME
 git checkout SHA^ FILENAME # Get the file from the last commit before the SHA
 ```
 
 # Clone as user with token
 
-```sh
+```bash
 git clone https://$SOME_USER:$SOME_TOKEN@GITHUBHOST/ORG/REPO.git --branch BRANCH PATH
 ```

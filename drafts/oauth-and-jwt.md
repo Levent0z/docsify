@@ -6,7 +6,7 @@
 
 Replace `PASSWORD` below:
 
-```sh
+```bash
 mkdir ~/TMP
 cd ~/TMP
 openssl genrsa -des3 -passout pass:PASSWORD -out server.pass.key 2048

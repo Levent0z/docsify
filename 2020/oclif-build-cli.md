@@ -4,7 +4,7 @@
 
 ## Installation
 
-```sh
+```bash
 $ npx oclif single FOLDERNAME
 $ cd FOLDERNAME
 $ ./bin/run
@@ -14,7 +14,7 @@ This runs Yeoman which asks you a number of questions to initialize a Node proje
 
 The starter app has a number of flags already defined:
 
-```sh
+```bash
 $ ./bin/run -h
 describe the command here
 
@@ -30,7 +30,7 @@ OPTIONS
 
 The following are equivalent:
 
-```sh
+```bash
 $ ./bin/run -n Levent
 $ ./bin/run -n=Levent
 $ ./bin/run -nLevent
@@ -74,14 +74,14 @@ In order for debugging of `.ts` files, comment out the `"composite": true` line 
 
 Before packaging make sure to run the following:
 
-```sh
+```bash
 npm run prepack                  # Clean the lib folder and rebuild with TSC
 npm version (major|minor|patch)  # Set the new version to a number
 ```
 
 To create a package for macOS do:
 
-```sh
+```bash
 oclif-dev pack:macos
 ```
 

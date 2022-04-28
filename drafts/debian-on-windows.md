@@ -4,14 +4,14 @@
 - Create new tab in `Windows Terminal`
 
 ## Disable Chime for the terminal
-```sh
+```bash
 echo 'set bell-style none' >> ~/.inputrc
 ```
 Restart terminal
 
 ## Mounting and unmounting 
 
-```sh
+```bash
 sudo mount -t drvfs E: /mnt/e
 # sudo umount /mnt/e
 
@@ -21,7 +21,7 @@ sudo mount -t drvfs '\\HOST\PATH' /mnt/share
 )
 ### Using CIFS
 
-```sh
+```bash
 sudo apt update
 sudo apt install cifs-utils
 sudo mount.cifs //IPNUMBER/SHAR /mnt/SHARE -o user=USERNAME,pass=PASSWORD # Replace uppercase values

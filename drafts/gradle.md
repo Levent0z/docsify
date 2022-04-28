@@ -15,7 +15,7 @@ It can build Java, Kotlin and C++
 
 ---
 ## Check Version and available tasks
-```sh
+```bash
 $ ./gradlew --version # Shows versions for Gradle, Kotlin, Groovy etc.
 $ ./gradlew tasks     # Shows list of tasks
 $ ./gradlew tasks --all  # Shows detailed list of tasks
@@ -34,7 +34,7 @@ task 'hello' {
     }
 }
 ```
-```sh
+```bash
 gradle hello
 ```
 

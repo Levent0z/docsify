@@ -4,7 +4,7 @@ This blog shows you step-by-step how to set up a TypeScript project from scratch
 
 ## STEP 1: Initialize Node project
 
-```sh
+```bash
 $ npm init
 ```
 
@@ -61,7 +61,7 @@ After this, the following lines will have been added to `devDependencies` sectio
 
 ## STEP 3 - Initialize a TypeScript project:
 
-```sh
+```bash
 $ npx tsc --init
 ```
 
@@ -122,7 +122,7 @@ Add the missing lines into `scripts` section of package.json:
 
 ## STEP 6 - Add a simple TypeScript class
 
-```sh
+```bash
 $ mkdir src
 $ touch src/index.ts
 ```
@@ -141,13 +141,13 @@ export class Main {
 
 Make sure it builds:
 
-```sh
+```bash
 $ npm run build # Creates a dist folder and transpiles index.ts into index.js
 ```
 
 ## Step 7 - Add a test
 
-```sh
+```bash
 $ mkdir src/__tests__
 $ touch src/__tests__/index.test.js # Using regular JavaScript for tests
 ```
@@ -172,7 +172,7 @@ describe('index', () => {
 
 Now run the test:
 
-```sh
+```bash
 $ npm run test
 ```
 
@@ -199,7 +199,7 @@ This is because Jest currently doesn't understand TypeScript. We need to use a t
 
 ## STEP 8 - Install TS-Jest
 
-```sh
+```bash
 $ npm i ts-jest --save-dev
 ```
 
@@ -207,7 +207,7 @@ This adds the line `"ts-jest": "^26.4.1",` to `devDependencies` in package.json.
 
 ## STEP 9 - Add Jest Configuration
 
-```sh
+```bash
 $ mkdir scripts
 $ touch scripts/jest.config.js
 ```
@@ -241,7 +241,7 @@ Use this configuration in the `test` script in `scripts` in package.json:
 
 Our tsconfig.json file doesn't have the configuration that ts-jest needs. Without affecting our production tsconfig.json, we can extend/override settings in a separate file that we will call tsconfig.test.json.
 
-```sh
+```bash
 $ touch tsconfig.test.json
 ```
 
@@ -262,7 +262,7 @@ Copy the following into tsconfig.test.json:
 
 Now we should be good to go:
 
-```sh
+```bash
 $ npm run test
 
 ...

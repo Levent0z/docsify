@@ -7,7 +7,7 @@
 
 ## Getting Started
 
-```sh
+```bash
 # Git init
 npm init
 npm i docsify-cli -g

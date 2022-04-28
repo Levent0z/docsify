@@ -63,7 +63,7 @@ Use `docker scan` to run Snyk tests against images to find vulnerabilities and l
 
 # Test a docker image
 
-```sh
+```bash
 $ docker login -u USERNAME IMAGEHOSTNAME
 $ docker build -t IMAGENAME:latest .
 $ docker run --rm -it IMAGENAME /bin/bash

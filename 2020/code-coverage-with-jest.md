@@ -6,7 +6,7 @@ In this blog, I pick up where I left off with [Jest with TypeScript](./jest-with
 
 ## STEP 1: Add jest-html-reporter
 
-```sh
+```bash
 $ npm i jest-html-reporter --save-dev
 ```
 
@@ -59,7 +59,7 @@ module.exports = {
 
 ## STEP 3: Run the Test
 
-```sh
+```bash
 $ npm run test
 ```
 

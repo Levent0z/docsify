@@ -4,7 +4,7 @@
 
 Define the following functions and then tun `joinVideos`:
 
-```sh
+```bash
 function escapeSingleQuotes() {
     echo $1 | sed "s/'/'\\\''/"
 }

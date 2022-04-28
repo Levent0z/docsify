@@ -9,6 +9,7 @@
 - [Docsify](2022/docsify.md)
 
 # 2020
+- [Bash Utils](2020/bash-utils.md)
 - [Code Coverage with Jest](2020/code-coverage-with-jest.md)
 - [Jest with TypeScript](2020/jest-with-typescript.md)
 - [LWC: Hot Reload in Electon](2020/hot-reload-lwc-electron.md)

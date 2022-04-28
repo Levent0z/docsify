@@ -1,16 +1,16 @@
 # NPM Cheatsheet
 
-```sh
+```bash
 $ npm init # creates package.json
 ```
 
-```sh
+```bash
 $ echo "registry='https://registry.npmjs.org'" > .npmrc
 $ npm config get registry
 # Note: if the current directory doesn't have package.json, it will ignore the local .npmrc and may report settings from a higher-level config file, such as user-specific one from ~/.npmrc.
 ```
 
-```sh
+```bash
 # first this
 $ npm config rm proxy
 $ npm config rm https-proxy
@@ -30,12 +30,12 @@ registry=https://registry.npmjs.org
 
 To set the auth token, you can do:
 
-```sh
+```bash
 AUTHTOKEN=`echo -n $NEXUS_USERNAME:$NEXUS_PASSWORD | base64`
 npm config set 'NPMREGISTRY:_authToken' '${AUTHTOKEN}'"
 ```
 
-```sh
+```bash
 npm version (major|minor|patch)  # Set the new version to a number
 ```
 
@@ -97,7 +97,7 @@ nvm install node --reinstall-packages-from=node
 Method 2
 Using brew, Updates node in /usr/local/bin/node
 
-```sh
+```bash
 brew upgrade node
 ```
 
@@ -132,7 +132,7 @@ Prefix config key with `$npm_package_config_`:
 
 ## Check whether the current package version is already published
 
-```sh
+```bash
     PACKVER=`npm -s run env echo '$npm_package_version'` # Get version
     PACKNAME=`npm -s run env echo '$npm_package_name'` # Get package name
     npm view $PACKNAME@$PACKVER dist.tarball # Display the path if exists, nothing otherwise
@@ -144,7 +144,7 @@ Prefix config key with `$npm_package_config_`:
 
 ## Publish Scoped
 
-```sh
+```bash
 mkdir tmp
 cd tmp
 npm init # use packaage name = @MYSCOPE/test1
@@ -169,7 +169,7 @@ npm publish --registry=https://registry.npmjs.org --scope=MYSCOPE --access=publi
 
 When `NPM_CONFIG_PRODUCTION` is true, npm automatically runs all scripts in a subshell where `NODE_ENV` is "production".
 
-```sh
+```bash
 npm whoami --registry='https://registry.npmjs.org'
 sh "npm config set proxy $PROXYURL"
 sh "npm config set https-proxy $PROXYURL"

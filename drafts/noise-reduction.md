@@ -9,11 +9,11 @@ https://www.audacityteam.org/
 
 
 3. Install ffmpeg
-```sh
+```bash
 brew install ffmpeg
 ```
 
-```sh
+```bash
 ffmpeg -i "video-only.mov" -i "audio.m4a" -c:v copy -c:a copy movie.mov
 ```
 

@@ -11,12 +11,12 @@ To use the Heroku CLI's autocomplete, there are 2 options:
    1. Follow homebrew's [install instructions](https://docs.brew.sh/Shell-Completion)
       NOTE: For zsh, as the instructions mention, be sure `compinit` is autoloaded and called, either explicitly or via a framework like `oh-my-zsh`.
    2. Then run
-      ```sh
+      ```bash
       $ heroku autocomplete --refresh-cache
       ```
 
 2. Use our standalone setup. Run and follow the install steps:
-   ```sh
+   ```bash
    $ heroku autocomplete
    ```
 
@@ -32,19 +32,19 @@ zsh completions have been installed to:
 
 ## Create a new app
 
-```sh
+```bash
 heroku create --app <give_your_app_a_name>
 ```
 
 ## SSO Login
 
-```sh
+```bash
 heroku login --sso
 ```
 
 ## Get/Set environment variables
 
-```sh
+```bash
 heroku config
 heroku config:set TIMES=2
 heroku config:add YOUR_KEY="YOUR_VALUE"
@@ -54,32 +54,32 @@ heroku config:add YOUR_KEY="YOUR_VALUE"
 
 https://help.heroku.com/PBGP6IDE/how-should-i-generate-an-api-key-that-allows-me-to-use-the-heroku-platform-api
 
-```sh
+```bash
 heroku auth:token
 ```
 
 ## Add-ons
 
-```sh
+```bash
 heroku addons:create graphenedb:dev-free            # Neo4j Graph DB
 heroku addons:create heroku-postgresql:hobby-dev    # Postgres
 ```
 
 ## Deploy the app to Heroku
 
-```sh
+```bash
 git push heroku master
 ```
 
 ## Check deployment
 
-```sh
+```bash
 heroku logs -t
 ```
 
 ## Run locally?
 
-```sh
+```bash
 heroku local # This will respect the .env file
 ```
 
@@ -103,14 +103,14 @@ worker: node packages/worker/dist/worker.js
 
 ## Enable Heroku app?
 
-```sh
+```bash
 heroku ps:scale web=1
 heroku ps:scale worker=1
 ```
 
 ## Browse the web app
 
-```sh
+```bash
 heroku open
 ```
 
@@ -120,7 +120,7 @@ https://github.com/lstoll/heroku-buildpack-monorepo
 
 ## Get running processes / view dyno configuration
 
-```sh
+```bash
 heroku ps
 ```
 
@@ -144,7 +144,7 @@ heroku ps
 
 ## Various commands
 
-```sh
+```bash
 heroku ps:scale worker=1
 ```
 
@@ -152,7 +152,7 @@ heroku ps:scale worker=1
 
 Assuming that you have Postgres installed locally, use the heroku pg:psql command to connect to the remote database, create a table and insert a row:
 
-```sh
+```bash
 > heroku pg:psql
 psql (11.5)
 SSL connection (cipher: DHE-RSA-AES256-SHA, bits: 256)

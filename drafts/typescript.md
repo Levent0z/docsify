@@ -12,6 +12,6 @@ Object.entries(Object.getOwnPropertyDescriptors(Object.getPrototypeOf(obj)))
 
 ## Diagnose typing issues
 https://drag13.io/posts/custom-typings/index.html
-```sh
+```bash
 tsc --traceResolution
 ```

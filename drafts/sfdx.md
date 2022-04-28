@@ -27,7 +27,7 @@ Or you can point to another username with `-u my@un.org`
 # Setup
 
 ## Create a scratch org
-```sh
+```bash
 sfdx force:org:create -s -f config/project-scratch-def.json -a someOrgAlias
 ```
 This will display the orgId and the username if successful.
@@ -64,7 +64,7 @@ sfdx force:data:tree:export --query "SELECT Body,LastModifiedDate FROM FeedItem"
 # Running
 
 ## Open Org in Browser
-```sh
+```bash
 sfdx force:org:open
 # or
 sfdx force:org:open --path one/one.app

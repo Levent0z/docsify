@@ -21,7 +21,7 @@ Options:
 
 # Use Create-LWC-App to create an Electron LWC-app
 
-```sh
+```bash
 npx create-lwc-app clowder
 ```
 Don't use simple setup. When asked "Select the type of app you want to create", choose "Electron app".

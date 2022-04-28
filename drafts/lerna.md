@@ -109,6 +109,6 @@ With the default settings (unless overridden), [lerna version](https://github.co
 
 Example prerelease with Lerna:
 
-```sh
+```bash
 yarn lerna version prerelease -m 'chore(release): publish %s'
 ```
