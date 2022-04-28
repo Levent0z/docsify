@@ -64,13 +64,7 @@ jstack -l <java-pid> # Sample call stacks
 /usr/libexec/java_home # Get location of the JDK
 ```
 
-## Sample call stacks
-
-```bash
-
-```
-
-## Using Termenu
+## Using [Termenu](https://github.com/elifiner/termenu)
 
 ```bash
 $ echo -n "Would you like to exit? " && termenu -i Yes No Maybe
