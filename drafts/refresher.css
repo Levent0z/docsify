@@ -1,0 +1,103 @@
+div {
+    background-color: white;
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    /* repeat-x, repeat-y, repeat */
+    background-attachment: fixed;
+    /* scroll */
+    background-position: right top;
+
+    /* shorthand: same order as above, space separated */
+    background: white url('image.jpg') no-repeat right top;
+
+     /* Stretch image to cover */
+    background-size: 100% 100%;
+
+    /* Stretch image to cover while respecting aspect ratio */
+    background-size: cover; 
+
+    border-width: 1px;
+    border-style: solid;
+    /* required for shorthand */
+    border-color: white;
+    /* will be color if omitted */
+
+    /* shorthand: same order as above, space separated */
+    border: 1px solid white;
+
+    color: white;
+    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    /* H = Hue: Rainbow colors clockwise starting at 0 to 360 degrees 
+       S = Saturation
+       L = Lightness (0: black, 100%: white) */
+    color: hsl(0, 100%, 50%);
+    color: hsla(0, 100%, 50%, 0.5);
+
+    /* Negative values are allowed for margin */
+    /* Can be px, pt, cm, %, auto */
+    margin-top: 1px;
+    margin-right: 2px;
+    margin-bottom: 3px;
+    margin-left: 4px;
+
+    /* 4 values means top, right, bottom, left (clockwise from the top) */
+    margin: 1px 2px 3px 4px;
+    /* 3 values means middle is left & right */
+    margin: 1px 2px 4px;
+    /* 2 values means first: top & bottom, second is left & right */
+    margin: 1px 2px;
+    /* 1 value means all 4 margins */
+    margin: 1px;
+
+    /* Negative values are NOT allowed for padding */
+    /* Can be px, pt, cm, %, auto */
+    padding-top: 1px;
+    padding-right: 2px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+
+    /* 4 values means top, right, bottom, left (clockwise from the top) */
+    padding: 1px 2px 3px 4px;
+    /* 3 values means middle is left & right */
+    padding: 1px 2px 4px;
+    /* 2 values means first: top & bottom, second is left & right */
+    padding: 1px 2px;
+    /* 1 value means all 4 margins */
+    padding: 1px;
+
+    text-align: center;
+
+    font-family: verdana;
+    font-size: 20px;
+
+    text-decoration: none;
+    text-align: center;    
+}
+
+@media screen and (min-width: 480px) {}
+@media only screen and (orientation: landscape) {
+    body {
+      background-color: lightblue;
+    }
+}
+
+.column {
+    float: left;
+    /* four columns */
+    width: 25%;
+}
+
+@media screen and (max-width: 992px) {
+    .column {
+        /* two columns */
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
