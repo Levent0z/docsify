@@ -6,7 +6,6 @@
 ```javascript
 // Using promises
 fetch(url)
-//.then(resp => resp.json()) // alternative
 .then(resp => resp.text())
 .then(text => console.log(text))
 .catch(err => console.error(err));
@@ -15,7 +14,6 @@ fetch(url)
 async function example() {
     try {
         const resp = await fetch(url);
-        // const json = await resp.json(); // alternative
         const text = await resp.text(); 
         console.log(text);
     } catch (err) {
@@ -26,7 +24,7 @@ async function example() {
 
 ### HTTP POST 
 
-Sending JSON data:
+**Sending JSON data:**
 ```javascript
 await fetch(url, {
     method: 'POST'
@@ -37,7 +35,7 @@ await fetch(url, {
 });
 ```
 
-Sending a file:
+**Sending a file:**
 ```javascript
 // <input type="file">
 const input = document.querySelector('input[type="file"]');
@@ -48,10 +46,68 @@ const input = document.querySelector('input[type="file"]');
 const formData = new FormData();
 Array.from(input.files).forEach((v, i) => formData.append(`file_${i}`, input.files[i]);
 await fetch(url, {
-  method: 'POST',
-  body: formData
+    method: 'POST',
+    body: formData
 });
 ```
+
+**Fetching an image:**
+```javascript
+const image = document.querySelector('.an-image');
+fetch(url)
+.then(response => response.blob())
+.then(blob => {
+    const objectURL = URL.createObjectURL(blob); 
+    image.src = objectURL;
+});
+```
+
+**Note**: If response.`type` is "opaque", blob.`size` will be 0 and a blob.`type` will be empty string, which renders it useless for methods like `URL.createObjectURL`.
+
+
+## Fetch-Related Objects
+
+### Headers Object
+
+This is like a `Map`, but allows multiple values per key. `append` adds to new/existing list of the key. `get` returns a CSV string for the (multiple) values. `set`, `forEach`, `delete`, etc.. exists.
+
+Also see: [HTTP Headers](http-headers.md)
+
+### Request Object
+
+The body type can only be a `Blob`, `BufferSource`, `FormData`, `URLSearchParams`, `USVString` or `ReadableStream` type, so for adding a JSON object to the payload you need to stringify that object.
+
+### Response Object
+
+To read the body of a response, use one of its following methods all of which return a promise:
+- `text()`
+- `json()`
+- `formData()`
+- `blob()`
+- `arrayBuffer()`
+  
+The following is also avaiable:
+- `body.getReader().read()` (Returns Promise<{`done`: boolean, `value`: Uint8Array}>)
+
+The `Response()` constructor accepts Files and Blobs, so it may be used to read a File into other formats:
+```javascript
+new Response(file).arrayBuffer()
+```
+
+### Note
+
+An `ArrayBuffer` is a generic, fixed-length raw binary data buffer. Cannot directly manipulate the contents. Instead it can be used in the constructor of a `TypedArray` type. A TypedArray object () describes an array-like view of an underlying binary data buffer. There is no global property named TypedArray, nor is there a directly visible TypedArray constructor.
+
+Example:
+```javascript
+const arrayBuffer = await resp.arrayBuffer();
+const bytes = new UInt8Array(arrayBuffer);
+```
+
+The `Blob` object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a `ReadableStream` so its methods can be used for processing the data.
+
+![Diagram](../assets/2022-04-30-blob-arraybuffer-etal.svg)
+
 
 [More on Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 

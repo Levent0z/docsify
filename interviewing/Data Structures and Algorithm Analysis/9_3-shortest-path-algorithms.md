@@ -1,8 +1,8 @@
 # Shortest Path Algorithms
 
-Problem: Starting at a given vertex, find shortest path from it to all the other vertices.
-
 Refer to the [graph data structures](9_1-graph-data-structures.md) for types used in code sections below.
+
+If the path is already known, recursion can be used to print the path from start to end, using each vertex's `previous` field.
 
 ```typescript
 function printPath(start: Vertex, end: Vertex): void {
@@ -15,6 +15,10 @@ function printPath(start: Vertex, end: Vertex): void {
     console.log(end);
 }
 ```
+
+But how do we set the previous values?
+**Problem**: Starting at a given vertex, find shortest path from it to all the other vertices.
+
 
 ## For undirected, unweighted graph
 Use `Breadth-First Search (BFS)`.
@@ -52,7 +56,7 @@ In each iteration, pick the closest new vertex seen to be the next current verte
 <summary>Code</summary>
 
 ```typescript
-// Note: This hasn't been tested, use at your own risk.
+// Note: This implementation hasn't been tested, use at your own risk.
 function dijkstra(g: Graph, v: Vertex): void {
     v.distance = 0;
     do {
@@ -70,8 +74,12 @@ function dijkstra(g: Graph, v: Vertex): void {
             }
         })
         v = closestW;
-    } while(v !== null);
+    } while(v);
 }
 ```
 
 </details>
+<br>
+
+**Note**: Dijkstra is a special case of [A* Search Algorithm](https://www.geeksforgeeks.org/a-search-algorithm/), where h = 0 for all nodes. (h is the heuristic used in $f = g + h$.)
+

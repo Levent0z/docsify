@@ -1,4 +1,6 @@
 # 2022 
+- [Web Security](2022/web-security.md)
+- [HTTP Headers](2022/http-headers.md)
 - [PC Keyboard on macOS](2022/pc-keyboard-on-mac.md)
 - [CSS Refresher](drafts/css-refresher.md)
 - [Browser Object Model Refresher](2022/bom-refresher.md)
