@@ -72,7 +72,7 @@
 - Document Database
   - Each document can have an entirely different structure
   - Examples: MongoDB, CouchDB
-- Wide-Column Datase
+- Wide-Column Database
   - Columns are containers for rows
   - Rows don’t need to have the same number of columns
   - Columns need not be known ahead of time
