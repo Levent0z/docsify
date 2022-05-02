@@ -221,3 +221,45 @@ a.length === 10 // true
 a[0] === undefined // true, in fact all entries are undefined. So be careful preinitializing arrays if using lengths
 ```
 
+## Object Prototypes
+
+Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a **prototype chain**. The chain ends when we reach a prototype that has `null` for its own prototype.
+
+```javascript
+class C {
+    f() {
+        return true;
+    }
+}
+typeof C === 'function' // true
+let c1 = new C();
+typeof c1 === 'object' // true
+
+let c1p = Object.getPrototypeOf(c1);    // This is the standard way, not __proto__
+typeof c1p === 'object' // true
+c1p.constructor === C   // true
+
+let c1pp = Object.getPrototypeOf(c1p);  // Still an object
+Object.getPrototypeOf(c1pp)) === null // true
+```
+
+When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case undefined is returned.
+
+In JavaScript, all `function`s have a property named `prototype`. When you call a function as a constructor, this property is set as the prototype of the newly constructed object (by convention, in the property named `__proto__`).
+
+```javascript
+const personPrototype = {
+  greet() {
+    console.log(`hello, my name is ${this.name}!`);
+  }
+}
+
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype = personPrototype;
+Person.prototype.constructor = Person;
+
+new Person('Levent').greet(); // hello, my name is Levent!
+```
