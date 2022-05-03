@@ -263,3 +263,43 @@ Person.prototype.constructor = Person;
 
 new Person('Levent').greet(); // hello, my name is Levent!
 ```
+
+
+## Promises
+
+```javascript
+const p = new Promise((resolve, reject) => {
+    someFuncThatTakesCallback((value, error) => {
+       if (error) {
+           reject(error);
+       } else {
+           resolve(value);
+       }
+    });
+});
+
+p.then(value => {
+
+}).catch(error => {
+
+}).finally(() => {
+
+});
+
+// Alternative to the above:
+try {
+    // Note: async keyword is required if used in a function
+    const value = await p;
+} catch (error) {
+
+} finally {
+
+}
+```
+
+| Promise method | description                                                                        |
+| -------------- | ---------------------------------------------------------------------------------- |
+| `all`          | resolves if all promises in the iterable resolve. Rejects as soon as one rejects   |
+| `allSettled`   | waits for all promises in the iterable to resolve or reject                        |
+| `any`          | resolves as soon as one promise in the iteraable resolves. Rejects if none resolve |
+| `race`         | resolves or rejects as soon as any of the promises to settles                      |
