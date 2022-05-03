@@ -6,8 +6,8 @@ let el = document.getElementById('element-id');
 el = document.querySelector('#element-id');    // Same as above. Use the # CSS selector for IDs.
 
 const divs = document.getElementsByTagName('div'); // Returns an HTMLCollection
-let elArray = document.getElementsByClassName('class-name'); // Returns an HTMLCollection
-elArray = document.querySelectorAll('.class-name'); // Returns a NodeList. Use the . CSS selector for classes.
+const htmlCol = document.getElementsByClassName('class-name'); // Returns an HTMLCollection
+const nodeList = document.querySelectorAll('.class-name'); // Returns a NodeList. Use the . CSS selector for classes.
 ```
 
 ## Navigating Node Relationships
@@ -78,6 +78,7 @@ div.insertAdjacentHTML(/* position */, /* HTML string */);
 ```
 
 Position takes the following values:
+
 | value           | meaning                                           |
 | --------------- | ------------------------------------------------- |
 | `'beforebegin'` | Before the target element                         |
@@ -112,6 +113,10 @@ element.removeEventListener('click', someFunction, useCapture);
 ```
 
 An event handler for a specific element can be specified as an attribute on an element using the **on** prefix, such as `onclick`. The value of the attribute is actual JavaScript, with `this` being the element. See forms section for an example. [List of event attributes](https://www.w3schools.com/tags/ref_eventattributes.asp).
+
+## Inputs
+
+
 
 ## Forms
 ```html
@@ -226,9 +231,11 @@ You can use `name`d `<slot>`s inside a template.
 | Form     | `<form>`                            | `formdata`, `reset`, `submit`                   |                                                   |
 | Input    | `<input>`, `<select>`, `<textarea>` | `input`, `invalid`, `search`, `selectionchange` |                                                   |
 | Keyboard |                                     | `keydown`, `keyup`                              | `altKey`, `ctrlKey`, `metaKey`, `shiftKey`, `key` |
-| Mouse    |                                     | `click`, `dblclick`, `mouseup`, `mousedown`     | *Key,                                             |
+| Mouse    |                                     | `click`, `dblclick`, `mouseup`, `mousedown`     |                                                   |
 
-**Importante properties**
+For `input` event, the event.`data` property has the last character typed if `inputType` is `'insertText'`. It's `null` if input type is `'deleteContentBackward'` or `'insertFromPaste'`.
+
+**Important properties**
 - event.`bubbles`,
 - event.`cancelable`
 - event.`composed`

@@ -31,7 +31,7 @@ An `outline` is a line that is drawn around elements, OUTSIDE the borders, to ma
 
 By default in the CSS box model, the width and height you assign to an element is applied only to the element's content box. The `box-sizing` property can be used to adjust this behavior:
 - `content-box`: default CSS behavior. May be desirable when `position` is `relative` or `absolute`.
-- `border-box`: account sfor border ad padding in the element's provided width and height. This is the default for `<table>`, `<select>`, `<button>` elements and the `<input>` element whose type is `radio`, `checkbox`, `reset`, `button`, `submit`, `color` or `search`.
+- `border-box`: accounts for border ad padding in the element's provided width and height. This is the default for `<table>`, `<select>`, `<button>` elements and the `<input>` element whose type is `radio`, `checkbox`, `reset`, `button`, `submit`, `color` or `search`.
 
 
 ## Sizing
@@ -43,7 +43,17 @@ By default in the CSS box model, the width and height you assign to an element i
 
 ### Position
 
-- The `position` property can take many values. (TBD)
+The `position` property can take many values:
+- `static`: Default, abides by the flow of the page
+- `relative`: Relative to where the item would normally be placed according to fixed
+- `fixed`: Relative to the viewport: Removed from the flow.
+- `absolute`: Relative to the first positioned ancestor (or body if none). Removed from the flow
+- `sticky`: Based on user's scroll position. Must also specify at least one of `top`, `right`, `bottom`, `left`.
+
+The `vertical-align` property sets vertical alignment of an inline, inline-block or table-cell box. Can't be used on block-level elements.
+
+The `text-align` property sets the horizontal alignment of the content inside a block element or table-cell box. This means it works like vertical-align but in the horizontal direction.
+
 
 ### Stacking
 
@@ -97,6 +107,29 @@ The `<link>` element has a `media` property.
 
 
 ## Flex
+
+### Learn about Flex in a fun interactive way
+[Flexbox Froggy](https://flexboxfroggy.com/)
+
+Properties on container element:
+- `display`: Must be set to `flex`
+- `flex`: Can be set to a certain percentage for sizing w.r.t. parent
+- `justify-content`: Aligns items along the main axis (row by default). 
+  - `flex-start` (default), `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`
+- `align-items`: Aligns item along the cross axis
+  - `flex-start`, `flex-end`, `center`, `baseline`, `stretch` (default)
+- `flex-direction`: direction of the main axis
+  - `row` (default), `row-reverse`, `column`, `column-reverse`
+- `flex-wrap`: single or multiple lines
+  - `nowrap` (default), `wrap`, `wrap-reverse`
+- `flex-flow`: shorthand for flex-direction flex-wrap.
+- `align-content`: Aligns lines within the flex container when there is extra space on the cross axis
+  - `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`, `stretch` (default)  
+
+Properties on child element
+- `order`: positive or negative value, 0 is the default. Items sorted in ascending order.
+- `align-self`: aligns self in cross axis. It overrides the align-items value of the parent
+
 
 ### Basic Responsive Two-Column Layout
 [Reference](https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_website)

@@ -157,6 +157,7 @@ Notes:
 
 
 Wildcards for `LIKE` operator (for SQL Server):
+
 | symbol | matches                       | example   |
 | ------ | ----------------------------- | --------- |
 | %      | 0-n characters                | endsWith% |
@@ -234,10 +235,10 @@ Null functions:
 
 
 #### Joins
-- `INNER JOIN`: Records have matching values in both tables. *Set expression:* $A \cap B$
-- `LEFT JOIN` or `LEFT OUTER JOIN`: all records from the left table and the matching records from the right table. *Set expression:* $A$
-- `RIGHT JOIN` or `RIGHT OUTER JOIN`: all records from the right table, and the matching records from the left table. *Set expression:* $B$
-- `FULL JOIN` or `FULL OUTER JOIN`: all records from the right table, and the matching records from the left table. *Set expression:* $A \cup B$
+- `INNER JOIN`: Records have matching values in both tables: $A \cap B$
+- `LEFT JOIN` or `LEFT OUTER JOIN`: all records from the left table and the matching records from the right table: $A$
+- `RIGHT JOIN` or `RIGHT OUTER JOIN`: all records from the right table, and the matching records from the left table: $B$
+- `FULL JOIN` or `FULL OUTER JOIN`: all records from the right table, and the matching records from the left table: $A \cup B$
 - For multiple joins use parantheses to group
 
 ```sql

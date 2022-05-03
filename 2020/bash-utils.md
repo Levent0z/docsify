@@ -85,11 +85,6 @@ find . -type f -name "*.js" | xargs grep function
 find . -type f -name “*.js” | xargs -P4 grep expression # parallel execution, max 4 procs
 ```
 
-dirname
-basename
-yes
-```
-
 ```bash
 nvm_get_os ()
 {
@@ -162,13 +157,6 @@ user is a member of the group
 ```
 
 
-
-```
-pkg=$(cat package.json) && echo <"$pkg"
-```
-
----
-
 ### NPM Run
 
 ```bash
@@ -190,10 +178,12 @@ function npmrun() {
 }
 ```
 
+## Change password
 ```bash
 sudo passwd centos # change password for the user centos
 ```
 
+## Line wrapping setting for the terminal
 ```bash
 $ tput rmam # Disable line wrapping
 $ tput smam # Enable line wrapping
@@ -419,3 +409,11 @@ curl -v -H"Content-Type:text/plain" -d "@sampleCoreEnvelope.txt" "http://localho
 
 ## Count how many colors xterm actually supports
 [xterm-color-count.sh](https://github.com/l0b0/xterm-color-count)
+
+## More ... (Still to document)
+```bash
+dirname
+basename
+yes
+pkg=$(cat package.json) && echo <"$pkg"
+```
