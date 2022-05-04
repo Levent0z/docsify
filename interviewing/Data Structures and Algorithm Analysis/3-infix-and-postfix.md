@@ -55,6 +55,7 @@ Also see Expression Trees.
 
 <details>
 <summary>Step-by-Step</summary>
+
 | Step | Cursor | Algorithm Step | Output                    | Stack |
 | ---- | ------ | -------------- | ------------------------- | ----- |
 | 1    | a      | 2              | a                         |       |

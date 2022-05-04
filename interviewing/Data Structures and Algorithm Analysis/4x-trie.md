@@ -34,7 +34,7 @@ function insert(root: TrieNode, text: string): void {
     let start: TrieNode = root;
     Array.from(text).forEach(charStr => {
         const index = charStr.charCodeAt(0) - A; // map character to index
-        if (!start[index])  {
+        if (!start.children[index])  {
             start.children[index] = new TrieNode(range);
         }        
         start = start.children[index];

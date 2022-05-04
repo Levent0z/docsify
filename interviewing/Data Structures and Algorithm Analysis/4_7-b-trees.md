@@ -19,7 +19,7 @@ Notes:
 
 <br>
 
-Goot to know:
+Good to know:
 - B-tree of order 3 is known as a "2-3 tree". 
 - B-tree of order 4 is known as a "2-3-4 tree".
 These names come how many values a leaf can hold.

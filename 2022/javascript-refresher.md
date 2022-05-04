@@ -91,40 +91,42 @@ Given:
 const a = [0, 1, 2, 3, 4, 5]; // Reset before each example
 ```
 
-| method                                  | returns                                | mutate | usage                             | output on reset a        | a after any mutation     |
-| --------------------------------------- | -------------------------------------- | ------ | --------------------------------- | ------------------------ | ------------------------ |
-| `push(...items)`                        | new length                             | yes    | a.push(6)                         | 7                        | [0, 1, 2, 3, 4, 5, 6]    |
-|                                         |                                        |        | a.push(6, 7)                      | 8                        | [0, 1, 2, 3, 4, 5, 6, 7] |
-|                                         |                                        |        | a.push(...[6, 7])                 | 8                        | [0, 1, 2, 3, 4, 5, 6, 7] |
-| `pop()`                                 | popped item from the right             | yes    | a.pop()                           | 5                        | [0, 1, 2, 3, 4]          |
-| `shift()`                               | dequeued item from the left            | yes    | a.shift()                         | 0                        | [1, 2, 3, 4, 5]          |
-| `unshift`                               | new length                             | yes    | a.unshift(6)                      | 7                        | [6, 0, 1, 2, 3, 4, 5]    |
-|                                         |                                        |        | a.unshift(6, 7)                   | 8                        | [6, 7, 0, 1, 2, 3, 4, 5] |
-|                                         |                                        |        | a.unshift(...[6, 7])              | 8                        | [6, 7, 0, 1, 2, 3, 4, 5] |
-| `slice(?start, ?end)`                   | new array                              | no     | a.slice()                         | [0, 1, 2, 3, 4, 5]       |                          |
-|                                         |                                        |        | a.slice(1)                        | [1, 2, 3, 4, 5]          |                          |
-|                                         |                                        |        | a.slice(1, 1)                     | []                       |                          |
-|                                         |                                        |        | a.slice(1, 2)                     | [1]                      |                          |
-|                                         |                                        |        | a.slice(1, -1)                    | [1, 2, 3, 4]             |                          |
-| `splice(start, ?deleteCount, ...items)` | new array of deleted items             | yes    | a.splice()                        | []                       | [0, 1, 2, 3, 4, 5]       |
-|                                         |                                        |        | a.splice(0)                       | [0, 1, 2, 3, 4, 5]       | []                       |
-|                                         |                                        |        | a.splice(1)                       | [1, 2, 3, 4, 5]          | [0]                      |
-|                                         |                                        |        | a.splice(1,1)                     | [1]                      | [0, 2, 3, 4, 5]          |
-|                                         |                                        |        | a.splice(3, 1, 6, 7)              | [3]                      | [0, 1, 2, 6, 7, 4, 5]    |
-| `concat()`                              | new array of concatenated items        | no     | a.concat([6,7])                   | [0, 1, 2, 3, 4, 5, 6 ,7] |                          |
-| `reverse()`                             | the same array, reversed               | yes    | a.reverse()                       | a                        | [5, 4, 3, 2, 1, 0]       |
-| `sort(?compareFn)`                      | the same array, sorted                 | yes    | a.sort()                          | a                        | [0, 1, 2, 3, 4, 5]       |
-|                                         |                                        |        | a.sort((a,b) => a - b))           | a                        | [0, 1, 2, 3, 4, 5]       |
-|                                         |                                        |        | a.sort((a,b) => b - a))           | a                        | [5, 4, 3, 2, 1, 0]       |
-| `forEach(iteratorFn, ?thisArg)`         | undefined                              | no     | a.forEach((v, i) =>  {}))         |                          |                          |
-| `map(iteratorFn, ?thisArg)`             | a new array                            | no     | a.map((v, i) =>  v*2))            | [0, 2, 4, 6, 8, 10]      |                          |
-| `filter(predicateFn, ?thisArg)`         | a new subset array                     | no     | a.filter((v, i) =>  v % 2 === 0)  | [0, 2, 4]                |                          |
-| `every(predicateFn, ?thisArg)`          | true if pfn=true for all (or empty)    | no     | a.every((v, i) => v < 6)          | true                     |                          |
-|                                         |                                        |        | a.every((v, i) => v < 5)          | false                    |                          |
-| `some(predicateFn, ?thisArg)`           | false if pfn=false for all ( or empty) | no     | a.some((v, i) => v < 1)           | true                     |                          |
-|                                         |                                        |        | a.some((v, i) => v > 5)           | false                    |                          |
-| `reduce(aggregatorFn, ?initValue)`      | aggregate value                        | no     | a.reduce((p, c) => p + c, 0)      | 15                       |                          |
-| `reduceRight(aggregatorFn, ?initValue)` | aggregate value                        | no     | a.reduceRight((p, c) => p + c, 0) | 15                       |                          |
+| method                                  | returns                                     | mutate | usage                             | output on reset a        | a after any mutation     |
+| --------------------------------------- | ------------------------------------------- | ------ | --------------------------------- | ------------------------ | ------------------------ |
+| `push(...items)`                        | new length                                  | yes    | a.push(6)                         | 7                        | [0, 1, 2, 3, 4, 5, 6]    |
+|                                         |                                             |        | a.push(6, 7)                      | 8                        | [0, 1, 2, 3, 4, 5, 6, 7] |
+|                                         |                                             |        | a.push(...[6, 7])                 | 8                        | [0, 1, 2, 3, 4, 5, 6, 7] |
+| `pop()`                                 | popped item from the right                  | yes    | a.pop()                           | 5                        | [0, 1, 2, 3, 4]          |
+| `shift()`                               | dequeued item from the left                 | yes    | a.shift()                         | 0                        | [1, 2, 3, 4, 5]          |
+| `unshift`                               | new length                                  | yes    | a.unshift(6)                      | 7                        | [6, 0, 1, 2, 3, 4, 5]    |
+|                                         |                                             |        | a.unshift(6, 7)                   | 8                        | [6, 7, 0, 1, 2, 3, 4, 5] |
+|                                         |                                             |        | a.unshift(...[6, 7])              | 8                        | [6, 7, 0, 1, 2, 3, 4, 5] |
+| `slice(?start, ?end)`                   | new array                                   | no     | a.slice()                         | [0, 1, 2, 3, 4, 5]       |                          |
+|                                         |                                             |        | a.slice(1)                        | [1, 2, 3, 4, 5]          |                          |
+|                                         |                                             |        | a.slice(1, 1)                     | []                       |                          |
+|                                         |                                             |        | a.slice(1, 2)                     | [1]                      |                          |
+|                                         |                                             |        | a.slice(1, -1)                    | [1, 2, 3, 4]             |                          |
+| `splice(start, ?deleteCount, ...items)` | new array of deleted items                  | yes    | a.splice()                        | []                       | [0, 1, 2, 3, 4, 5]       |
+|                                         |                                             |        | a.splice(0)                       | [0, 1, 2, 3, 4, 5]       | []                       |
+|                                         |                                             |        | a.splice(1)                       | [1, 2, 3, 4, 5]          | [0]                      |
+|                                         |                                             |        | a.splice(1,1)                     | [1]                      | [0, 2, 3, 4, 5]          |
+|                                         |                                             |        | a.splice(3, 1, 6, 7)              | [3]                      | [0, 1, 2, 6, 7, 4, 5]    |
+| `concat()`                              | new array of concatenated items             | no     | a.concat([6,7])                   | [0, 1, 2, 3, 4, 5, 6 ,7] |                          |
+| `reverse()`                             | the same array, reversed                    | yes    | a.reverse()                       | a                        | [5, 4, 3, 2, 1, 0]       |
+| `sort(?compareFn)`                      | the same array, sorted                      | yes    | a.sort()                          | a                        | [0, 1, 2, 3, 4, 5]       |
+|                                         |                                             |        | a.sort((a,b) => a - b))           | a                        | [0, 1, 2, 3, 4, 5]       |
+|                                         |                                             |        | a.sort((a,b) => b - a))           | a                        | [5, 4, 3, 2, 1, 0]       |
+| `forEach(iteratorFn, ?thisArg)`         | undefined                                   | no     | a.forEach((v, i) =>  {}))         |                          |                          |
+| `map(iteratorFn, ?thisArg)`             | a new array                                 | no     | a.map((v, i) =>  v*2))            | [0, 2, 4, 6, 8, 10]      |                          |
+| `filter(predicateFn, ?thisArg)`         | a new subset array                          | no     | a.filter((v, i) =>  v % 2 === 0)  | [0, 2, 4]                |                          |
+| `every(predicateFn, ?thisArg)`          | true if pfn=true for all (or empty)         | no     | a.every((v, i) => v < 6)          | true                     |                          |
+|                                         |                                             |        | a.every((v, i) => v < 5)          | false                    |                          |
+| `some(predicateFn, ?thisArg)`           | false if pfn=false for all ( or empty)      | no     | a.some((v, i) => v < 1)           | true                     |                          |
+|                                         |                                             |        | a.some((v, i) => v > 5)           | false                    |                          |
+| `reduce(aggregatorFn, ?initValue)`      | aggregate value                             | no     | a.reduce((p, c) => p + c, 0)      | 15                       |                          |
+| `reduceRight(aggregatorFn, ?initValue)` | aggregate value                             | no     | a.reduceRight((p, c) => p + c, 0) | 15                       |                          |
+| `flat(?depth)`                          | new array, flattened recursively upto depth | no     | a.flat()                          | [0, 1, 2, 3, 4, 5]       |                          |
+|                                         |                                             | no     | [1, [2, 3]].flat()                | [1, 2, 3]                |                          |
 
 
 **Notes**:
@@ -192,6 +194,20 @@ where iterable is an array of pairs. Each pair is an array of two elements (the 
 - The `iteratorFn` takes as arguments **value**, **key**, and **map**. 
 - `Array.from(map.entries())` returns an array of arrays, where the nested arrays are pairs: entry[0] is key, entry[1] is value.
 - Always use the `get` method to access a `Map`'s elements, not indexing.
+
+## Converting a POJO into a map
+```javascript
+const map = new Map();
+for (const key in pojo) { 
+    map.set(key, pojo[key]); 
+}
+```
+
+## Sorting a map
+```javascript
+const sortedOnKeys = new Map(Array.from(unsorted.entries()).sort((a, b) => a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0));
+const sortedOnValues = new Map(Array.from(unsorted.entries()).sort((a, b) => a[1] < b[1] ? -1 : a[1] > b[1] ? 1 : 0));
+```
 
 ## Utility Functions
 
