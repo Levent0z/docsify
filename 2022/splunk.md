@@ -18,7 +18,7 @@ search and filter | munge | report | cleanup
 
 Example:
 
-```splunk
+```splunk-spl
 index=SOMEINDEX source=SOMESOURCE earliest=-24h (or -24h@h to snap to the hour) latest=now
 ```
 
@@ -71,7 +71,7 @@ index=SOMEINDEX source=SOMESOURCE earliest=-24h (or -24h@h to snap to the hour) 
 
 Suppose a field contains stringified JSON. We can use the `spath` command to reach into the JSON object by specifying a path, such as `outer.inner.deeper` and label the field located by path using the `output` argument. That field will now be hoisted up to be treated as a regular field from here on, which means we can include it in our query.
 
-```splunk
+```splunk-spl
 | makeresults
 | eval newField="{\"string\":\"text\"}"
 | spath input=newField path=string
@@ -82,7 +82,7 @@ Suppose a field contains stringified JSON. We can use the `spath` command to rea
 
 Use `{}` suffix to indicate an array
 
-```splunk
+```splunk-spl
 | makeresults
 | eval newField="{\"string\":\"text\",\"array\":[1,2,3,4]}"
 | spath input=newField path="array{}" output=arrayObj
@@ -92,7 +92,7 @@ Use `{}` suffix to indicate an array
 
 Spath can also be written in function form. The above is equivalent to:
 
-```splunk
+```splunk-spl
 | makeresults
 | eval newField="{\"string\":\"text\",\"array\":[1,2,3,4]}"
 | eval arrayObj = spath (newField, "array{}")
@@ -104,7 +104,7 @@ Spath can also be written in function form. The above is equivalent to:
 
 Use mvjoin to string join items of an array
 
-```splunk
+```splunk-spl
 | makeresults
 | eval newField="{\"string\":\"text\",\"array\":[1,2,3,4]}"
 | eval arrayObj = spath (newField, "array{}")
@@ -116,7 +116,7 @@ Use mvjoin to string join items of an array
 
 Use `{}` suffix to indicate an array.
 
-```splunk
+```splunk-spl
 | makeresults
 | eval newField="{\"string\":\"text\",\"array\":[1,2,3,4],\"collection\":[{\"name\":\"one\",\"value\":1},{\"name\":\"two\",\"value\":2}]"
 | spath input=newField path="collection{}" output=collectionObj
@@ -124,7 +124,7 @@ Use `{}` suffix to indicate an array.
 | table collectionObj
 ```
 
-```splunk
+```splunk-spl
 | makeresults
 | eval newField="{\"string\":\"text\",\"array\":[1,2,3,4],\"collection\":[{\"name\":\"one\",\"value\":1},{\"name\":\"two\",\"value\":2}]"
 | spath input=newField path="collection{}" output=collectionObj
@@ -139,7 +139,7 @@ Use `{}` suffix to indicate an array.
 
 **Example**: Find names where the letter 'w' appears
 
-```splunk
+```splunk-spl
 | makeresults
 | eval newField="{\"collection\":[{\"name\":\"one\",\"value\":1},{\"name\":\"two\",\"value\":2}]"
 | spath input=newField path="collection{}.name" output="name"
@@ -149,7 +149,7 @@ Use `{}` suffix to indicate an array.
 
 ### Assign keywords to matches
 
-```splunk
+```splunk-spl
 | ...
 | eval LABEL = case(
     match(FIELD, ".*KEYWORD1.*"), "LABEL1",
@@ -165,13 +165,13 @@ Use `{}` suffix to indicate an array.
 - Use `TERM()` (all-caps) to match values which might have minor segmenters (`/ : = @ . - $ # \\ _`).
   - Prefer instead of wild chars and partial match. For example, if you are doing a search for the literal value `x.y.z` as:
 
-```splunk
+```splunk-spl
 search key=*.z
 ```
 
 do instead:
 
-```splunk
+```splunk-spl
 search key=TERM(x.y.z)
 ```
 
