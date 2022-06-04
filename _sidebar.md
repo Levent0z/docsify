@@ -3,7 +3,7 @@
 - [Web Security](2022/web-security.md)
 - [HTTP Headers](2022/http-headers.md)
 - [PC Keyboard on macOS](2022/pc-keyboard-on-mac.md)
-- [CSS Refresher](drafts/css-refresher.md)
+- [CSS Refresher](2022/css-refresher.md)
 - [Browser Object Model Refresher](2022/bom-refresher.md)
 - [HTML DOM Refresher](2022/html-dom-refresher.md)
 - [SQL Refresher](2022/sql-refresher.md)

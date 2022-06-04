@@ -410,6 +410,11 @@ curl -v -H"Content-Type:text/plain" -d "@sampleCoreEnvelope.txt" "http://localho
 ## Count how many colors xterm actually supports
 [xterm-color-count.sh](https://github.com/l0b0/xterm-color-count)
 
+## Remove app from security quarantine on macOs
+```bash
+xattr -d com.apple.quarantine ./FILENAME
+```
+
 ## More ... (Still to document)
 ```bash
 dirname

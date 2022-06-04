@@ -57,3 +57,64 @@ chrome.runtime.on
 ```
 
 Idea: add CSS automatically to the first item through content_script CSS
+
+## Manifest.json
+
+Replace upper-case values as needed
+
+```json
+{
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "description": "DESCRIPTION",
+    "name": "PROJECT_NAME",
+    "browser_action": {
+        "default_title": "TITLE",
+        "default_icon": "assets/ICON-48.png",
+        "default_popup": "POPUP.html"
+    },
+    "omnibox": {
+        "keyword": "KEYWORD"
+    },
+    "permissions": [
+        "cookies",
+        "contextMenus",
+        "storage"
+        "tabs",
+        "https://URL/"
+    ],
+    "background": {
+        "scripts": [
+            "UTILITY.js",
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "content_scripts": [
+        {
+            "all_frames": false,
+            "run_at": "document_start",
+            "matches": [
+                "https://URL*"
+            ],
+            "js": [
+                "resources/js/INJECTED.js"
+            ],
+            "css": [
+                "resources/css/INJECTED.css"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "assets/ICON-16.png",
+        "32": "assets/ICON-32.png",
+        "48": "assets/ICON-48.png",
+        "64": "assets/ICON-64.png",
+        "96": "assets/ICON-96.png",
+        "128": "assets/ICON-128.png"
+    },
+    "options_page": "options.html",
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; object-src 'self'",
+
+}
+```

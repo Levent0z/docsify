@@ -66,6 +66,8 @@
   - Merges the enumerable properties of two or more objects deeply
 - [inquirer](https://www.npmjs.com/package/inquirer)
   - A collection of common interactive command line user interfaces.
+- [micromatch](https://www.npmjs.com/package/micromatch)
+  - Glob matching for javascript/node.js. A replacement and faster alternative to minimatch and multimatch.
 - [semver](https://www.npmjs.com/package/semver)
   - The semantic versioner for npm
 - [xterm](https://www.npmjs.com/package/xterm)

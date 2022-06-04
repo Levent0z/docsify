@@ -43,6 +43,15 @@
 - [esm](https://github.com/standard-things/esm) The brilliantly simple, babel-less, bundle-less ECMAScript module loader.
 - [expo](https://expo.io/) With Expo tools, services, and React, you can build, deploy, and quickly iterate on native Android, iOS, and web apps from the same JavaScript codebase.
 - [Husky](https://github.com/typicode/husky) Git hooks made easy
+  ```json
+  // package.json
+  "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -e GIT_PARAMETERS"
+        }
+    }
+  ```
 - [JSforce](https://jsforce.github.io/) Develop Salesforce apps with JavaScript, whether it's running on server or web browser.
 - [Lerna](https://github.com/lerna/lerna) A tool for managing JavaScript projects with multiple packages.
 - [LoopBack 4](https://loopback.io/doc/en/lb4/index.html) Highly extensible, open-source Node.js and TypeScript framework based on Express that enables you to quickly create APIs and microservices composed from backend systems such as databases and SOAP or REST services
@@ -91,7 +100,7 @@
 - [Web Extensions made with Angular](https://cito.github.io/blog/web-ext-with-angular/)
 - [Deploy Angular Application to Heroku](https://itnext.io/how-to-deploy-angular-application-to-heroku-1d56e09c5147)
 - [How to Use Query Parameters in Angular](https://www.digitalocean.com/community/tutorials/angular-query-parameters)
-
+- [ngx-json-viewer](https://www.npmjs.com/package/ngx-json-viewer) JSON formatter and viewer for Angular
 
 ## Podcasts
 

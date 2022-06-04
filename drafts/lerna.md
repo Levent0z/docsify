@@ -31,7 +31,7 @@ Example `lerna.json`:
 ```json
 {
   "packages": ["packages/*"],
-  "version": "238.5.1",
+  "version": "1.0.0",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
