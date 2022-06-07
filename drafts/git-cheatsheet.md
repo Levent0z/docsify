@@ -112,7 +112,7 @@ git config commit.gpgsign false
 
 ## Troubleshooting with GPG
 
-- [gpg failed to sign the data](https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/55646482#55646482)
+-   [gpg failed to sign the data](https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/55646482#55646482)
 
 # GitHub Markdown
 
@@ -131,9 +131,9 @@ git clean -fdx
 2. Generate new token, copy the text
 3. You can now do:
 
-   ```bash
-   git clone https://USERNAME:PERSONALACCESSTOKEN@GITHOST/ORG/REPO.git
-   ```
+    ```bash
+    git clone https://USERNAME:PERSONALACCESSTOKEN@GITHOST/ORG/REPO.git
+    ```
 
 # Deep-Clean
 
@@ -141,6 +141,7 @@ git clean -fdx
 git clean -n -dX # Dry run
 git clean -f -dX # The real thing (include untracked files and folders)
 ```
+
 Also, check out using `-dx` argument instead.
 
 # Restore a file after it has been deleted
@@ -155,3 +156,51 @@ git checkout SHA^ FILENAME # Get the file from the last commit before the SHA
 ```bash
 git clone https://$SOME_USER:$SOME_TOKEN@GITHUBHOST/ORG/REPO.git --branch BRANCH PATH
 ```
+
+# "Cherry-pick" from a repo on a different repo
+
+Suppose you have two local clones of a git repo. One of them is a clone of a branch that belongs to someone else's fork, and the other is yours. What happens if you can't or shouldn't (force) push to their branch?
+
+You can "cherry-pick" the changes to your own branch and do what you will. But how? You can't `git cherry-pick` across different repos. Instead, you use **patches**. First you `format-patch` on the source repo, then you apply the patches on the destination repo.
+
+So suppose you do `git log --oneline -n20` and see that the source repo has the following recent commits:
+
+```
+b3bc5218e (HEAD -> otherBranch) commit msg 6
+201f7e32e commit msg 5
+cdc5a755c commit msg 4
+dd130e601 commit msg 3
+7283bc2aa commit msg 2
+87cfe898c commit msg 1
+714ae42b0 (master)
+...
+```
+
+And the destination has the following:
+
+```
+714ae42b0 (HEAD -> ownBranch, origin/master, origin/HEAD, master)
+ff53f12bd
+10a17b1d7
+cf42322ad
+47283d642
+...
+```
+
+Notice that the other branch is already rebased, and that the two branches share the commit with hash **714ae42b0**. In this case, you do the following in the folder of the otherBanch:
+
+```bash
+git format-patch 714ae42b0...b3bc5218e
+```
+
+This will create a set of **.patch** files for each commit in the current folder (e.g. 0001-commit-msg-1.patch)
+
+Note that when specifying the range, we are specifying the start hash of the common commit, which is excluded.
+
+Next, go to the other folder and do:
+
+```bash
+git am ../other/branch/\*.patch
+```
+
+This will commit the patches in the correct order. If you run into any issues, you can do `git am --abort`.
