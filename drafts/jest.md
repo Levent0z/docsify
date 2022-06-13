@@ -199,6 +199,35 @@ describe('async tests', () => {
 jest.mock
 jest.isolateModules
 mock modules?
+__esModule is needed for module with default exports
 
 jest.mock('package/module', () => ({}), { virtual: true });
 expectDefine()
+
+https://www.npmjs.com/package/memfs
+directory structure (**tests**)
+
+Reaching into past function calls
+const retValue = spyFunc.mock.results[0].value;
+mockReturnValue
+
+slide from Matrix 2
+
+jest.config.js:
+
+```javascript
+module.exports = {
+    // resolver,
+    displayName: 'display name',
+    preset: 'some-jest-preset',
+    moduleNameMapper: {
+        '^module/(.+)$': '<rootDir>/../node_modules/module/$1',
+    },
+    transformIgnorePatterns: ['node_modules/someRegexPattern'],
+    testURL: 'https://localhost',
+    testMatch: ['<rootDir>/**/__tests__/*.(spec|test).(ts|js)'],
+};
+```
+
+
+If you make changes to jest.config.js, restart Jest runners in vs code.
