@@ -126,10 +126,6 @@ describe('time tests', () => {
     afterEach(() => {
         jest.useRealTimers();
     });
-
-    it(() => {
-        fetchMock.resetMocks();
-    });
 });
 ```
 
@@ -199,9 +195,14 @@ describe('async tests', () => {
 jest.mock
 jest.isolateModules
 mock modules?
-__esModule is needed for module with default exports
 
+```javascript
 jest.mock('package/module', () => ({}), { virtual: true });
+```
+
+`__esModule` is needed for module with default exports
+
+
 expectDefine()
 
 https://www.npmjs.com/package/memfs
@@ -210,6 +211,7 @@ directory structure (**tests**)
 Reaching into past function calls
 const retValue = spyFunc.mock.results[0].value;
 mockReturnValue
+spyFunc.mock.calls[0][0] // first argument to first call
 
 slide from Matrix 2
 
