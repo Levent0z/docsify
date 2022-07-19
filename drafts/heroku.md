@@ -164,6 +164,20 @@ INSERT 0 1
 => \q
 ```
 
+### Maintenance 
+
+Maintenance window:
+```bash
+heroku pg:maintenance:window DATABASE "Tuesday 14:30"
+```
+
+Maintenance now:
+```bash
+heroku pg:maintenance:run DATABASE
+```
+
+[Upgrade](https://devcenter.heroku.com/articles/upgrading-heroku-postgres-databases)
+
 ## Heroku-specific Build Scripts
 
 In `package.json`:

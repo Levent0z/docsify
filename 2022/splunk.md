@@ -179,3 +179,10 @@ search key=TERM(x.y.z)
 
 - Use `fields` instead of `table` (latter is a formatting command, not a filtering command)
 - Don't use join, limited at 50K rows or by time. Better to use `OR` for `sourcetype`s.
+
+
+## Find Indexes
+
+```splunk-spl
+index=* earliest=-2m | stats count as countIndex by index | sort -countIndex | head 10
+```
