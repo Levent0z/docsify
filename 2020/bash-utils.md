@@ -291,6 +291,17 @@ find . | grep KEYWORD
 du -kd0 ~/sdb*/sdb* | sort -rnk1
 ```
 
+## Get total file sizes for each subfolder of the current folder (not block size)
+```bash
+for A in `ls -1p | grep -e "/$"`
+do 
+    pushd "$A" >/dev/null
+    pwd
+    find . -type f -print0  | xargs -0 stat -f %z | awk '{t+=$1}END{print t}'
+    popd >/dev/null
+done
+```
+
 ## Assign default value to var
 
 ```bash
