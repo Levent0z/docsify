@@ -1,5 +1,6 @@
 # 2022
 
+-   [Salesforce OAuth2 Flows](2022/salesforce-oauth-flows.md)
 -   [Autocomplete in XML using XSD](2022/autocomplete-in-xml-using-xsd.md)
 -   [Splunk](2022/splunk.md)
 -   [Web Security](2022/web-security.md)
