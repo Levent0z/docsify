@@ -13,6 +13,8 @@
 
 ## Database
 
+- [firebase](https://www.npmjs.com/package/firebase)
+  - Provides the tools and infrastructure you need to develop, grow, and earn money from your app.
 - [pg](https://www.npmjs.com/package/pg)
   - Non-blocking PostgreSQL client
 - [pg-format](https://www.npmjs.com/package/pg-format)
@@ -75,6 +77,10 @@
 
 ## Web
 
+- [algoliasearch](https://www.npmjs.com/package/algoliasearch)
+  - Search API Client for JavaScript. [What is Algolia](https://www.algolia.com/doc/)
+- [instantsearch.js](https://www.npmjs.com/package/instantsearch.js)
+  - Vanilla JavaScript library that lets you create an instant-search result experience using Algolia’s search API
 - [passport](https://www.npmjs.com/package/passport)
   - Express-compatible authentication middleware
 - [query-string](https://www.npmjs.com/package/query-string)
