@@ -8,17 +8,17 @@ To use the Heroku CLI's autocomplete, there are 2 options:
 
 1. Via homebrew's shell completion:
 
-   1. Follow homebrew's [install instructions](https://docs.brew.sh/Shell-Completion)
-      NOTE: For zsh, as the instructions mention, be sure `compinit` is autoloaded and called, either explicitly or via a framework like `oh-my-zsh`.
-   2. Then run
-      ```bash
-      $ heroku autocomplete --refresh-cache
-      ```
+    1. Follow homebrew's [install instructions](https://docs.brew.sh/Shell-Completion)
+       NOTE: For zsh, as the instructions mention, be sure `compinit` is autoloaded and called, either explicitly or via a framework like `oh-my-zsh`.
+    2. Then run
+        ```bash
+        $ heroku autocomplete --refresh-cache
+        ```
 
 2. Use our standalone setup. Run and follow the install steps:
-   ```bash
-   $ heroku autocomplete
-   ```
+    ```bash
+    $ heroku autocomplete
+    ```
 
 Result:
 
@@ -164,14 +164,16 @@ INSERT 0 1
 => \q
 ```
 
-### Maintenance 
+### Maintenance
 
 Maintenance window:
+
 ```bash
 heroku pg:maintenance:window DATABASE "Tuesday 14:30"
 ```
 
 Maintenance now:
+
 ```bash
 heroku pg:maintenance:run DATABASE
 ```
@@ -189,3 +191,7 @@ In `package.json`:
   "heroku-cleanup": "echo This runs after Heroku prunes and caches dependencies."
 }
 ```
+
+## Authorization
+
+-   [How should I generate an API key that allows me to use the Heroku Platform API?](https://help.heroku.com/PBGP6IDE/how-should-i-generate-an-api-key-that-allows-me-to-use-the-heroku-platform-api)

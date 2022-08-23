@@ -19,6 +19,7 @@
   programming language. Browse code samples directly in the browser
 - [Lightning Web Components Playground](https://developer.salesforce.com/docs/component-library/tools/playground)
 - [LWC Viewer](https://lwc-viewer.herokuapp.com/)
+- [Mermaid Live](https://mermaid.live) Lets you create diagrams and visualizations using text and code.
 - [Mockaroo](https://mockaroo.com/) Lets you generate up to 1,000 rows of realistic test data in CSV, JSON, SQL, and Excel formats.
 - [Photopea](https://www.photopea.com/) Photo & graphics editor which can work with raster and vector graphics
 - [Raw.GitHack.Com](https://raw.githack.com/) Serves raw files directly from GitHub, Bitbucket or GitLab with proper Content-Type headers
@@ -144,6 +145,7 @@
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Angular](https://angular.io/guide/cheatsheet)
 - [Chrome Devtools](http://anti-code.com/devtools-cheatsheet/)
+- [Everything Curl](https://everything.curl.dev/)
 - [Gmail](https://support.google.com/mail/answer/6594?hl=en)
 - [IntelliJ IDEA](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
 - [Perforce (P4V)](https://www.perforce.com/pdf/perforce-helix-cheatsheet.pdf)

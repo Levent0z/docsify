@@ -2,6 +2,7 @@
 
 - [Apple macOS bash commands](https://ss64.com/osx/)
 - [Chrome Devtools Cheatsheet](http://anti-code.com/devtools-cheatsheet/) - Is this working?
+- [Curl HTTP Cheat sheet](https://everything.curl.dev/http/cheatsheet)
 - [Gmail Keyboard Shortcuts](https://support.google.com/mail/answer/6594?hl=en)
 - [P4 Command Reference](https://www.perforce.com/manuals/v15.1/cmdref/chapter.introduction.html#introduction.help)
 - [TypeScript](https://rmolinamir.github.io/typescript-cheatsheet/)
