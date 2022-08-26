@@ -21,3 +21,10 @@ In addition, you may want to:
 1. Check `Enable for Device Flow`
 2. Uncheck `Require Secret for Web Server Flow`
 3. Uncheck `Require Secret for Refresh Token Flow`
+
+In the management page for your connected app, under `OAuth Policies` you may want to:
+
+1. Set `Permitted Users` to `All users may self-authorize`
+2. Set `IP Relaxation` to `Relax IP restrictions`
+
+The access token timeout is configured in the `timeout` in `Session Settings` page, but the refresh token is configured in the management page. 

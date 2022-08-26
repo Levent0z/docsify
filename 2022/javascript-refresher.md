@@ -55,7 +55,9 @@ a.substr(1)       // '123456'
 a.substring(1)    // '123456'
 
 'a'.charcodeAt(0)           // 97
-String.fromCharCode(97)     // 'a'    
+String.fromCharCode(97)     // 'a'  
+
+'a,b ,c, d , e f'.split(/\s*,\s*/);    // ['a', 'b', 'c', 'd', 'e f']
 ```
 
 **Notes**

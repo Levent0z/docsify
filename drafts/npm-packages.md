@@ -54,9 +54,16 @@
 - [shelljs](https://www.npmjs.com/package/shelljs)
   - Unix shell commands for Node.js
 
+## Security
+
+- [passport](https://www.npmjs.com/package/passport)
+  - Express-compatible authentication middleware
+- [Salesforce OAuth 2.0 JWT Bearer Token Flow](https://www.npmjs.com/package/salesforce-jwt-bearer-token-flow)
+
 ## UI
 
 - [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti)
+- [React Inspector](https://www.npmjs.com/package/react-inspector)
 
 ## Utilities
 
@@ -81,8 +88,6 @@
   - Search API Client for JavaScript. [What is Algolia](https://www.algolia.com/doc/)
 - [instantsearch.js](https://www.npmjs.com/package/instantsearch.js)
   - Vanilla JavaScript library that lets you create an instant-search result experience using Algolia’s search API
-- [passport](https://www.npmjs.com/package/passport)
-  - Express-compatible authentication middleware
 - [query-string](https://www.npmjs.com/package/query-string)
 - [serve](https://www.npmjs.com/package/serve)
   - serve a static site, single page application or just a static file (no matter if on your device or on the local network)
