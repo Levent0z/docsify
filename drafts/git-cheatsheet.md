@@ -204,3 +204,13 @@ git am ../other/branch/\*.patch
 ```
 
 This will commit the patches in the correct order. If you run into any issues, you can do `git am --abort`.
+
+
+## Force Push Safely
+
+```sh
+git push --force-with-lease
+```
+
+Unlike `--force`, `--force-with-lease` won't push if there are commits in the remote branch that would be lost.
+
