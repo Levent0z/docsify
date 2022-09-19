@@ -16,6 +16,7 @@
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css" disabled> -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
 
     <!-- DARK THEMES -->
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" crossorigin="anonymous"> -->
@@ -25,6 +26,7 @@
         .markdown-section pre>code {
             padding: 0;
         }
+
         .markdown-section {
             max-width: unset;
             margin: unset;
@@ -38,9 +40,6 @@
     <div id="app">Loading...</div>
     <script>
         window.$docsify = {
-            requestHeaders: {
-                'cache-control': 'no-cache'
-            },
             name: '<span style="font-family: \'Lexend Tera\', script; font-size:28px;">LEVENT OZ</span>',
             // repo: 'https://github.com/Levent0z/docsify',    // Adds github icon to the corner
             loadNavbar: true,
@@ -103,6 +102,10 @@
     <!-- "node_modules/docsify-copy-code/dist/docsify-copy-code.js" 
   "node_modules/docsify-toc/dist/toc.js"
   "node_modules/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.js" -->
+
+    <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/marked@3"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
 
     <!-- https://github.com/PrismJS/prism/tree/gh-pages/components -->
     <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
