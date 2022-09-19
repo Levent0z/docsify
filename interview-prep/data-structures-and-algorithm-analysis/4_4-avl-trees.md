@@ -8,13 +8,12 @@ During insertion, balance may need to be restored through single or double rotat
 Start at the node inserted and travel up the tree, updating balance information at every node on the path. If an unbalance is found, do the rotation and it's done. (No need to keep traveling)
 
 ### Example:
-1. Inserting 1 through 7 can be achieved by single rotation when needed. 
 <pre>
         4
     2       6
 1     3   5    7
 </pre>
-
+1. Inserting 1 through 7 can be achieved by single rotation when needed. 
 2. Insert 15, doesn't affect balance.
 3. Insert 14, requires double rotation.
 

@@ -1,3 +1,7 @@
+# System Design Approach
+
+> Draft
+
 1. Gather requirements and scope
     - Functional
     - non-Functional (i.e. what key characteristics of a distributed system)
@@ -12,4 +16,3 @@
 	- Schema
 	- Kind of DB
 5. Algorithm
-6. 

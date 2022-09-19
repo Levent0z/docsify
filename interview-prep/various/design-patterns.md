@@ -1,5 +1,7 @@
 # Design Patterns
 
+> Not a full list
+
 ## 1. Singleton Pattern
 
 "There can be a single instance of a class"
@@ -25,5 +27,4 @@ Define strategies for different purposes to simplify complexity. Should have def
 Loose coupling between the publisher(s) and subscriber(s)
 
 Con: Too many messages could be difficult to debug
-
 
