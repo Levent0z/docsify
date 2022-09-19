@@ -1,8 +1,6 @@
 # Web Security Concepts
 
-## XSS 
-
-"Cross-Site Scripting"
+## XSS - "Cross-Site Scripting"
 
 It's an injection attack. 
 
@@ -16,7 +14,7 @@ It's an injection attack.
 
 2 types as part of new classification:
 1. `Server XSS` - User-provided data is included in the HTTP response, where the source could be the request or storage.
-2. `Client XSS` - User-provided data is used to update the DOM with an "unsafe" JavaScript call. "Unsafe" mans JavaScript can be introduced into the DOM.
+2. `Client XSS` - User-provided data is used to update the DOM with an "unsafe" JavaScript call. "Unsafe" means JavaScript can be introduced into the DOM.
 
 **Defense**: Context-sensitive server-side output encoding
 
@@ -28,9 +26,7 @@ It's an injection attack.
 
 [More on owasp.org](https://owasp.org/www-community/attacks/xss/)
 
-## CSRF / XSRF
-
-"Cross-Site Request Forgery"
+## CSRF / XSRF - "Cross-Site Request Forgery"
 
 It's an attack that might require "social engineering".
 
@@ -44,10 +40,9 @@ A hacker can hide `GET` URLs in `<a>` and `<img>` tags and `POST` URLs in a `<fo
 [More on owasp.org](https://owasp.org/www-community/attacks/csrf/)
 
 
-## CORS
-"Cross-Origin Resource Sharing"
+## CORS - "Cross-Origin Resource Sharing"
 
-- Server adds `Access-Control-Allow-Origin` header to the response. If set to `*`, all is alloed. The client (browser) is responsible for allowing/denying a request.
+- Server adds `Access-Control-Allow-Origin` header to the response. If set to `*`, all is allowed. The client (browser) is responsible for allowing/denying a request.
 - Note: Client can change/override `Origin` header value.
 
 ["Simple requests"](https://developer.mozilla.org/en-US/docs/web/http/cors#simple_requests) don't trigger a `CORS preflight`:
@@ -61,8 +56,8 @@ A hacker can hide `GET` URLs in `<a>` and `<img>` tags and `POST` URLs in a `<fo
 
 ## Cookie Attributes
 
-`HttpOnly`: Not available to scripting
-`SameSite`: Lax (default), Strict or None. 
+- `HttpOnly`: Not available to scripting
+- `SameSite`: Lax (default), Strict or None. 
 
 ## Security around Caching
 
@@ -82,16 +77,14 @@ A hacker can hide `GET` URLs in `<a>` and `<img>` tags and `POST` URLs in a `<fo
 - Use `POST` instead of `GET`
 
 
-## COOP
-"Cross-Origin Opener Policy"
+## COOP - "Cross-Origin Opener Policy"
 
 The `Cross-Origin-Opener-Policy` HTTP response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.
 
 COOP will process-isolate your document and potential attackers can't access your global object if they were to open it in a popup, preventing a set of cross-origin attacks dubbed XS-Leaks.
 
 
-## CORP
-"Cross-Origin Resource Policy"
+## CORP - "Cross-Origin Resource Policy"
 
 - Allows you to control the set of origins that are empowered to include a resource.
 - The policy is only effective for no-cors requests, which are issued by default for CORS-safelisted methods/headers.
@@ -99,8 +92,7 @@ COOP will process-isolate your document and potential attackers can't access you
 - [More on Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP))
 - [More on Resource Policies](https://resourcepolicy.fyi/)
 
-## CSP
-"Content Security Policy"
+## CSP - "Content Security Policy"
 
 - Control resources the user agent is allowed to load for a given page. 
 - With a few exceptions, policies mostly involve specifying server origins and script endpoints. 

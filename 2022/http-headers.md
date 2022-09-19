@@ -18,7 +18,7 @@
 | Cond.    | `If-Modified-Since`                 |                                                                                                            |
 | Cond.    | `Vary`                              |                                                                                                            |
 | Conn.    | `Connection`                        | Controls whether the network connection stays open                                                         |
-| Conn.    | `Keep-Alive`                        | Controls how longa persistent connection stays open                                                        |
+| Conn.    | `Keep-Alive`                        | Controls how long persistent connection stays open                                                         |
 | Content  | `Accept`                            | Accepted types of data                                                                                     |
 | Content  | `Accept-Encoding`                   | Accepted compression algorithms                                                                            |
 | Content  | `Accept-Language`                   | Hint expected human language for server responses                                                          |
@@ -37,7 +37,7 @@
 | CORS     | `Access-Control-Expose-Headers`     | List of headers that can be exposed                                                                        |
 | CORS     | `Access-Control-Max-Age`            | Preflight request cache time                                                                               |
 | CORS     | `Access-Control-Request-Headers`    | During preflight, specify HTTP headers that will be used in the actual request                             |
-| CORS     | `Access-Control-Request-Method`     | During preflight, specify whch HTTP method will be used                                                    |
+| CORS     | `Access-Control-Request-Method`     | During preflight, specify which HTTP method will be used                                                   |
 | CORS     | `Origin`                            | Where a fetch originates from                                                                              |
 | CORS     | `Timing-Allow-Origin`               | Origins that are allowed to see values from Resource Timing API                                            |
 | Download | `Content-Disposition`               | Whether to display a downloaded file inline or pop up a "Save As" dialog                                   |

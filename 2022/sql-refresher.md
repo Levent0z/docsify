@@ -79,11 +79,13 @@ CREATE OR REPLACE VIEW [Virtual Table Name] AS -- "OR REPLACE" is optional
 ```
 
 #### Date Types
-- `DATE`: YYYY-MM-DD
-- `DATETIME`: YYYY-MM-DD HH:MI:SS
-- `TIMESTAMP`: MySQL: YYYY-MM-DD HH:MI:SS, SQL Server: a unique number
-- `YEAR`: MySQL: YYYY or YY
-- `SMALDATETIME`: SQL Server: Similar to DATETIME
+| Type           | Format                                                    |
+| -------------- | --------------------------------------------------------- |
+| `DATE`         | `YYYY-MM-DD`                                              |
+| `DATETIME`     | `YYYY-MM-DD HH:MI:SS`                                     |
+| `TIMESTAMP`    | MySQL: `YYYY-MM-DD HH:MI:SS`, SQL Server: a unique number |
+| `YEAR`         | MySQL: `YYYY` or `YY`                                     |
+| `SMALDATETIME` | SQL Server: Similar to DATETIME                           |
 
 
 ### Updates

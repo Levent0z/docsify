@@ -16,7 +16,7 @@
 ## Pseudo-classes
 
 - `:active`, : commonly used on `<a>` and `<button>`
-- `:link`, `:visited`, `:hover`, 
+- `:link`, `:visited`, `:hover`,
 
 ## The Box model
 
@@ -31,13 +31,13 @@ An `outline` is a line that is drawn around elements, OUTSIDE the borders, to ma
 
 By default in the CSS box model, the width and height you assign to an element is applied only to the element's content box. The `box-sizing` property can be used to adjust this behavior:
 - `content-box`: default CSS behavior. May be desirable when `position` is `relative` or `absolute`.
-- `border-box`: accounts for border ad padding in the element's provided width and height. This is the default for `<table>`, `<select>`, `<button>` elements and the `<input>` element whose type is `radio`, `checkbox`, `reset`, `button`, `submit`, `color` or `search`.
+- `border-box`: accounts for border and padding in the element's provided width and height. This is the default for `<table>`, `<select>`, `<button>` elements and the `<input>` element whose type is `radio`, `checkbox`, `reset`, `button`, `submit`, `color` or `search`.
 
 
 ## Sizing
 
 - The effects of `width` and `height` are controlled by `box-sizing`.
-- `min-width`, `max-width` override `width`. Similarly `min-height`, `max-height` override `height`. 
+- `min-width`, `max-width` override `width`. Similarly `min-height`, `max-height` override `height`.
 
 ## Positioning
 
@@ -62,7 +62,7 @@ When the `z-index` property is not specified on any element, elements are stacke
 1. The background and borders of the root element
 2. Descendant **non-positioned** blocks, in order of appearance in the HTML
 3. Descendant **positioned** elements, in order of appearance in the HTML
-   
+
 `z-index` allows to reorder elements.
 
 ## Variables
@@ -78,7 +78,7 @@ div {
 }
 ```
 
-- The function `var(--name, fallbackvalue)` accepts an optional fallback vale.
+- The function `var(--name, fallbackvalue)` accepts an optional fallback value.
 - Redefined variables can override global variables locally.
 
 Dealing with variables in JavaScript:
@@ -114,21 +114,21 @@ The `<link>` element has a `media` property.
 Properties on container element:
 - `display`: Must be set to `flex`
 - `flex`: Can be set to a certain percentage for sizing w.r.t. parent
-- `justify-content`: Aligns items along the main axis (row by default). 
-  - `flex-start` (default), `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`
-- `align-items`: Aligns item along the cross axis
-  - `flex-start`, `flex-end`, `center`, `baseline`, `stretch` (default)
-- `flex-direction`: direction of the main axis
-  - `row` (default), `row-reverse`, `column`, `column-reverse`
-- `flex-wrap`: single or multiple lines
-  - `nowrap` (default), `wrap`, `wrap-reverse`
+- `flex-direction`: Specified the direction of the main axis. Default is **row**, i.e. horizontal.
+  - `row`, `row-reverse`, `column`, `column-reverse`
+- `flex-wrap`: single or multiple lines. Default is **nowrap**.
+  - `nowrap, `wrap`, `wrap-reverse`
 - `flex-flow`: shorthand for flex-direction flex-wrap.
+- `justify-content`: Aligns items along the main axis. Default is **flex-start**.
+  - `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`
+- `align-items`: Aligns items along the cross axis. Default is **stretch**.
+  - `flex-start`, `flex-end`, `center`, `baseline`, `stretch`
 - `align-content`: Aligns lines within the flex container when there is extra space on the cross axis
-  - `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`, `stretch` (default)  
+  - `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`, `stretch` (default)
 
 Properties on child element
-- `order`: positive or negative value, 0 is the default. Items sorted in ascending order.
-- `align-self`: aligns self in cross axis. It overrides the align-items value of the parent
+- `order`: positive or negative value, 0 is the default. Items are sorted in ascending order.
+- `align-self`: aligns self in cross axis. It overrides the `align-items` value of the parent
 
 
 ### Basic Responsive Two-Column Layout
@@ -157,19 +157,19 @@ CSS
 .navbar {
   display: flex;
 }
-.row {  
+.row {
   display: flex;
   flex-wrap: wrap;
 }
 .left-column {
-  flex: 30%;  
+  flex: 30%;
 }
 .right-column {
-  flex: 70%;  
+  flex: 70%;
 }
 
 @media screen and (max-width: 700px) {
-  .row, .navbar {   
+  .row, .navbar {
     flex-direction: column;
   }
 }
@@ -177,7 +177,7 @@ CSS
 
 ## Responsive Design
 
-Add the following to let the width and zoom be proper for the device 
+Add the following to let the width and zoom be proper for the device
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```

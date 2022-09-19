@@ -4,34 +4,8 @@ If you have a PC-style keyboard with separate `home`, `end`, `page up` and `page
 
 Thanks to [this blog](https://damieng.com/blog/2015/04/24/make-home-end-keys-behave-like-windows-on-mac-os-x/), it's easy to configure macOS to behave like that. 
 
-In a terminal run the following:
+In a terminal run the following, which will run [this script](https://gist.github.com/Levent0z/731f0c4810310bc3e2674882f88b7c23):
 
 ```bash
-function genKeyBindings() {
-    mkdir -p ~/Library/KeyBindings
-    cd ~/Library/KeyBindings
-    if [[ -f DefaultKeyBinding.dict ]]; then
-        read -p 'Confirm overwrite of existing key bindings to continue: (y/n) ' INPUT
-        if [[ "$INPUT" != 'y' ]] && [[ "$INPUT" != 'Y' ]]; then
-            echo 'Canceled.';
-            return 1;
-        fi
-    fi
-
-    cat << EOFKEY >DefaultKeyBinding.dict
-{
-"\UF729"  = moveToBeginningOfLine:; // home
-"\UF72B"  = moveToEndOfLine:; // end
-"$\UF729" = moveToBeginningOfLineAndModifySelection:; // shift-home
-"$\UF72B" = moveToEndOfLineAndModifySelection:; // shift-end
-"^\UF729" = moveToBeginningOfDocument:; // ctrl-home
-"^\UF72B" = moveToEndOfDocument:; // ctrl-end
-"^$\UF729" = moveToBeginningOfDocumentAndModifySelection:; // ctrl-shift-home
-"^$\UF72B" = moveToEndOfDocumentAndModifySelection:; // ctrl-shift-end
-}
-EOFKEY
-
-    [[ "$?" == "0" ]] && echo 'Done.' || echo 'Failed'.
-}
-genKeyBindings
+/bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/Levent0z/731f0c4810310bc3e2674882f88b7c23/raw/f60c3b0df53def7fcb81496e473ea94ae53a6d68/genKeyBindings.sh)"
 ```

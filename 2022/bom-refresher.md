@@ -57,19 +57,18 @@ const image = document.querySelector('.an-image');
 fetch(url)
 .then(response => response.blob())
 .then(blob => {
-    const objectURL = URL.createObjectURL(blob); 
-    image.src = objectURL;
+    image.src = URL.createObjectURL(blob); 
 });
 ```
 
-**Note**: If response.`type` is "opaque", blob.`size` will be 0 and a blob.`type` will be empty string, which renders it useless for methods like `URL.createObjectURL`.
+**Note**: If the `response.type` is 'opaque', the `blob.size` will be 0 and the `blob.type` will be an empty string, which renders it useless for methods like `URL.createObjectURL`.
 
 
 ## Fetch-Related Objects
 
 ### Headers Object
 
-This is like a `Map`, but allows multiple values per key. `append` adds to new/existing list of the key. `get` returns a CSV string for the (multiple) values. `set`, `forEach`, `delete`, etc.. exists.
+This is like a `Map`, but allows multiple values per key. `append` adds to new/existing list of the key. `get` returns a CSV string for the (multiple) values. Other methods like `set`, `forEach`, `delete` exist.
 
 Also see: [HTTP Headers](http-headers.md)
 

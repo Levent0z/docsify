@@ -8,8 +8,8 @@ There are several [authentication flows for Salesforce](https://help.salesforce.
 
 For the oauth2 flows, you use one or both of the following endpoints:
 
--   Authorize endpoint: `https://login.salesforce.com//services/oauth2/authorize/?...`
--   Token endpoint: ``https://login.salesforce.com/services/oauth2/token`
+-   **Authorize endpoint**: `https://login.salesforce.com//services/oauth2/authorize/?...`
+-   **Token endpoint**: `https://login.salesforce.com/services/oauth2/token`
 
 Once you receive an `access_token`, you can specify it in the `Authorization` HTTP header for subsequent requests using the `Bearer <access token>` syntax.
 
