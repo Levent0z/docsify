@@ -3,7 +3,7 @@
 `Minimum Spanning Tree` of an *undirected* graph is a tree formed from edges that connects all vertices at lowest total cost.
 
 ## Prim's Algorithm
-It's essentially identical to [Dijkstra's](9_3-shortest-path-algorithms.md), except the definition of "distance" is changed: it is the weight of the shortest edge connecting v to a known vertex.
+It's essentially identical to [Dijkstra's](interview-prep/data-structures-and-algorithm-analysis/9_3-shortest-path-algorithms.md), except the definition of "distance" is changed: it is the weight of the shortest edge connecting v to a known vertex.
 
 <details>
 <summary>Code</summary>

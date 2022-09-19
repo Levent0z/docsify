@@ -23,7 +23,7 @@
 <details>
 <summary>Code</summary>
 
-See [graph data structures](9_1-graph-data-structures.md) for referenced types below.
+See [graph data structures](interview-prep/data-structures-and-algorithm-analysis/9_1-graph-data-structures.md) for referenced types below.
 
 ```typescript
 function getInDegrees(g: Graph): Map<Vertex, number> {

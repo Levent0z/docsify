@@ -1,6 +1,6 @@
 # Shortest Path Algorithms
 
-Refer to the [graph data structures](9_1-graph-data-structures.md) for types used in code sections below.
+Refer to the [graph data structures](interview-prep/data-structures-and-algorithm-analysis/9_1-graph-data-structures.md) for types used in code sections below.
 
 If the path is already known, recursion can be used to print the path from start to end, using each vertex's `previous` field.
 
