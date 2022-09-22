@@ -143,7 +143,7 @@ function merge(source, tmpArray, left, right, rightEnd) {
     // Copy it back at the correct indexes. Use rightEnd since it hasn't mutated.
     for (let i = 0; i < count; i += 1, rightEnd -= 1) {
         source[rightEnd] = tmpArray[rightEnd];
-    }s
+    }
 }
 ```
 
@@ -168,7 +168,9 @@ Uses `divide and conquer`. Given an array $A$ of size $n$:
 <br>
 <details>
 <summary>Diagram of QuickSort with first element as the pivot</summary>
+
 ![QuickSort with first element as the pivot](https://s3.amazonaws.com/hr-challenge-images/quick-sort/QuickSort.png)
+
 </details>
 <br>
 <details>

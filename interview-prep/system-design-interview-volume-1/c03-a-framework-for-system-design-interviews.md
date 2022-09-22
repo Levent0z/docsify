@@ -27,4 +27,4 @@ Questions to ask:
 2. Discuss error cases
 3. Discuss operational issues (monitoring, rollout, ...)
 4. How to scale up further?
-5. NOT DONE until interview says you're done.
+5. NOT DONE until the interviewer says you're done.
