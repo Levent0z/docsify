@@ -49,7 +49,7 @@ function insertionSort(array) {
 
 [Run it on replit.com](https://replit.com/@leventoz/InsertionSort)
 
-Also see [Selection Sort](7x-sorting.md), which is similar.
+Also see [Selection Sort](interview-prep/data-structures-and-algorithm-analysis/7x-sorting.md), which is similar.
 
 <hr>
 
