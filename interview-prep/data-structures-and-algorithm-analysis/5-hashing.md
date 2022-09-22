@@ -37,7 +37,7 @@ Solution:
 
 - Solution: `Rehashing` using bigger hash table size. $O(n)$
 - Problem: A lot of items move around (i.e. get new positions) when rehashed. 
-- Solution: Use `Consistent Hashing` instead.
+- Solution: Use [Consistent Hashing](interview-prep/system-design-interview-volume-1/c05-design-consistent-hashing.md) instead.
 
 ### Problem 3: Data is too large
 
