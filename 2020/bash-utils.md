@@ -433,3 +433,16 @@ basename
 yes
 pkg=$(cat package.json) && echo <"$pkg"
 ```
+
+## Grep except pattern
+
+Use the `-v` argument. eg:
+```bash
+find . -name '*.js' | grep -v '/node_modules/' | grep -v '/dist/'
+```
+
+## Replace something in XML
+
+```bash
+xq -x --xml-dtd ".SOME.JQ.PATH=\"$NEW_VALUE\"" INPUT.XML >OUTPUT.XML
+```

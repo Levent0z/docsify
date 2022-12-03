@@ -25,7 +25,7 @@ Once you receive an `access_token`, you can specify it in the `Authorization` HT
     -   as `password`, the user's password
 -   Receive an `asset_token` that you can use in the `Authorization` HTTP Header.
 
-## 1. Web Server Flow
+## 2. Web Server Flow
 
 -   Used when the app is hosted on a secure server, and has access to client secret.
 -   In the initial GET request to the authorize endpoint, specify
@@ -39,7 +39,7 @@ Once you receive an `access_token`, you can specify it in the `Authorization` HT
     -   as `client_secret`, the "consumer secret" (if "Require Secret for Web Server Flow" is checked in the Connected App settings)
     -   as `redirect_uri`, the path the the local web server that handles the auth
 
-## 2. User-Agent Flow
+## 3. User-Agent Flow
 
 -   Has the advantage of not requiring client secret
 -   In the GET request to the authorize endpoint, specify
@@ -64,7 +64,7 @@ Once you receive an `access_token`, you can specify it in the `Authorization` HT
 
 -   No subsequent POST needed.
 
-## 3. Device Flow
+## 4. Device Flow
 
 -   For use in IoT devices "with limited input or display capabilitied" and command-line (CLI) applications
 -   In the initial POST request to the token endpoint, specify
@@ -90,7 +90,7 @@ Once you receive an `access_token`, you can specify it in the `Authorization` HT
     -   as `client_secret`, the "consumer secret" but only if "Require Secret for Refresh Token Flow" is checked in the Connected App settings
     -   as `refresh_token` the value you received for it in the initial access grant.
 
-## 5. Asset Token Flow
+## 6. Asset Token Flow
 
 -   For use in integrating IoT devices
 -   Uses JWT

@@ -198,10 +198,13 @@ mock modules?
 
 ```javascript
 jest.mock('package/module', () => ({}), { virtual: true });
+
+jest.mock('package/moduleWithDefaultExport', () => ({ default: value }), {
+    virtual: true,
+});
 ```
 
 `__esModule` is needed for module with default exports
-
 
 expectDefine()
 
@@ -230,6 +233,5 @@ module.exports = {
     testMatch: ['<rootDir>/**/__tests__/*.(spec|test).(ts|js)'],
 };
 ```
-
 
 If you make changes to jest.config.js, restart Jest runners in vs code.
