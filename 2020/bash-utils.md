@@ -66,6 +66,12 @@ jstack -l <java-pid> # Sample call stacks
 
 ## Using [Termenu](https://github.com/elifiner/termenu)
 
+Install:
+```
+pip3 install termenu
+```
+
+Use:
 ```bash
 $ echo -n "Would you like to exit? " && termenu -i Yes No Maybe
 ```
