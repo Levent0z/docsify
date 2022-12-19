@@ -1,5 +1,7 @@
 # 2022
 
+-   [Set up SSL for a Node on Diskstation](2022/nas-node-ssl.md)
+-   [Set up Node on Diskstation](2022/nas-node.md)
 -   [Salesforce OAuth2 Flows](2022/salesforce-oauth-flows.md)
 -   [Autocomplete in XML using XSD](2022/autocomplete-in-xml-using-xsd.md)
 -   [Splunk](2022/splunk.md)
