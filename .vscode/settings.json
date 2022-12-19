@@ -4,5 +4,6 @@
         "titleBar.activeBackground": "#267a9e",
         "activityBar.background": "#267a9e"
     },
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "off"
 }

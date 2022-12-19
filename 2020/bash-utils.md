@@ -452,3 +452,14 @@ find . -name '*.js' | grep -v '/node_modules/' | grep -v '/dist/'
 ```bash
 xq -x --xml-dtd ".SOME.JQ.PATH=\"$NEW_VALUE\"" INPUT.XML >OUTPUT.XML
 ```
+
+## Which shell am I really using?
+
+```sh
+ps -p $$
+# Take the value from under the "CMD" column, e.g. sh
+type sh
+# Take the path, e.g. /bin/sh
+ls /bin/sh
+# Check to see if it's a sybolic link directing to, say, bash
+```
