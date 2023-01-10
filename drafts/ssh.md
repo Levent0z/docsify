@@ -1,10 +1,11 @@
 # Shell to Remote Host
 
-Local: 
+Local:
 Remote: loz-wsm
 
-Note: Remove  entries for the REMOTEHOST from `~/.ssh/known_hosts`
+Note: Remove entries for the REMOTEHOST from `~/.ssh/known_hosts`
 Note: May need to flushdns
+
 ```bash
 alias flushdns='sudo killall -HUP mDNSResponder; say dns cleared successfully'
 ```
@@ -21,13 +22,15 @@ alias sicp="scp -i $HOME/.ssh/$KEYNAME -o StrictHostKeyChecking=no -o UserKnownH
 alias sish="ssh -i $HOME/.ssh/$KEYNAME -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=QUIET"
 ```
 
-## Example Usage: 
+## Example Usage:
+
 ```bash
 sicp ~/.bash_profile $REMOTEHOST:/Users/loz/
 sish $REMOTEHOST
 ```
 
 ## Basic Copy Example
+
 ```bash
 scp USERNAME@HOSTNAME:/Users/USERNAME/FILE* .
 # Asks for password
@@ -35,5 +38,39 @@ scp USERNAME@HOSTNAME:/Users/USERNAME/FILE* .
 ```
 
 ## Misc
+
 https://superuser.com/questions/141344/dont-add-hostkey-to-known-hosts-for-ssh
 
+## Start SSH Agent
+
+eval "(ssh-agent -s)"
+
+## Create SSH key using ED25519
+
+```sh
+ssh-keygen -t ed25519 -C "your_email@your_domain.com"
+```
+
+## Add key to SSH agent
+
+```sh
+ssh-add -K ~/.ssh/id_KEY_NAME
+```
+
+## Example `~/.ssh/config` file:
+
+Replace PERSONAL and OTHER as needed.
+
+```sh
+#personal account
+Host github.com-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_PERSONAL
+
+#default account
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_OTHER
+```

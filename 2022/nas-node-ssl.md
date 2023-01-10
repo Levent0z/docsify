@@ -1,6 +1,6 @@
 # Setting up SSL for a Node server running on Synology Diskstation
 
-This page provides information on how I configured a new SSL for a node server I have running on my Synology DiskStation (aka NAS). This is Part 2 in the series and assumes certain configurations descrived there. Refer to [Part 1](nas-node.md).
+This page provides information on how I configured a new SSL for a node server I have running on my Synology DiskStation (aka NAS). This is Part 2 in the series and assumes certain configurations described there. Refer to [Part 1](nas-node.md).
 
 ## Goal
 

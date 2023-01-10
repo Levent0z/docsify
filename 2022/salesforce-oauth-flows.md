@@ -29,7 +29,7 @@ Once you receive an `access_token`, you can specify it in the `Authorization` HT
 
 -   Used when the app is hosted on a secure server, and has access to client secret.
 -   In the initial GET request to the authorize endpoint, specify
-    -   as `response type`, the text `code`
+    -   as `response_type`, the text `code`
     -   as `client_id`, the "consumer key"
     -   as `redirect_uri`, the path the the local web server that handles auth
 -   In the subsequent POST request to the token endpoint, specify
