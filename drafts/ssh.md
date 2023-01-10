@@ -74,3 +74,6 @@ Host github.com
     User git
     IdentityFile ~/.ssh/id_OTHER
 ```
+
+You can then use `git@github.com-personal:ORG/REPO` when cloning to use your personal account.
+
