@@ -14,3 +14,5 @@ nx.dev
 gatsbyjs.com
 tsdx.io
 
+
+- [react-hot-toast](https://www.npmjs.com/package/react-hot-toast) - Smoking hot Notifications for React.
